@@ -5,8 +5,122 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+    <header class="header-mainpage">
+      <a class="logo-header" href="#">Device</a>
+      <div class="header-background"></div>
+        <form name="search" action="#" method="get">
+          <label for="search-field"><img src="#" width="16" height="16" title="Поиск по сайту"></label>
+          <input name="search-field" id="search-field" type="search" placeholder="Поиск по сайту" required>
+          <input name="search-btn" type="submit" value="Найти">
+        </form>
+      <nav class="header-upper-container">
+        <ul class="header-upper-menu">
+          <li><img src="#" height="12" width="12"><a href="#">Войти</a></li>
+          <li><img src="#" height="12" width="12"><a href="#">Сравнить</a></li>
+          <li><img src="#" height="12" width="12"><a href="#">Корзина</a></li>
+        </ul>
+      </nav>
+      <nav class="header-main-container">
+        <ul class="header-main-menu">
+          <li>
+            <a href="#">Каталог товаров<img src="#" width="16" height="16"></a>
+              <ul class="catalog-menu">
+                <li><a href="#">Виртуальная реальность</a></li>
+                <li><a href="#">Моноподы для селфи</a></li>
+                <li><a href="#">Экшн-камеры</a></li>
+                <li><a href="#">Фитнес-браслеты</a></li>
+                <li><a href="#">Умные часы</a></li>
+                <li><a href="#">Квадрокоптеры</a></li>
+              </ul>
+          </li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--Конец шапки сайта-->
+    <main>
+      <div class="1-slide"></div>
+      <div class="2-slide"></div>
+      <div class="3-slide"></div>
+      <section class="popular">
+        <figure class="popular-list">
+          <a href="#" class="1-item"><img src="#" title="Посмотреть в каталоге" alt="Виртуальая реальность" width="160" height="160"><p>Виртуальная реальность</p></a>
+          <a href="#" class="2-item"><img src="#" title="Посмотреть в каталоге" alt="Моноподы для селфи" width="160" height="160"><p>Моноподы для селфи</p></a>
+          <a href="#" class="3-item"><img src="#" title="Посмотреть в каталоге" alt="Экшн-камеры" width="160" height="160"><p>Экшн-камеры</p></a>
+          <a href="#" class="4-item"><img src="#" title="Посмотреть в каталоге" alt="Фитнес-браслеты" width="160" height="160"><p>Фитнес-браслеты</p></a>
+          <a href="#" class="5-item"><img src="#" title="Посмотреть в каталоге" alt="Умные часы" width="160" height="160"><p>Умные часы</p></a>
+          <a href="#" class="6-item"><img src="#" title="Посмотреть в каталоге" alt="Квадрокоптеры" width="160" height="160"><p>Квадрокоптеры</p></a>
+        </figure>
+      </section>
+      <div class="services"></div>
+      <section class="logotypes">
+        <figure class="logotypes-list">
+          <a href="#"><img src="#" alt="dji" width="260" height="100"></a>
+          <a href="#"><img src="#" alt="SPadgets" width="260" height="100"></a>
+          <a href="#"><img src="#" alt="GoPro" width="260" height="100"></a>
+          <a href="#"><img src="#" alt="vive" width="260" height="100"></a>
+        </figure>
+      </section>
+      <article class="info">
+        <section class="about-us">
+          <h1>О нас</h1>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими траснпортными компаниями:</p>
+          <ul class="company-list">
+            <li>Деловые Линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+        </section>
+        <form action="#" method="get">
+          <button type="submit" class="main-btn" name="about-us-btn"><span>подробнее о нас</span></button>
+        </form>
+      </article>
+      <article class="contact">
+        <section class="contact-text">
+          <h1>Контакты</h1>
+          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+        </section>
+        <div class="map"><img src="#" alt="Наш адрес" width="560" height="222" ></div>
+        <!--Pop-up карта-->
+        <button type="submit" class="main-btn" name="contact-btn"><span>Напишите нам</span></button>
+        <!--Pop-up форма отправки письма-->
+      </article>
+    </main>
+    <!--Начало подвала-->
+    <footer class="footer-mainpage">
+      <a class="logo-footer" href="#">Device</a>
+      <nav class="footer-upper-container">
+        <ul class="footer-upper-menu">
+          <li><img src="#" height="12" width="12"><a href="#">Войти</a></li>
+          <li><img src="#" height="12" width="12"><a href="#">Сравнить</a></li>
+          <li><img src="#" height="12" width="12"><a href="#">Корзина</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-main-container">
+        <ul class="footer-main-menu">
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contacts">
+        <span class="direction">г.Москва, ул.Строителей, 15</span>
+        <span class="phonenumber">Тел.:+7(495)495-95-95</span>
+      </div>
+      <div class="social">
+        <ul class="social-btn">
+          <li><a href="#"><img src="#" title="Фейсбук" alt="Фейсбук" width="32" height="32"></a></li>
+          <li><a href="#"><img src="#" title="Инстаграм" alt="Инстаграм" width="32" height="32"></a></li>
+          <li><a href="#"><img src="#" title="Твиттер" alt="Твиттер" width="32" height="32"></a></li>
+        </ul>
+      </div>
+      <div class="htmlacademy">
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="#" title="HTMLacademy" width="27" height="35"></a>
+      </div>
+    </footer>
 
   </body>
 </html>
