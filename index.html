@@ -41,9 +41,100 @@
     </header>
     <!--Конец шапки сайта-->
     <main>
-      <div class="1-slide"></div>
-      <div class="2-slide"></div>
-      <div class="3-slide"></div>
+      <div class="1-slide">
+        <div class="1-slide-img-container">
+          <img src="#" alt="Моноподы для селфи" width="384" height="486">
+        </div>
+        <section class="item-description">
+          <h1>Делай селфи,<br>
+            как Бен Стиллер</h1>
+          <p>Самая длинная палка для селфи в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+        </section>
+        <table class="item-stats">
+          <tr>
+            <td>8,5 м</td>
+            <td>5  кг</td>
+            <td>Карбон</td>
+          </tr>
+          <tr>
+            <td>Длина палки</td>
+            <td>Вес палки</td>
+            <td>Материал</td>
+          </tr>
+        </table>
+      </div>
+      <div class="radiobtn">
+          <form action="#" method="post">
+            <input type="radio" name="slide-radiobtn" checked>
+            <input type="radio" name="slide-radiobtn">
+            <input type="radio" name="slide-radiobtn">
+          </form>
+      </div>
+      <form action="#" method="get">
+          <button type="submit" class="main-btn" name="more-btn"><span>подробнее</span></button>
+      </form>
+      <!--
+      <div class="2-slide">
+        <div class="2-slide-img-container">
+          <img src="#" alt="Умные часы" width="345" height="485">
+        </div>
+        <section class="item-description">
+          <h1>Худеем<br>
+            правильно!</h1>
+          <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+        </section>
+        <table class="item-stats">
+          <tr>
+            <td>48 часов</td>
+          </tr>
+          <tr>
+            <td>Без подзарядки</td>
+          </tr>
+        </table>
+      </div>
+      <div class="radiobtn">
+          <form action="#" method="post">
+            <input type="radio" name="slide-radiobtn">
+            <input type="radio" name="slide-radiobtn" checked>
+            <input type="radio" name="slide-radiobtn">
+          </form>
+      </div>
+      <form action="#" method="get">
+          <button type="submit" class="main-btn" name="more-btn"><span>подробнее</span></button>
+      </form>
+      </div>
+      <div class="3-slide">
+        <div class="3-slide-img-container">
+          <img src="#" alt="Квадрокоптеры" width="526" height="334">
+        </div>
+        <section class="item-description">
+          <h1>Порхает как бабочка,<br>
+            жалит как пчела!</h1>
+          <p>Это обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру</p>
+        </section>
+        <table class="item-stats">
+          <tr>
+            <td>800 м</td>
+            <td>50 м</td>
+          </tr>
+          <tr>
+            <td>Дальность полета</td>
+            <td>Радиус поражения</td>
+          </tr>
+        </table>
+      </div>
+      <div class="radiobtn">
+          <form action="#" method="post">
+            <input type="radio" name="slide-radiobtn">
+            <input type="radio" name="slide-radiobtn">
+            <input type="radio" name="slide-radiobtn" checked>
+          </form>
+      </div>
+      <form action="#" method="get">
+          <button type="submit" class="main-btn" name="more-btn"><span>подробнее</span></button>
+      </form>
+      </div>
+      -->
       <section class="popular">
         <figure class="popular-list">
           <a href="#" class="1-item"><img src="#" title="Посмотреть в каталоге" alt="Виртуальая реальность" width="160" height="160"><p>Виртуальная реальность</p></a>
@@ -54,7 +145,40 @@
           <a href="#" class="6-item"><img src="#" title="Посмотреть в каталоге" alt="Квадрокоптеры" width="160" height="160"><p>Квадрокоптеры</p></a>
         </figure>
       </section>
-      <div class="services"></div>
+      <article class="services">
+        <aside class="services-list">
+          <form action="#" method="post">
+            <fieldset class="sevices-list-btns">
+              <button type="button" class="services-btn" name="delivery-btn"><span>доставка</span></button>
+              <button type="button" class="services-btn" name="warranty-btn"><span>гарантия</span></button>
+              <button type="button" class="services-btn" name="credit-btn"><span>кредит</span></button>
+            </fieldset>
+          </form>
+        </aside>
+        <section class="delivery-description">
+          <div class="services-wrappaper">
+            <img src="#" class="delivery-img" width="136" height="164">
+          </div>
+          <h1>Доставка</h1>
+          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплтано! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        </section>
+        <!--
+        <section class="warranty-description">
+          <div class="services-wrappaper">
+            <img src="#" class="warranty-img" width="171" height="194">
+          </div>
+          <h1>Гарантия</h1>
+          <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+        </section>
+        <section class="credit-description">
+          <div class="services-wrappaper">
+            <img src="#" class="credit-img" width="156" height="186">
+          </div>
+          <h1>кредит</h1>
+          <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+        </section>
+      -->
+      </article>
       <section class="logotypes">
         <figure class="logotypes-list">
           <a href="#"><img src="#" alt="dji" width="260" height="100"></a>
