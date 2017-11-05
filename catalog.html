@@ -14,7 +14,7 @@
 
         <form class="main-search" name="main-search" action="#" method="get">
           <input class="main-search-field" type="search" placeholder="Поиск по сайту" required>
-          <button class="main-search-button" name="search-button" type="submit" value="Найти"></button>
+          <button class="main-search-button" name="search-button" type="submit">Найти</button>
         </form>
 
         <ul class="user-navigation-header">
@@ -97,10 +97,10 @@
 
         <ul class="sorting-pointers">
           <li>
-            <button  type="button">По возрастанию</button>
+            <button class="sorting-pointer sorting-pointer-up" type="button">По возрастанию</button>
           </li>
           <li>
-            <button class="sorting-pointer is-active" type="button">По убыванию</button>
+            <button class="sorting-pointer sorting-pointer-down is-active" type="button">По убыванию</button>
           </li>
         </ul>
       </section>
@@ -111,12 +111,12 @@
         <ul class="catalog-list">
           <li class="catalog-item">
             <a class="catalog-img-container" href="#">
-              <img class="fan-stick-img" src="#" alt="Любительская селфи-палка" width="360" height="380">
+              <img class="catalog-img" src="#" alt="Любительская селфи-палка" width="360" height="380">
             </a>
             <h3><a href="#">Любительская селфи-палка</a></h3>
             <span>500 руб.</span>
               
-            <div class="action-button"> <!--Нельзя это вынести одним блоком после всех итемов, что бы не повторять?-->
+            <div class="action-button">
               <button class="button" type="button">В корзину</button>
               <button class="compare-button" type="button">Добавить к сравнению</button>
             </div>
@@ -124,7 +124,7 @@
         
           <li class="catalog-item">
             <a class="catalog-img-container" href="#">
-              <img class="pro-stick-img" src="#" alt="Профессиональная селфи-палка" width="360" height="380">
+              <img class="catalog-img" src="#" alt="Профессиональная селфи-палка" width="360" height="380">
             </a>  
             <h3><a href="#">Профессиональная селфи-палка</a></h3>
             <span> 1500 руб.</span>
@@ -137,7 +137,7 @@
             
           <li class="catalog-item">
             <a class="catalog-img-container" href="#">
-              <img class="waterproof-stick-img" src="#" alt="Непотопляемая селфи-палка" width="360" height="380">
+              <img class="catalog-img" src="#" alt="Непотопляемая селфи-палка" width="360" height="380">
             </a>    
             <h3><a>Непотопляемая селфи-палка</a></h3>
             <span>2500 руб.</span>
@@ -150,7 +150,7 @@
               
           <li class="catalog-item followme-stick">
             <a class="catalog-img-container" href="#">
-              <img class="followme-stick-img" src="#" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+              <img class="catalog-img" src="#" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
             </a> 
             <strong>New</strong>
             <h3><a>Селфи-палка «Следуй за мной»</a></h3>

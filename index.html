@@ -13,8 +13,8 @@
         </a>
 
         <form class="main-search" name="main-search" action="#" method="get">
-          <input class="main-search-field" type="search" placeholder="Поиск по сайту" required> <!--Поменяла кнопку на инпут-->
-          <button class="main-search-button" name="search-button" type="submit" value="Найти"></button>
+          <input class="main-search-field" type="search" placeholder="Поиск по сайту" required> 
+          <button class="main-search-button" name="search-button" type="submit">Найти</button>
         </form>
 
         <ul class="user-navigation-header">
@@ -23,7 +23,6 @@
           <li class="cart"><a href="#">Корзина</a></li>
         </ul>
 
-        <div class="sait-navigation-container">  <!--Добавила обертку для основной навигации-->
           <ul class="sait-navigation">
             <li class="catalog">
               <a href="#">Каталог товаров</a>
@@ -45,7 +44,6 @@
                     <li><a href="#">Квадрокоптеры</a></li>
                   </ul>
 
-                </div>
             </li>
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Гарантия</a></li>
@@ -62,7 +60,7 @@
       <section class="sliders-list">
         <h2 class="visually-hidden">Хиты продаж!</h2>
 
-        <div class="1-slider-item"> <!--Добавила персональный класс для каждого слайда-->
+        <div class="slider-item">
           <img class="slider-img" src="#" alt="Моноподы для селфи" width="384" height="486">
 
           <div class="slider-item-content">
@@ -86,7 +84,7 @@
           </div>
         </div>
 
-        <div class="2-slider-item">
+        <div class="slider-item">
           <img class="slider-img" src="#" alt="Умные часы" width="345" height="485">
 
           <div class="slider-item-content">
@@ -106,7 +104,7 @@
           </div>
         </div>
 
-        <div class="3-slider-item">
+        <div class="slider-item">
           <img class="slider-img" src="#" alt="Квадрокоптеры" width="526" height="334">
 
           <div class="slider-item-content">
@@ -129,9 +127,9 @@
         </div>
 
         <div class="slider-list-navigation">
-          <button class="radio-button-slide-1" type="button"></button>
-          <button class="radio-button-slide-2" type="button"></button>
-          <button class="radio-button-slide-3" type="button"></button>
+          <button class="slider-button is-active" type="button"></button>
+          <button class="slider-button" type="button"></button>
+          <button class="slider-button" type="button"></button>
         </div>
 
       </section>
@@ -197,28 +195,28 @@
         <div class="services-nav">
           <ul>
             <li>
-                <button class="delivery-button" type="button" name="delivery-button">Доставка</button>
+                <button class="services-button is-active" type="button" name="delivery-button">Доставка</button>
             </li>
             <li>
-                <button class="warranty-button" type="button" name="warranty-button">Гарантия</button>
+                <button class="services-button" type="button" name="warranty-button">Гарантия</button>
             </li>
             <li>
-                <button class="credit-button" type="button" id="credit" name="credit-button">Кредит</button>
+                <button class="services-button" type="button" name="credit-button">Кредит</button>
             </li>
           </ul>
         </div>
 
-        <div class="services-item delivery"> <!--Добавила персональные классы-->
+        <div class="services-item"> 
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
         </div>
 
-        <div class="services-item warranty">
+        <div class="services-item">
           <h3>Гарантия</h3>
           <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
         </div>
 
-        <div class="services-item credit">
+        <div class="services-item">
           <h3>Кредит</h3>
           <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
         </div>
