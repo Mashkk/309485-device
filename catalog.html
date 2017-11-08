@@ -9,7 +9,7 @@
 
       <nav class="main-navigation-header ">
         <a class="logo-header" href="/index.html">
-          <img class="logo-header-img" src="img/logo.png" alt="Device" width="100" height="50">
+          <img class="logo-header-img" src="img/logo.svg" alt="Device" width="163" height="35">
         </a>
 
         <form class="main-search" name="main-search" action="#" method="get">
@@ -74,8 +74,39 @@
 
       <section class="filters">
         <h2 class="catalog-h2 filters-h">Фильтр:</h2>
-        <!--Здесь будет форма-->
-        <button class="button show" type="button">Показать</button>
+
+        <form class="filter" action="/echo" method="get">
+          <label class="filter-name" for="cost">Стоимость</label>
+          <span class="value">от 0</span>
+          <input id="cost" type="range" min="0" max="8000" step="1">
+          <span class="value">до 5000</span>
+
+          <fieldset class="colors">
+            <legend class="filter-name">Цвет</legend>
+
+            <input id="black" type="checkbox" value="black" checked>
+            <label for="black">Черный</label>
+            <input id="white" type="checkbox" value="white">
+            <label for="white">Белый</label>
+            <input id="blue" type="checkbox" value="blue" checked>
+            <label for="blue">Синий</label>
+            <input id="red" type="checkbox" value="red" checked>
+            <label for="red">Красный</label>
+            <input id="pink" type="checkbox" value="pink">
+            <label for="pink">Розовый</label>
+          </fieldset>
+
+          <fieldset class="bluetooth">
+            <legend class="filtr-name">Bluetooth</legend>
+
+            <input id="yes" type="radio" value="yes" checked>
+            <label for="yes">Есть</label>
+            <input id="no" type="radio" value="no">
+            <label for="no">Нет</label>
+          </fieldset>
+
+          <button class="button show" type="submit" value="Показать">Показать</button>
+        </form>
       </section>
 
       <section class="sorting">
@@ -184,7 +215,7 @@
     <!--Начало подвала-->
     <footer class="main-footer">
       <a class="logo-footer" href="/index.html">
-        <img class="logo-footer" src="img/logo-footer.png" alt="Device" width="100" height="50">
+        <img class="logo-footer-img" src="img/logo-footer.svg" alt="Device" width="162" height="35">
       </a>
 
       <ul class="user-navigation-footer">
