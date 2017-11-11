@@ -24,30 +24,30 @@
         </ul>
 
           <ul class="sait-navigation">
-            <li class="catalog">
+            <li class="sait-navigation-item">
               <a href="catalog.html">Каталог товаров</a>
 
-                <div class="catalog-list">
+                <div class="navigation-catalog">
 
-                  <ul class="1-catalog-list">
+                  <ul class="1-navigation-catalog-list catalog">
                     <li><a href="catalog.html">Виртуальная реальность</a></li>
                     <li><a href="catalog.html">Моноподы для селфи</a></li>
                     <li><a href="catalog.html">Экшн-камеры</a></li>
                   </ul>
 
-                  <ul class="2-catalog-list">
+                  <ul class="2-navigation-catalog-list catalog">
                     <li><a href="catalog.html">Фитнес-браслеты</a></li>
                     <li><a href="catalog.html">Умные часы</a></li>
                   </ul>
 
-                  <ul class="3-catalog-list">
+                  <ul class="3-navigation-catalog-list catalog">
                     <li><a href="catalog.html">Квадрокоптеры</a></li>
                   </ul>
                 </div>
             </li>
             <li><a href="#delivery">Доставка</a></li>
             <li><a href="#waranty">Гарантия</a></li>
-            <li><a href="#credit">Контакты</a></li>
+            <li><a href="#contact">Контакты</a></li>
           </ul>
       </nav>
     </header>
@@ -79,7 +79,7 @@
                 <td>Материал</td>
               </tr>
             </table>
-            <a class="button more" href="catalog.html">подробнее</a>
+            <a class="button" href="catalog.html">подробнее</a>
           </div>
         </div>
 
@@ -99,7 +99,7 @@
                 <td>Без подзарядки</td>
               </tr>
             </table>
-            <a class="button more" href="catalog.html">подробнее</a>
+            <a class="button" href="catalog.html">подробнее</a>
           </div>
         </div>
 
@@ -215,7 +215,7 @@
           <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
         </div>
 
-        <div class="services-item" id="credit">
+        <div class="services-item">
           <h3>Кредит</h3>
           <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
         </div>
@@ -271,10 +271,10 @@
           </li>
         </ul>
 
-        <a class="button about-us" href="#">подробнее о нас</a>
+        <a class="button" href="#">подробнее о нас</a>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contact">
         <h2>Контакты</h2>
 
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
@@ -283,34 +283,34 @@
           <a class="pop-up map" href="#">
             <img src="img/map.jpg" alt="Наш адрес" width="560" height="222">
           </a>
-        </div>
+          <button class="button" type="button">Напишите нам</button>
 
-        <!--Pop-up карта-->
-        <div class="modal">
+          <div class="modal">
             <button class="modal-close-button" type="button">Закрыть карту</button>
             <img src="img/map.jpg" alt="Мы находимся по адресу: г.Москва, ул.Строителей, 15" width="560" height="222">
+          </div>
         </div>
 
-          <button class="button pop-up text" type="button">Напишите нам</button>
+        <div class="modal write-us-form">
+          <button class="modal-close-button" type="button">Закрыть форму обратной связи</button>
 
-          <div class="modal write-us-form">
-            <button class="modal-close-button" type="button">Закрыть форму обратной связи</button>
+          <form action="https://echo.htmlacademy.ru" method="post">
 
-            <form action="/echo" method="post">
-              <label for="user-name">Ваше имя:</label> <!--p-->
-              <input id="user-name" type="text" placeholder="Представьтесь, пожалуйста">
+            <div class="modal-items">
+              <label for="modal-user-name">Ваше имя:</label> 
+              <input id="modal-user-name" type="text" name="modal-user-name" placeholder="Представьтесь, пожалуйста" required>
 
-              <label for="user-email">Ваш e-mail:</label>
-              <input id="user-email" type="email" placeholder="Для отправки ответа">
+              <label for="modal-user-email">Ваш e-mail:</label>
+              <input id="modal-user-email" type="email" name="modal-user-email" placeholder="Для отправки ответа" required>
+            </div>
 
-              <p>
-                <label for="user-comment">Текст письма:</label>
-                <textarea id="user-comment" placeholder="В свободной форме" rows="5"></textarea>
-              </p>
-            </form>
-            
-            <button class="button send" type="submit">Отправить</button>
-          </div>
+            <p>
+              <label for="modal-user-comment">Текст письма:</label>
+              <textarea id="modal-user-comment" name="modal-user-comment" placeholder="В свободной форме" rows="5" required></textarea>
+            </p>
+            <button class="button" type="submit">Отправить</button>
+          </form>
+        </div>
       </section>
     </main>
 
