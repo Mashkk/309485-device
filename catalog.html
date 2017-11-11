@@ -76,36 +76,76 @@
         <h2 class="catalog-h2 filters-h">Фильтр:</h2>
 
         <form class="filter" action="/echo" method="get">
-          <label class="filter-name" for="cost">Стоимость</label>
-          <span class="value">от 0</span>
-          <input id="cost" type="range" min="0" max="8000" step="1">
-          <span class="value">до 5000</span>
 
-          <fieldset class="colors">
+          <fieldset class="filter-list">
+            <legend class="filter-name">Стоимость</legend>
+
+            <div class="grey-scale">
+                <div class="green-scale"></div>
+            </div>
+
+            <input class="range" type="range">
+            
+            <div class="filter-start" tabindex="0">
+              от 0
+            </div>
+            
+            <div class="filter-end" tabindex="0">
+              до 5000
+            </div>
+
+            <!--Вариант 2
+            <label for="filter-start">от</label>
+            <label for="filter-start">от</label>
+            <input id="filter-start" type="text" value="0">
+            <label for="filter-end">до</label> <!--<input type="range">
+            <input id="filter-end" type="text" value="5000">
+          -->
+          </fieldset>
+
+          <fieldset class="filter-list">
             <legend class="filter-name">Цвет</legend>
 
-            <input id="black" type="checkbox" value="black" checked>
-            <label for="black">Черный</label>
-            <input id="white" type="checkbox" value="white">
-            <label for="white">Белый</label>
-            <input id="blue" type="checkbox" value="blue" checked>
-            <label for="blue">Синий</label>
-            <input id="red" type="checkbox" value="red" checked>
-            <label for="red">Красный</label>
-            <input id="pink" type="checkbox" value="pink">
-            <label for="pink">Розовый</label>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" id="black" type="checkbox" name="black" checked>
+                <label for="black">Черный</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" id="white" type="checkbox" name="white">
+                <label for="white">Белый</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" id="blue" type="checkbox" name="blue" checked>
+                <label for="blue">Синий</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" id="red" type="checkbox" name="red" checked>
+                <label for="red">Красный</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" id="pink" type="checkbox" name="pink">
+                <label for="pink">Розовый</label>
+              </li>
+            </ul>
           </fieldset>
 
-          <fieldset class="bluetooth">
-            <legend class="filtr-name">Bluetooth</legend>
+          <fieldset class="filter-list">
+            <legend class="filter-name">Bluetooth</legend>
 
-            <input id="yes" type="radio" value="yes" checked>
-            <label for="yes">Есть</label>
-            <input id="no" type="radio" value="no">
-            <label for="no">Нет</label>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" id="yes" type="radio" name="bluetooth" checked>
+                <label for="yes">Есть</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" id="no" type="radio" name="bluetooth">
+                <label for="no">Нет</label>
+              </li>
+            </ul>
           </fieldset>
 
-          <button class="button show" type="submit" value="Показать">Показать</button>
+          <button class="button filter-button" type="submit" name="filter-button">Показать</button>
         </form>
       </section>
 
@@ -139,10 +179,10 @@
 
         <ul class="catalog-list">
           <li class="catalog-item">
-            <a class="catalog-img-container" href="#">
+            <p class="catalog-item-image">
               <img class="catalog-img" src="img/item-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
-            </a>
-            <h3><a href="#">Любительская селфи-палка</a></h3>
+            </p>
+            <h3><a href="catalog-item.html">Любительская селфи-палка</a></h3>
             <span>500 руб.</span>
               
             <div class="action-button">
@@ -152,10 +192,10 @@
           </li>  
         
           <li class="catalog-item">
-            <a class="catalog-img-container" href="#">
+            <p class="catalog-item-image">
               <img class="catalog-img" src="img/item-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
-            </a>  
-            <h3><a href="#">Профессиональная селфи-палка</a></h3>
+            </p>  
+            <h3><a href="catalog-item.html">Профессиональная селфи-палка</a></h3>
             <span> 1500 руб.</span>
 
             <div class="action-button">
@@ -165,10 +205,10 @@
           </li>
             
           <li class="catalog-item">
-            <a class="catalog-img-container" href="#">
+            <p class="catalog-item-image">
               <img class="catalog-img" src="img/item-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
-            </a>    
-            <h3><a>Непотопляемая селфи-палка</a></h3>
+            </p>    
+            <h3><a href="catalog-item.html">Непотопляемая селфи-палка</a></h3>
             <span>2500 руб.</span>
 
             <div class="action-button">
@@ -178,11 +218,11 @@
           </li>
               
           <li class="catalog-item followme-stick">
-            <a class="catalog-img-container" href="#">
+            <p class="catalog-item-image">
               <img class="catalog-img" src="img/item-4.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
-            </a> 
+            </p> 
             <strong>New</strong>
-            <h3><a>Селфи-палка «Следуй за мной»</a></h3>
+            <h3><a href="catalog-item.html">Селфи-палка «Следуй за мной»</a></h3>
             <strong>4900 руб.</strong>
               
             <div class="action-button">

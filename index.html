@@ -25,7 +25,7 @@
 
           <ul class="sait-navigation">
             <li class="catalog">
-              <a href="#">Каталог товаров</a>
+              <a href="#">Каталог товаров</a> <!--<summary></summary>-->
 
                 <div class="catalog-list">
 
@@ -236,7 +236,7 @@
             <li>
               <a href="#">
                 <img class="logotyp-img-greyscale" src="img/logo-2.jpg" alt="SPadgets" width="260" height="100">
-                <img class="logotyp-img" src="img/color-logo-2.jpg" alt="dji" width="260" height="100">
+                <img class="logotyp-img" src="img/color-logo-2.jpg" alt="SPadgets" width="260" height="100">
               </a>
             </li>
             <li>
@@ -248,7 +248,7 @@
             <li>
               <a href="#">
                 <img class="logotyp-img-greyscale" src="img/logo-4.jpg" alt="VIVE" width="260" height="100">
-                <img class="logotyp-img" src="img/color-logo-4.jpg" alt="GoPro" width="260" height="100">
+                <img class="logotyp-img" src="img/color-logo-4.jpg" alt="VIVE" width="260" height="100">
               </a>
             </li>
           </ul>
@@ -288,24 +288,26 @@
 
         <!--Pop-up карта-->
         <div class="modal">
-            <button class="modal-close-button" type="submit">Закрыть</button>
-            <img src="img/map.jpg" alt="Наш адрес" width="560" height="222">
+            <button class="modal-close-button" type="button">Закрыть карту</button>
+            <img src="img/map.jpg" alt="Мы находимся по адресу: г.Москва, ул.Строителей, 15" width="560" height="222">
         </div>
 
           <button class="button pop-up text" type="button">Напишите нам</button>
 
           <div class="modal write-us-form">
-            <button class="modal-close-button" type="submit">Закрыть</button>
+            <button class="modal-close-button" type="button">Закрыть форму обратной связи</button>
 
             <form action="/echo" method="post">
-              <label for="user-name">Ваше имя:</label>
+              <label for="user-name">Ваше имя:</label> <!--p-->
               <input id="user-name" type="text" placeholder="Представьтесь, пожалуйста">
 
               <label for="user-email">Ваш e-mail:</label>
               <input id="user-email" type="email" placeholder="Для отправки ответа">
 
-              <label for="user-comment">Текст письма:</label>
-              <textarea id="user-comment" placeholder="В свободной форме" rows="5"></textarea>
+              <p>
+                <label for="user-comment">Текст письма:</label>
+                <textarea id="user-comment" placeholder="В свободной форме" rows="5"></textarea>
+              </p>
             </form>
             
             <button class="button send" type="submit">Отправить</button>
