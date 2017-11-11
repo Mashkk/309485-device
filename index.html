@@ -24,23 +24,23 @@
         </ul>
 
           <ul class="sait-navigation">
-            <li class="sait-navigation-item">
+            <li class="sait-navigation-catalog">
               <a href="catalog.html">Каталог товаров</a>
 
                 <div class="navigation-catalog">
 
-                  <ul class="1-navigation-catalog-list catalog">
+                  <ul class="sait-navigation-catalog-list">
                     <li><a href="catalog.html">Виртуальная реальность</a></li>
                     <li><a href="catalog.html">Моноподы для селфи</a></li>
                     <li><a href="catalog.html">Экшн-камеры</a></li>
                   </ul>
 
-                  <ul class="2-navigation-catalog-list catalog">
+                  <ul class="sait-navigation-catalog-list">
                     <li><a href="catalog.html">Фитнес-браслеты</a></li>
                     <li><a href="catalog.html">Умные часы</a></li>
                   </ul>
 
-                  <ul class="3-navigation-catalog-list catalog">
+                  <ul class="sait-navigation-catalog-list">
                     <li><a href="catalog.html">Квадрокоптеры</a></li>
                   </ul>
                 </div>
@@ -121,7 +121,7 @@
                 <td>Радиус поражения</td>
               </tr>
             </table>
-            <a class="button more" href="catalog.html">подробнее</a>
+            <a class="button" href="catalog.html">подробнее</a>
           </div>
         </div>
 
@@ -194,13 +194,13 @@
         <div class="services-nav">
           <ul>
             <li>
-                <button class="services-button is-active" type="button" name="delivery-button">Доставка</button>
+                <button class="services-button is-active button" type="button" name="delivery-button">Доставка</button>
             </li>
             <li>
-                <button class="services-button" type="button" name="warranty-button">Гарантия</button>
+                <button class="services-button button" type="button" name="warranty-button">Гарантия</button>
             </li>
             <li>
-                <button class="services-button" type="button" name="credit-button">Кредит</button>
+                <button class="services-button button" type="button" name="credit-button">Кредит</button>
             </li>
           </ul>
         </div>
@@ -296,10 +296,12 @@
 
           <form action="https://echo.htmlacademy.ru" method="post">
 
-            <div class="modal-items">
+            <div class="modal-item">
               <label for="modal-user-name">Ваше имя:</label> 
               <input id="modal-user-name" type="text" name="modal-user-name" placeholder="Представьтесь, пожалуйста" required>
+            </div>
 
+            <div class="modal-item">
               <label for="modal-user-email">Ваш e-mail:</label>
               <input id="modal-user-email" type="email" name="modal-user-email" placeholder="Для отправки ответа" required>
             </div>

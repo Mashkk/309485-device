@@ -33,23 +33,23 @@
         </ul>
 
         <ul class="sait-navigation">
-          <li class="sait-navigation-item">
+          <li class="sait-navigation-catalog">
             <a href="catalog.html">Каталог товаров</a>
 
               <div class="navigation-catalog">
 
-                <ul class="1-navigation-catalog-list catalog">
+                <ul class="site-navigation-catalog-list">
                   <li><a href="catalog.html">Виртуальная реальность</a></li>
                   <li class="navigation-catalog-item-is-active"><a href="catalog.html">Моноподы для селфи</a></li>
                   <li><a href="catalog.html">Экшн-камеры</a></li>
                 </ul>
 
-                <ul class="2-navigation-catalog-list catalog">
+                <ul class="sait-navigation-catalog-list">
                   <li><a href="catalog.html">Фитнес-браслеты</a></li>
                   <li><a href="catalog.html">Умные часы</a></li>
                 </ul>
 
-                <ul class="3-navigation-catalog-list catalog">
+                <ul class="sait-navigation-catalog-list">
                   <li><a href="catalog.html">Квадрокоптеры</a></li>
                 </ul>
               </div>
@@ -79,8 +79,8 @@
           <fieldset class="filter-list">
             <legend class="filter-name">Стоимость</legend>
 
-            <div class="grey-scale">
-              <div class="green-scale"></div>
+            <div class="price-slider">
+              <div class="price-slider-bar"></div>
 
               <button class="price-slider-button price-slider-button-from" id="price-slider-button-from" name="price" type="button">Цена от</button>
               <label for="price-slider-button-from">от 0</label>
@@ -95,23 +95,23 @@
 
             <ul>
               <li class="filter-item">
-                <input class="visually-hidden filter-input filter-input-checkbox" id="black" type="checkbox" name="color" checked>
+                <input class="visually-hidden filter-input filter-input-checkbox" id="black" type="checkbox" name="color" value="black" checked>
                 <label for="black">Черный</label>
               </li>
               <li class="filter-item">
-                <input class="visually-hidden filter-input filter-input-checkbox" id="white" type="checkbox" name="color">
+                <input class="visually-hidden filter-input filter-input-checkbox" id="white" type="checkbox" name="color" value="white">
                 <label for="white">Белый</label>
               </li>
               <li class="filter-item">
-                <input class="visually-hidden filter-input filter-input-checkbox" id="blue" type="checkbox" name="color" checked>
+                <input class="visually-hidden filter-input filter-input-checkbox" id="blue" type="checkbox" name="color" value="blue" checked>
                 <label for="blue">Синий</label>
               </li>
               <li class="filter-item">
-                <input class="visually-hidden filter-input filter-input-checkbox" id="red" type="checkbox" name="color" checked>
+                <input class="visually-hidden filter-input filter-input-checkbox" id="red" type="checkbox" name="color" value="red" checked>
                 <label for="red">Красный</label>
               </li>
               <li class="filter-item">
-                <input class="visually-hidden filter-input filter-input-checkbox" id="pink" type="checkbox" name="color">
+                <input class="visually-hidden filter-input filter-input-checkbox" id="pink" type="checkbox" name="color" value="pink">
                 <label for="pink">Розовый</label>
               </li>
             </ul>
@@ -122,11 +122,11 @@
 
             <ul>
               <li class="filter-item">
-                <input class="visually-hidden filter-input filter-input-radio" id="yes" type="radio" name="bluetooth" checked>
+                <input class="visually-hidden filter-input filter-input-radio" id="yes" type="radio" name="bluetooth" value="yes" checked>
                 <label for="yes">Есть</label>
               </li>
               <li class="filter-item">
-                <input class="visually-hidden filter-input filter-input-radio" id="no" type="radio" name="bluetooth">
+                <input class="visually-hidden filter-input filter-input-radio" id="no" type="radio" name="bluetooth" value="no">
                 <label for="no">Нет</label>
               </li>
             </ul>
