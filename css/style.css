@@ -25,9 +25,9 @@ body {
     line-height: 30px;
     font-weight: 300;
     color: #464646;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.01em;
     
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 a {
@@ -43,24 +43,25 @@ a {
 }
 
 .user-navigation-header a {
-    line-height: 36px;
-    color: #000000;
+    line-height: 2.4;
+    color: #000;
 }
 
 .sait-navigation a {
     font-family: "Gilroy", Arial, Helvetica, sans-serif;
     font-size: 18px;
+    line-height: 1.2;
     font-weight: bold;
-    color: #000000;
+    color: #000;
     letter-spacing: 0.2em;
     text-transform: uppercase;
 }
 
 .navigation-catalog-list a {
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    font-size: 15px; 
+    font-size: 15px;
+    line-height: 2.4; 
     font-weight: 300;
-    line-height: 36px;
     letter-spacing: 0.01em;
     text-transform: none;
 }
@@ -74,3 +75,17 @@ a {
 .sait-navigation a:focus {
     color: rgba(0, 0, 0, 0.3)
 }
+
+.visually-hidden {
+    display: none;
+}
+
+.slider-item-content h3 {
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 47px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #000;
+    
+}
+
