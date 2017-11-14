@@ -4,7 +4,7 @@
          url("fonts/web/gilroylight.woff2") format("woff2"), 
          url("fonts/web/gilroylight.woff") format("woff"); 
     font-style: normal;
-    font-weight: normal; 
+    font-weight: lighter; 
 }
 
 @font-face {
@@ -22,7 +22,7 @@ body {
 
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 15px;
-    line-height: 30px;
+    line-height: 2;
     font-weight: 300;
     color: #464646;
     letter-spacing: 0.01em;
@@ -86,6 +86,132 @@ a {
     line-height: 1.2;
     font-weight: bold;
     color: #000;
-    
 }
 
+table {
+    border-collapse: collapse;
+}
+
+.item-stats th {
+    font-size: 13px;
+    line-height: 1.54;
+    font-weight: 300;
+    text-align: left;
+    padding: 0;
+}
+
+.item-stats td {
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: lighter;
+    color: #000;
+
+    padding-right: 80px;
+    padding-bottom: 18px;
+}
+
+.button {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 220px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    padding-top: 12px;
+    background-color: #f0c52e;
+    border: none;
+
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.button:focus {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.popular-item-img {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 160px;
+    height: 160px;
+    background-color: #f6dc82;
+    text-align: center;
+}
+
+.popular-item-img:hover, 
+.popular-item-img:focus{
+    background-color: #f0c52e;
+}
+/*
+.services {
+    position: relative;
+}
+
+.services::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 200px;
+
+    width: 1445px;
+    height: 288px;
+    background-color: #e5e5e5;
+}
+*/
+
+.services-item h3,
+.about-us h2,
+.contacts h2 {
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 47px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0.01em;
+}
+
+.company-list a{
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 2.5;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0em;
+}
+
+.main-footer {
+    background-color: #464646;
+}
+
+.main-footer a,
+.main-footer p {
+    color: #fff;
+}
+
+.user-navigation-footer {
+    line-height: 2.4; 
+}
+
+.main-footer>p {
+    letter-spacing: 0em;
+}
+
+.sait-navigation-footer {
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+.social-btn {
+    text-align: center;
+}
