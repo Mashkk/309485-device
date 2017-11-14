@@ -1,0 +1,76 @@
+@font-face { 
+    font-family: "Gilroy"; 
+    src: local("Gilroy Light"),
+         url("fonts/web/gilroylight.woff2") format("woff2"), 
+         url("fonts/web/gilroylight.woff") format("woff"); 
+    font-style: normal;
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: local("Gilroy Extra Bold"),
+        url("fonts/web/gilroyextrabold.woff2") format("woff2"),
+        url("fonts/web/gilroyextrabold.woff") format("woff");
+    font-style: normal;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #464646;
+    letter-spacing: 0.03em;
+    
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-navigation-header li,
+.popular li,
+.services li,
+.logotypes li,
+.main-footer li{
+    list-style: none;
+}
+
+.user-navigation-header a {
+    line-height: 36px;
+    color: #000000;
+}
+
+.sait-navigation a {
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.navigation-catalog-list a {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 15px; 
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    text-transform: none;
+}
+
+.user-navigation-header a:hover,
+.sait-navigation a:hover {
+    color: rgba(0, 0, 0, 0.6)
+}
+
+.user-navigation-header a:focus,
+.sait-navigation a:focus {
+    color: rgba(0, 0, 0, 0.3)
+}
