@@ -57,6 +57,30 @@ body {
     color: rgba(0, 0, 0, 0.3);
 }
 
+.main-navigation-header::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 40px;
+
+    display: block;
+    width: 1160px;
+    height: 299px;
+    background-color: #f6dc82;
+}
+
+.navigation-catalog::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 210px;
+
+    display: block;
+    width: 1160px;
+    height: 129px;
+    background-color: #f6dc82;
+}
+
 .main-search-field{
     background-color: transparent;
     border: none;
@@ -208,22 +232,18 @@ table {
     letter-spacing: 0.01em;
     text-decoration: none;
 }
-/*
-.services {
-    position: relative;
-}
 
 .services::after {
     content: "";
     display: block;
     position: absolute;
-    top: 200px;
+    z-index: -1;
+    top: 1242px;
 
     width: 1445px;
     height: 288px;
     background-color: #e5e5e5;
 }
-*/
 
 .services-item h3,
 .about-us h2,
