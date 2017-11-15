@@ -307,6 +307,10 @@ table {
     background-color: #efefef;
 }
 
+.filters fieldset{
+    border: none;
+}
+
 .filters h2,
 .sorting h2 {
     font-family: "Gilroy", Arial, Helvetica, sans-serif;
@@ -345,6 +349,10 @@ table {
     color: #000;
 
     list-style: none;
+}
+
+.filter-input:disabled + label {
+    color: #a6a6a6;
 }
 
 .sorting-list li {
@@ -437,7 +445,16 @@ table {
     color: rgba(0, 0, 0, 0.6);
 }
 
+.pagination-list li:first-child:hover,
+.pagination-list li:last-child:hover,
+.pagination-list li:first-child:active,
+.pagination-list li:last-child:active {
+    background-color: #d9d9d9;
+}
+
 .pagination-item-is-active a,
+.pagination-item-is-active a:hover,
+.pagination-item-is-active a:focus,
 .pagination-list a:active,
 .back a,
 .next a,
@@ -446,13 +463,6 @@ table {
     color: #000;
 }
 
-.pagination-list li:first-child:hover,
-.pagination-list li:last-child:hover,
-.pagination-list li:first-child:active,
-.pagination-list li:last-child:active {
-    background-color: #d9d9d9;
-
-}
 
 /*Футер*/
 .main-footer {
