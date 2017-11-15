@@ -30,8 +30,72 @@ body {
     background-color: #fff;
 }
 
-a {
+.button {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 220px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    padding-top: 12px;
+    background-color: #f0c52e;
+    border: none;
+
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
     text-decoration: none;
+}
+
+.button:focus {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.main-search-field{
+    background-color: transparent;
+    border: none;
+
+    color: rgba(0, 0, 0, 0.3)
+}
+
+.main-search-field:hover {
+    color: rgba(0, 0, 0, 0.6)
+}
+
+.main-search-field:focus,
+.main-search-field:active {
+    color: #000;
+
+    border-bottom: 2px solid #000;
+    outline: none;
+}
+
+.main-search-button {
+    color: #000;
+
+    background-color: transparent;
+    border: 2px solid #000;
+}
+
+.main-search-button:hover {
+    color: #fff;
+
+    background-color: #000;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main-search-button:focus,
+.main-search-button:active {
+    color: rgba(225, 225, 225, 0.3);
+
+    outline: none;
 }
 
 .main-navigation-header li,
@@ -45,6 +109,7 @@ a {
 .user-navigation-header a {
     line-height: 2.4;
     color: #000;
+    text-decoration: none;
 }
 
 .sait-navigation a {
@@ -55,6 +120,7 @@ a {
     color: #000;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .navigation-catalog-list a {
@@ -64,20 +130,29 @@ a {
     font-weight: 300;
     letter-spacing: 0.01em;
     text-transform: none;
+    text-decoration: none;
 }
 
 .user-navigation-header a:hover,
-.sait-navigation a:hover {
-    color: rgba(0, 0, 0, 0.6)
+.user-navigation-header a:focus,
+.sait-navigation a:hover,
+.sait-navigation a:focus {
+    color: rgba(0, 0, 0, 0.6);
+
+    outline: none;
 }
 
-.user-navigation-header a:focus,
-.sait-navigation a:focus {
-    color: rgba(0, 0, 0, 0.3)
+.user-navigation-header a:active,
+.sait-navigation a:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .visually-hidden {
-    display: none;
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
 }
 
 .slider-item-content h3 {
@@ -111,31 +186,6 @@ table {
     padding-bottom: 18px;
 }
 
-.button {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 220px;
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    padding-top: 12px;
-    background-color: #f0c52e;
-    border: none;
-
-    font-family: "Gilroy", Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 1.2;
-    font-weight: bold;
-    color: #000;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.button:focus {
-    color: rgba(0, 0, 0, 0.3);
-}
-
 .popular-item-img {
     display: inline-block;
     box-sizing: border-box;
@@ -148,6 +198,16 @@ table {
 .popular-item-img:hover, 
 .popular-item-img:focus{
     background-color: #f0c52e;
+}
+
+.popular-list a{
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0.01em;
+    text-decoration: none;
 }
 /*
 .services {
@@ -177,6 +237,10 @@ table {
     letter-spacing: 0.01em;
 }
 
+.logotyp-img {
+    display: none;
+}
+
 .company-list a{
     font-family: "Gilroy", Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -184,34 +248,105 @@ table {
     font-weight: bold;
     color: #000;
     letter-spacing: 0em;
+    text-decoration: none;
 }
 
 .main-footer {
     background-color: #464646;
 }
 
-.main-footer a,
-.main-footer p {
-    color: #fff;
-}
-
-.user-navigation-footer {
+.user-navigation-footer a{
+    color: rgba(225, 225, 225, 0.7);
     line-height: 2.4; 
+    text-decoration: none;
 }
 
 .main-footer>p {
+    color: #fff;
     letter-spacing: 0em;
 }
 
 .sait-navigation-footer {
+    text-align: center;
+}
+
+.sait-navigation-footer a{
     font-family: "Gilroy", Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 1.2;
     font-weight: bold;
+    color: #fff;
     letter-spacing: 0.2em;
     text-align: center;
+    text-decoration: none;
+}
+
+.user-navigation-footer a:hover {
+    color: #fff;
+}
+
+.sait-navigation-footer a:hover {
+    color: rgba(225, 225, 225, 0.6)
+}
+
+.sait-navigation-footer a:focus,
+.user-navigation-footer a:focus {
+    color: rgba(225, 225, 225, 0.3)
 }
 
 .social-btn {
     text-align: center;
+}
+
+.social-btn {
+    color: #fff;
+}
+
+.write-us-form {
+    width: 960px;
+    height: 553px;
+
+    background-color: #fff;
+    /*box-shadow: 0 10px 80px 10px #000;*/     
+}
+
+.write-us-form label {
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0em;
+}
+
+.write-us-form input[type="text"],
+.write-us-form input[type="email"],
+.write-us-form textarea {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.29; 
+    font-weight: 400;
+    color: rgba(70, 70, 70, 0.4);
+    letter-spacing: 0em;
+
+    background-color: rgba(242, 242, 242, 0.5);
+    border: none;
+}
+
+.write-us-form input[type="text"]:hover,
+.write-us-form input[type="email"]:hover,
+.write-us-form textarea:hover {
+    background-color: rgba(234, 234, 234, 0.8);
+}
+
+.write-us-form input[type="text"]:focus,
+.write-us-form input[type="text"]:active,
+.write-us-form input[type="email"]:focus,
+.write-us-form input[type="email"]:active,
+.write-us-form textarea:focus,
+.write-us-form textarea:active {
+    color: rgb(70, 70, 70);
+
+    background-color: transparent;
+    outline: 3px solid #f0c52e; 
 }
