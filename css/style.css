@@ -53,7 +53,7 @@ body {
     text-decoration: none;
 }
 
-.button:focus {
+.button:active {
     color: rgba(0, 0, 0, 0.3);
 }
 
@@ -83,19 +83,18 @@ body {
     border: 2px solid #000;
 }
 
-.main-search-button:hover {
+.main-search-button:hover,
+.main-search-button:focus {
     color: #fff;
 
     background-color: #000;
     text-align: center;
     vertical-align: middle;
+    outline: none;
 }
 
-.main-search-button:focus,
 .main-search-button:active {
-    color: rgba(225, 225, 225, 0.3);
-
-    outline: none;
+    color: rgba(225, 225, 225, 0.3); 
 }
 
 .main-navigation-header li,
@@ -251,6 +250,211 @@ table {
     text-decoration: none;
 }
 
+/*Оформление catalog.html*/
+
+.user-navigation-exit-button {
+    color: rgba(0, 0, 0, 0.3);
+
+    background-color: transparent;
+    border: none;
+}
+
+.user-navigation-exit-button:hover,
+.user-navigation-exit-button:focus {
+    color: rgba(0, 0, 0, 0.6);
+
+    outline: none;
+}
+
+.user-navigation-exit-button:active {
+    color: #000;
+}
+
+.inner-page h1 {
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 47px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0.01em;
+}
+
+.breadcrumbs li {
+    list-style: none;
+}
+
+.breadcrumbs a {
+    font: inherit;
+    font-size: 14px;
+    line-height: 2.6;
+    color: rgba(0, 0, 0, 0.3);
+
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+    color: rgba(0, 0, 0, 0.6);
+
+    outline: none;
+}
+
+.breadcrumbs a:active {
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.filters {
+    background-color: #efefef;
+}
+
+.filters h2,
+.sorting h2 {
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.filter-name,
+.catalog-list h3 {
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0.01em;
+}
+
+.price-slider-data {
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 0.63;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.2);
+    letter-spacing: 0em;
+}
+
+.filter-list li {
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 2.86;
+    font-weight: 300;
+    color: #000;
+
+    list-style: none;
+}
+
+.sorting-list li {
+    list-style: none;
+}
+
+.sorting-list a {
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.29;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 0em;
+
+    text-decoration: none;
+}
+
+.sorting-list a:hover,
+.sorting-list a:focus {
+    color: rgba(0, 0, 0, 0.6);
+
+    outline: none;
+}
+
+.sorting-list .is-active,
+.sorting-list a:active {
+    color: #000;
+}
+
+.catalog-list li {
+    list-style: none;
+}
+
+.catalog-list a {
+    color: #000;
+
+    text-decoration: none;
+}
+
+.catalog-item-price {
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: lighter;
+    color: #464646;
+    letter-spacing: 0.01em;
+}
+
+.compare-button {
+    font: inherit;
+    font-size: 13px;
+    line-height: 2.77;
+    color: rgba(0, 0, 0, 0.5);
+
+    border: none;
+    background-color: transparent;
+}
+.compare-button:hover,
+.compare-button:focus {
+    color: #000;
+
+    outline: none;
+}
+
+.compare-button:active {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.pagination-list {
+    background-color: #ebebeb;
+}
+
+.pagination-list li{
+    list-style: none;
+}
+
+.pagination-list a{
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.2em; 
+
+    text-decoration: none;
+}
+
+.pagination-list a:hover,
+.pagination-list a:focus {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination-item-is-active a,
+.pagination-list a:active,
+.back a,
+.next a,
+.back a:hover,
+.next a:hover {
+    color: #000;
+}
+
+.pagination-list li:first-child:hover,
+.pagination-list li:last-child:hover,
+.pagination-list li:first-child:active,
+.pagination-list li:last-child:active {
+    background-color: #d9d9d9;
+
+}
+
+/*Футер*/
 .main-footer {
     background-color: #464646;
 }
@@ -350,3 +554,8 @@ table {
     background-color: transparent;
     outline: 3px solid #f0c52e; 
 }
+/*
+.write-us-form input[type="text"]:invalid,
+.write-us-form input[type="email"]:invalid {
+    background-color: #f6dada;
+}*/
