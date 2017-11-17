@@ -195,8 +195,6 @@ body {
                 height: 12px;
 
                 background: url("../img/user.svg") no-repeat center left/13px 12px;
-                fill: currentColor;
-                
             }
 
             .comparison a::before {
@@ -242,6 +240,16 @@ body {
         text-transform: uppercase;
         text-decoration: none;
     }
+
+        .sait-navigation-catalog > a:first-child::after {
+            content: "";
+            display: inline-block;
+            width: 32px;
+            height: 16px;
+
+            background: url("../img/plus.svg") no-repeat center right/16px 16px;
+            opacity: 0.6;
+        }
 
         .navigation-catalog-list a {
             font:300 15px/2.4 "Open Sans", Arial, Helvetica, sans-serif;
@@ -414,13 +422,88 @@ main {
         background: url("../img/delivery.svg") no-repeat center/136px 164px;
     }
 
-.logotyp-img {
-    display: none;
+.logotypes {
+    box-sizing: inherit;
 }
 
-.logotyp-img-greyscale {
-    opacity: 0.2;
-}
+    .logotypes-list {
+        box-sizing: inherit;
+    }
+
+    .logotypes-list li {
+        box-sizing: inherit;
+    }
+
+        .logotypes-list a {
+            box-sizing: inherit;
+            display: inline-block;
+            width: 260px;
+            height: 100px;
+        }
+
+            .logo-dji a {
+                background: url("../img/logo-1.jpg") no-repeat center;
+                opacity: 0.2;
+            }
+
+            .logo-dji a:hover,
+            .logo-dji a:focus {
+                background: url("../img/color-logo-1.jpg") no-repeat center;
+                opacity: 1;
+                outline: none;
+            }
+
+            .logo-dji a:active {
+                opacity: 0.7;
+            }
+
+            .logo-spgadgets a {
+                background: url("../img/logo-2.jpg") no-repeat center;
+                opacity: 0.2;
+            }
+
+            .logo-spgadgets a:hover,
+            .logo-spgadgets a:focus {
+                background: url("../img/color-logo-2.jpg") no-repeat center;
+                opacity: 1;
+                outline: none;
+            }
+
+            .logo-spgadgets a:active {
+                opacity: 0.7;
+            }
+
+            .logo-gopro a {
+                background: url("../img/logo-3.jpg") no-repeat center;
+                opacity: 0.2;
+            }
+
+            .logo-gopro a:hover,
+            .logo-gopro a:focus {
+                background: url("../img/color-logo-3.jpg") no-repeat center;
+                opacity: 1;
+                outline: none;
+            }
+
+            .logo-gopro a:active {
+                opacity: 0.7;
+            }
+
+            .logo-vive a {
+                background: url("../img/logo-4.jpg") no-repeat center;
+                opacity: 0.2;
+            }
+
+            .logo-vive a:hover,
+            .logo-vive a:focus {
+                background: url("../img/color-logo-4.jpg") no-repeat center;
+                opacity: 1;
+                outline: none;
+            }
+
+            .logo-vive a:active {
+                opacity: 0.7;
+            }
 
 .company-list a {
     font: bold 16px/2.5 "Gilroy", Arial, Helvetica, sans-serif;
@@ -656,25 +739,53 @@ main {
     }
 
     .user-navigation-footer a {
-        color: rgba(225, 225, 225, 0.7);
+        color: rgba(225, 225, 225, 0.6);
         line-height: 2.4; 
         text-decoration: none;
     }
     
-    .user-navigation-footer a:first-of-type::before {
-        content: "";
-        display: inline-block;
-        width: 26px;
-        height: 12px;
+        .user-enter-footer a::before {
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 12px;
 
-        background: url("../img/user_footer.svg") no-repeat center left/13px 12px;
-    }
+            background: url("../img/userfooter.svg") no-repeat center left/13px 12px;
+        }
 
-    .user-navigation-footer a:hover {
+        .comparison-footer a::before {
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 12px;
+
+            background: url("../img/comparefooter.svg") no-repeat center left/13px 12px;
+        }
+
+        .cart-footer a::before {
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 12px;
+
+            background: url("../img/cartfooter.svg") no-repeat center left/13px 12px;
+        }
+
+        .cart-footer a:hover::before,
+        .cart-footer a:focus::before,
+        .comparison-footer a:hover::before,
+        .comparison-footer a:focus::before,
+        .user-enter-footer a:hover::before,
+        .user-enter-footer a:focus::before {
+            opacity: 0.6;
+            outline: none;
+        }
+
+    .user-navigation-footer a:hover,
+    .user-navigation-footer a:focus {
             color: #fff;
+            outline: none;
     }
-
-
 
     .sait-navigation-footer {
         text-align: center;
@@ -688,21 +799,48 @@ main {
             text-decoration: none;
         }
 
-        .sait-navigation-footer a:hover {
-            color: rgba(225, 225, 225, 0.6)
+        .sait-navigation-footer a:hover,
+        .sait-navigation-footer a:focus {
+            color: rgba(242, 242, 242, 0.6);
+            outline: none;
         }
 
-        .sait-navigation-footer a:focus,
-        .user-navigation-footer a:focus {
-            color: rgba(225, 225, 225, 0.3)
+        .sait-navigation-footer a:active,
+        .user-navigation-footer a:active,
+        .cart-footer a:active::before
+         {
+            color: rgba(225, 225, 225, 0.3);
+        } 
+
+        .comparison-footer a:active::before,
+        .user-enter-footer a:active::before {
+            opacity: 0.3;
         }
 
     .social-btn {
-
         text-align: center;
-        color: #fff;
     }
 
+        .social-btn a {
+            text-decoration: none;
+            color: #fff;
+            opacity: 0.3;
+        }
+
+        .social-btn a:hover,
+        .social-btn a:focus,
+        .htmlacademy-link:hover,
+        .htmlacademy-link:focus {
+            opacity: 0.6;
+            outline: none;
+        }
+
+        .social-btn a:active,
+        .htmlacademy-link:active {
+            opacity: 0.1;
+        }
+
+    
 /*Модальные окна*/
 
 .contacts {
