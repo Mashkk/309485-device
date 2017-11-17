@@ -21,6 +21,7 @@ html {
 }
 
 body {
+    box-sizing: inherit;
     margin: 0;
     padding: 0;
 
@@ -32,8 +33,9 @@ body {
 }
 
 .button {
-    display: inline-block;
     box-sizing: inherit;
+    display: inline-block;
+    
     position: relative;
     width: 220px;
     height: 40px;
@@ -81,6 +83,7 @@ body {
 }
 
 .main-header {
+    box-sizing: inherit;
     margin-top: 40px;
 
     display: block;
@@ -105,18 +108,31 @@ body {
         background-color: #f6dc82;
     }
 
-    .main-search-field {
-        background-color: transparent;
-        border: none;
+    .main-search {
+        box-sizing: inherit;
     }
 
-        .main-search-field::-webkit-input-placeholder {
-            color: rgba(0, 0, 0, 0.3);
+        .main-search::before {
+            content: "";
+            display: inline-block;
+            width: 35px;
+            height: 16px;
+
+            background: url("../img/search.svg") no-repeat center left/16px 16px;
         }
 
-        .main-search-field:hover::-webkit-input-placeholder {
-            color: rgba(0, 0, 0, 0.6);
+        .main-search-field {
+            background-color: transparent;
+            border: none;
         }
+
+            .main-search-field::-webkit-input-placeholder {
+                color: rgba(0, 0, 0, 0.3);
+            }
+
+            .main-search-field:hover::-webkit-input-placeholder {
+                color: rgba(0, 0, 0, 0.6);
+            }
 
         .main-search-field:focus,
         .main-search-field:active {
@@ -154,37 +170,70 @@ body {
             color: rgba(225, 225, 225, 0.3); 
         }
 
-    .main-navigation-header li,
-    .popular li,
-    .services li,
-    .logotypes li,
-    .main-footer li {
-        list-style: none outside;
+    .main-navigation-header {
+        box-sizing: inherit;
     }
 
-    .user-navigation-header a {
-        line-height: 2.4;
-        color: #000;
-        text-decoration: none;
-    }
+        .main-navigation-header li,
+        .popular li,
+        .services li,
+        .logotypes li,
+        .main-footer li {
+            list-style: none outside;
+        }
 
-    .user-navigation-exit-button {
-        color: rgba(0, 0, 0, 0.3);
+            .user-navigation-header a {
+                line-height: 2.4;
+                color: #000;
+                text-decoration: none;
+            }    
+            
+            .user-enter a::before {
+                content: "";
+                display: inline-block;
+                width: 26px;
+                height: 12px;
 
-        background-color: transparent;
-        border: none;
-    }
+                background: url("../img/user.svg") no-repeat center left/13px 12px;
+                fill: currentColor;
+                
+            }
 
-    .user-navigation-exit-button:hover,
-    .user-navigation-exit-button:focus {
-        color: rgba(0, 0, 0, 0.6);
+            .comparison a::before {
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height: 10px;
 
-        outline: none;
-    }
+                background: url("../img/compare.svg") no-repeat center left/10px 10px;
+            }
 
-    .user-navigation-exit-button:active {
-        color: #000;
-    }
+            .cart a::before {
+                content: "";
+                display: inline-block;
+                width: 23px;
+                height: 12px;
+
+                background: url("../img/cart.svg") no-repeat center left/12px 12px;
+            }
+
+        .user-navigation-exit-button {
+            color: rgba(0, 0, 0, 0.3);
+
+            background-color: transparent;
+            border: none;
+        }
+
+        .user-navigation-exit-button:hover,
+        .user-navigation-exit-button:focus {
+            color: rgba(0, 0, 0, 0.6);
+
+            outline: none;
+        }
+
+        .user-navigation-exit-button:active {
+            color: #000;
+        }
 
     .sait-navigation a {
         font: bold 18px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
@@ -205,14 +254,16 @@ body {
         .user-navigation-header a:focus,
         .sait-navigation a:hover,
         .sait-navigation a:focus {
-            color: rgba(0, 0, 0, 0.6);
+            color: #000;
+            opacity: 0.6;
 
             outline: none;
         }
 
         .user-navigation-header a:active,
         .sait-navigation a:active {
-            color: rgba(0, 0, 0, 0.3);
+            color: #000;
+            opacity: 0.3;
         }
 
 .visually-hidden {
@@ -223,30 +274,46 @@ body {
         margin: -1px;
 }
 
-.slider-item-content h3 {
-    font: bold 47px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
-    color: #000;
+main {
+    box-sizing: inherit;
 }
 
-.item-stats {
-    border-collapse: collapse;
-}
-
-    .item-stats th {
-        font-size: 13px;
-        line-height: 1.54;
-        font-weight: 300;
-        text-align: left;
-        padding: 0;
+    .slider-list {
+        box-sizing: inherit;
     }
 
-    .item-stats td {
-        font: lighter 36px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
-        color: #000;
+        .slider-item {
+            box-sizing: inherit;
+        }
 
-        padding-right: 80px;
-        padding-bottom: 18px;
-    }
+            .slider-item-content {
+                box-sizing: inherit;
+            }
+
+                .slider-item-content h3 {
+                    font: bold 47px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
+                    color: #000;
+                }
+
+                .item-stats {
+                    border-collapse: collapse;
+                }
+
+                    .item-stats th {
+                        font-size: 13px;
+                        line-height: 1.54;
+                        font-weight: 300;
+                        text-align: left;
+                        padding: 0;
+                    }
+
+                        .item-stats td {
+                            font: lighter 36px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
+                            color: #000;
+
+                            padding-right: 80px;
+                            padding-bottom: 18px;
+                        }
 
 .popular-list a {
     font: bold 18px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
@@ -292,22 +359,67 @@ body {
         }
 
 .services {
-    display: inline-block;
+    box-sizing: inherit;
+    display: inline-block; 
+
     background-color: #e5e5e5;
     height: 288px;
     width: 100%;
 }
 
-.services-item h3,
-.about-us h2,
-.contacts h2 {
-    font: bold 47px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
-    color: #000;
-    letter-spacing: 0.01em;
-}
+    .services-nav {
+        box-sizing: inherit;
+    }
+
+    .services-nav ul {
+        box-sizing: inherit;
+    }
+
+        .services-nav li {
+            box-sizing: inherit;
+        }
+
+    .services-item h3,
+    .about-us h2,
+    .contacts h2 {
+        font: bold 47px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
+        color: #000;
+        letter-spacing: 0.01em;
+    }
+
+    .services div:nth-last-of-type(1)::after {
+        content: "";
+        display: inline-block;
+        width: 156px;
+        height: 186px;
+
+        background: url("../img/credit.svg") no-repeat center/156px 186px;
+    }
+
+    .services div:nth-last-of-type(2)::after {
+        content: "";
+        display: inline-block;
+        width: 171px;
+        height: 194px;
+
+        background: url("../img/warranty.svg") no-repeat center/171px 194px;
+    }
+
+    .services div:nth-last-of-type(3)::after {
+        content: "";
+        display: inline-block;
+        width: 136px;
+        height: 164px;
+
+        background: url("../img/delivery.svg") no-repeat center/136px 164px;
+    }
 
 .logotyp-img {
     display: none;
+}
+
+.logotyp-img-greyscale {
+    opacity: 0.2;
 }
 
 .company-list a {
@@ -549,9 +661,20 @@ body {
         text-decoration: none;
     }
     
+    .user-navigation-footer a:first-of-type::before {
+        content: "";
+        display: inline-block;
+        width: 26px;
+        height: 12px;
+
+        background: url("../img/user_footer.svg") no-repeat center left/13px 12px;
+    }
+
     .user-navigation-footer a:hover {
             color: #fff;
     }
+
+
 
     .sait-navigation-footer {
         text-align: center;
@@ -580,7 +703,19 @@ body {
         color: #fff;
     }
 
+/*Модальные окна*/
+
+.contacts {
+    box-sizing: inherit;
+}
+
+    .map {
+        box-sizing: inherit;
+    }
+
     .write-us-form {
+        box-sizing: inherit;
+
         width: 960px;
         height: 553px;
 
@@ -588,46 +723,50 @@ body {
         /*box-shadow: 0 10px 80px 10px #000;*/     
     }
 
-    .write-us-form label {
-        font: bold 18px/1 "Gilroy", Arial, Helvetica, sans-serif;
-        color: #000;
-        letter-spacing: 0;
+    .write-us-form form {
+        box-sizing: inherit;
     }
-    
-        .write-us-form input[type="text"]::-webkit-input-placeholder,
-        .write-us-form input[type="email"]::-webkit-input-placeholder,
-        .write-us-form textarea::-webkit-input-placeholder {  
-            font: 400 14px/1.29 "Open Sans", Arial, Helvetica, sans-serif;
-            color: rgba(70, 70, 70, 0.4);
+
+        .write-us-form label {
+            font: bold 18px/1 "Gilroy", Arial, Helvetica, sans-serif;
+            color: #000;
             letter-spacing: 0;
         }
 
-    .write-us-form input[type="text"],
-    .write-us-form input[type="email"],
-    .write-us-form textarea {
-        background-color: rgba(242, 242, 242, 0.5);
-        border: none;
-    }
+            .write-us-form input[type="text"]::-webkit-input-placeholder,
+            .write-us-form input[type="email"]::-webkit-input-placeholder,
+            .write-us-form textarea::-webkit-input-placeholder {  
+                font: 400 14px/1.29 "Open Sans", Arial, Helvetica, sans-serif;
+                color: rgba(70, 70, 70, 0.4);
+                letter-spacing: 0;
+            }
 
-    .write-us-form input[type="text"]:hover,
-    .write-us-form input[type="email"]:hover,
-    .write-us-form textarea:hover {
-        background-color: rgba(234, 234, 234, 0.8);
-    }
+        .write-us-form input[type="text"],
+        .write-us-form input[type="email"],
+        .write-us-form textarea {
+            background-color: rgba(242, 242, 242, 0.5);
+            border: none;
+        }
 
-    .write-us-form input[type="text"]:focus,
-    .write-us-form input[type="text"]:active,
-    .write-us-form input[type="email"]:focus,
-    .write-us-form input[type="email"]:active,
-    .write-us-form textarea:focus,
-    .write-us-form textarea:active {
-        color: rgb(70, 70, 70);
+        .write-us-form input[type="text"]:hover,
+        .write-us-form input[type="email"]:hover,
+        .write-us-form textarea:hover {
+            background-color: rgba(234, 234, 234, 0.8);
+        }
 
-        background-color: transparent;
-        outline: 3px solid #f0c52e; 
-    }
+        .write-us-form input[type="text"]:focus,
+        .write-us-form input[type="text"]:active,
+        .write-us-form input[type="email"]:focus,
+        .write-us-form input[type="email"]:active,
+        .write-us-form textarea:focus,
+        .write-us-form textarea:active {
+            color: rgb(70, 70, 70);
+
+            background-color: transparent;
+            outline: 3px solid #f0c52e; 
+        }
 /* Работает не корректно
 .write-us-form input[type="text"]:invalid,
 .write-us-form input[type="email"]:invalid {
-    background-color: #f6dada;
+background-color: #f6dada;
 }*/
