@@ -71,7 +71,7 @@
         <ul class="breadcrumbs">
           <li><a href="index.html">Главная</a></li>
           <li><a href="#">Каталог товаров</a></li>
-          <li><a>Моноподы для селфи</a></li>
+          <li><a class="breadcrumb-is-active">Моноподы для селфи</a></li>
         </ul>
 
       <section class="filters">
@@ -101,7 +101,7 @@
 
             <ul>
               <li class="filter-item">
-                <input class="visually-hidden filter-input filter-input-checkbox" id="black" type="checkbox" name="color" value="black" checked>
+                <input class="filter-input filter-input-checkbox" id="black" type="checkbox" name="color" value="black" hidden checked>
                 <label for="black">Черный</label>
               </li>
               <li class="filter-item">
@@ -156,15 +156,15 @@
             <a class="sorting-link" href="#">По популярности</a>
           </li>
         </ul>
-<!--псевдоэлементы
+
         <ul class="sorting-pointers">
           <li>
             <button class="sorting-pointer sorting-pointer-up" type="button">По возрастанию</button>
           </li>
           <li>
-            <button class="sorting-pointer sorting-pointer-down is-active" type="button">По убыванию</button>
+            <button class="sorting-pointer sorting-pointer-down pointer-is-active" type="button">По убыванию</button>
           </li>
-        </ul>-->
+        </ul>
       </section>
 
       <section class="catalog">
@@ -214,7 +214,9 @@
             <p class="catalog-item-image">
               <img class="catalog-img" src="img/item-4.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
             </p> 
-            <strong class="catalog-item-new">New</strong>
+            <strong class="catalog-item-new">
+              <span class="visually-hidden">Новинка</span>
+            </strong>
             <h3><a href="catalog-item.html">Селфи-палка «Следуй за мной»</a></h3>
             <span class="catalog-item-price">4900 руб.</span>
               
@@ -252,13 +254,13 @@
       </a>
 
       <ul class="user-navigation-footer">
-        <li class="user-enter">
+        <li class="user-enter-footer">
           <a href="#">Войти</a>
         </li>
-        <li class="comparison">
+        <li class="comparison-footer">
           <a href="#">Сравнить</a>
         </li>
-        <li class="cart">
+        <li class="cart-footer">
           <a href="#">Корзина</a>
         </li>
       </ul>
@@ -280,18 +282,18 @@
 
       <ul class="social-btn">
         <li>
-          <a href="https://www.facebook.com"><img src="#" title="Фейсбук" alt="Фейсбук" width="32" height="32"></a>
+          <a href="https://www.facebook.com"><img src="img/fb.svg" title="Фейсбук" alt="Фейсбук" width="32" height="32"></a>
         </li>
         <li>
-          <a href="https://www.instagram.com"><img src="#" title="Инстаграм" alt="Инстаграм" width="32" height="32"></a>
+          <a href="https://www.instagram.com"><img src="img/instagram.svg" title="Инстаграм" alt="Инстаграм" width="32" height="32"></a>
         </li>
         <li>
-          <a href="https://twitter.com"><img src="#" title="Твиттер" alt="Твиттер" width="32" height="32"></a>
+          <a href="https://twitter.com"><img src="img/twitter.svg" title="Твиттер" alt="Твиттер" width="32" height="32"></a>
         </li>
       </ul>
       
       <a class="htmlacademy-link" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img class="htmlacademy-link-img" src="#" title="HTMLacademy" alt="HTMLacademy" width="27" height="35">
+        <img class="htmlacademy-link-img" src="img/logohtml.svg" title="HTMLacademy" alt="HTMLacademy" width="27" height="35">
       </a>
     </footer>
   </body>

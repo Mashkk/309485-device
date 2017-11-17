@@ -188,7 +188,8 @@ body {
                 text-decoration: none;
             }    
             
-            .user-enter a::before {
+            .user-enter a::before,
+            .user-name a::before {
                 content: "";
                 display: inline-block;
                 width: 26px;
@@ -323,6 +324,10 @@ main {
                             padding-bottom: 18px;
                         }
 
+.popular-list li {
+    display: inline-block;
+}
+
 .popular-list a {
     font: bold 18px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
     color: #000;
@@ -432,6 +437,7 @@ main {
 
     .logotypes-list li {
         box-sizing: inherit;
+        display: inline-block;
     }
 
         .logotypes-list a {
@@ -524,6 +530,16 @@ main {
     list-style: none outside;
 }
 
+    .breadcrumbs li:nth-child(1)::after,
+    .breadcrumbs li:nth-child(2)::after {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 7px;
+
+        background: url("../img/navarrow.svg") no-repeat center;
+    }
+
     .breadcrumbs a {
         font-size: 14px;
         line-height: 2.6;
@@ -543,12 +559,66 @@ main {
         color: rgba(0, 0, 0, 0.1);
     }
 
+    .breadcrumbs .breadcrumb-is-active {
+        pointer-events: none;
+        cursor: default;
+        color: rgba(0, 0, 0, 0.3);
+    }
+
 .filters {
     background-color: #efefef;
+    box-sizing: inherit;
 }
+
+    .filter {
+        box-sizing: inherit;
+    }
 
     .filters fieldset {
         border: none;
+        box-sizing: inherit;
+    }
+
+    .price-slider {
+        display: inline-block;
+        position: relative;
+        width: 196px;
+        height: 2px;
+        line-height: 0;
+        font-size: 0;
+
+        background-color: #dbdbdb;
+    }
+
+        .price-slider-bar {
+            display: inline-block;
+            position: absolute;
+            width: 110px;
+            height: 2px;
+
+            background-color: #91c92f;
+        }
+
+    .price-slider-button {
+        display: inline-block;
+        position: absolute;
+        top: -12px;
+        left: -10px;
+        width: 30px;
+        height: 30px;
+
+        background: url("../img/filterbutton.svg") no-repeat center/20px 22px;
+    }
+
+    .price-slider-button-to {
+        left: 100px;
+    }
+
+    .price-slider-button:hover,
+    .price-slider-button:focus,
+    .price-slider-button:active {
+        outline: none;
+        background-size: 22px 24px;
     }
 
     .filters h2,
@@ -581,18 +651,71 @@ main {
         letter-spacing: 0;
     }
 
-    .filter-list li {
+    .filter-list li{
+        list-style: none outside;
+    }
+
+    .filter-list input[type="checkbox"]+label,
+    .filter-list input[type="radio"]+label {
         font-size: 14px;
         line-height: 2.86;
         font-weight: 300;
         color: #000;
 
         list-style: none outside;
+        cursor: pointer;
     }
 
-        .filter-input:disabled + label {
-            color: #a6a6a6;
-        }
+    .filter-list input[type="checkbox"]+label::before,
+    .filter-list input[type="radio"]+label::before {
+        content: "";
+        display: inline-block;
+        width: 27px;
+        height: 25px;
+        margin: 5px 17px 0 0;
+    }
+
+    .filter-list input[type="checkbox"]+label::before {
+        background: url("../img/checkboxoff.svg") no-repeat bottom left/23px 23px;
+    }
+
+    .filter-list input[type="radio"]+label::before {
+        background: url("../img/radiooff.svg") no-repeat bottom left/25px 25px;
+    }
+
+    .filter-list input[type="checkbox"]:checked+label::before,
+    .filter-list input[type="checkbox"]:active+label::before {
+        background: url("../img/checkboxon.svg") no-repeat bottom left/27px 23px;
+    }
+
+    .filter-list input[type="checkbox"]:disabled+label::before {
+        opacity: 0.25;
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .filter-list input[type="checkbox"]:hover+label::before,
+    .filter-list input[type="checkbox"]:focus+label::before {
+        opacity: 0.6;
+        outline: none;
+    } 
+
+    .filter-list input[type="radio"]:checked+label::before,
+    .filter-list input[type="radio"]:active+label::before {
+        background: url("../img/radioon.svg") no-repeat bottom left/25px 25px;
+    }
+
+    .filter-list input[type="radio"]:disabled+label::before {
+        opacity: 0.25;
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .filter-list input[type="radio"]:hover+label::before,
+    .filter-list input[type="radio"]:focus+label::before {
+        opacity: 0.6;
+        outline: none;
+    } 
 
 .sorting-list li {
     list-style: none outside;
@@ -620,9 +743,70 @@ main {
         color: #000;
     }
 
+    .sorting-pointers li {
+        list-style: none; 
+    }
+
+    .sorting-pointer {
+        display: inline-block;
+        border: none;
+        line-height: 0;
+        font-size: 0;
+        margin: 0 19px;
+    }
+    
+    .sorting-pointer::before {
+        content: "";
+        display: inline-block;
+        border: 10px solid #000;
+        opacity: 0.2;
+        border-right-width: 5px;
+        border-left-width: 5px;
+        border-right-color: transparent;
+        border-left-color: transparent;
+    }
+
+    .sorting-pointer-up::before {
+        border-top-width: 0;
+    }
+
+    .sorting-pointer-down::before {
+        border-bottom-width: 0;
+    }
+
+    .sorting-pointer:hover::before,
+    .sorting-pointer:focus::before {
+        outline: none;
+        opacity: 0.4;
+    }
+
+    .sorting-pointer:active::before,
+    .pointer-is-active::before {
+        opacity: 1;
+    }
+
 .catalog-list li {
     list-style: none outside;
 }
+
+    .catalog-item {
+        display: inline-block;
+        position: relative;
+    }
+
+    .catalog-item-new::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 28px;
+        right: 27px;
+
+        display: inline-block;
+        width: 60px;
+        height: 61px;
+
+        background: url("../img/new.png") no-repeat center/60px 61px;
+    }
 
     .catalog-list a {
         color: #000;
@@ -857,7 +1041,6 @@ main {
         width: 960px;
         height: 553px;
 
-        background-color: #fff;
         /*box-shadow: 0 10px 80px 10px #000;*/     
     }
 
