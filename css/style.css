@@ -118,7 +118,7 @@ body {
             width: 35px;
             height: 16px;
 
-            background: url("../img/search.svg") no-repeat center left/16px 16px;
+            background: url("../img/search.svg") no-repeat center left;
         }
 
         .main-search-field {
@@ -195,7 +195,7 @@ body {
                 width: 26px;
                 height: 12px;
 
-                background: url("../img/user.svg") no-repeat center left/13px 12px;
+                background: url("../img/user.svg") no-repeat center left;
             }
 
             .comparison a::before {
@@ -204,7 +204,7 @@ body {
                 width: 20px;
                 height: 10px;
 
-                background: url("../img/compare.svg") no-repeat center left/10px 10px;
+                background: url("../img/compare.svg") no-repeat center left;
             }
 
             .cart a::before {
@@ -213,7 +213,7 @@ body {
                 width: 23px;
                 height: 12px;
 
-                background: url("../img/cart.svg") no-repeat center left/12px 12px;
+                background: url("../img/cart.svg") no-repeat center left;
             }
 
         .user-navigation-exit-button {
@@ -242,14 +242,14 @@ body {
         text-decoration: none;
     }
 
-        .sait-navigation-catalog > a:first-child::after {
+        .sait-navigation-catalog > a::after {
             content: "";
             display: inline-block;
             width: 32px;
             height: 16px;
 
-            background: url("../img/plus.svg") no-repeat center right/16px 16px;
-            opacity: 0.6;
+            background: url("../img/plus.svg") no-repeat center right;
+            opacity: 0.3;
         }
 
         .navigation-catalog-list a {
@@ -263,16 +263,23 @@ body {
         .user-navigation-header a:focus,
         .sait-navigation a:hover,
         .sait-navigation a:focus {
-            color: #000;
             opacity: 0.6;
 
             outline: none;
         }
 
+        .sait-navigation-catalog > a:hover::after,
+        .sait-navigation-catalog > a:focus::after {
+            opacity: 0.5;
+        }
+
         .user-navigation-header a:active,
         .sait-navigation a:active {
-            color: #000;
             opacity: 0.3;
+        }
+
+        .sait-navigation-catalog > a:active::after {
+            opacity: 1;
         }
 
 .visually-hidden {
@@ -406,7 +413,7 @@ main {
         width: 156px;
         height: 186px;
 
-        background: url("../img/credit.svg") no-repeat center/156px 186px;
+        background: url("../img/credit.svg") no-repeat center;
     }
 
     .services div:nth-last-of-type(2)::after {
@@ -415,7 +422,7 @@ main {
         width: 171px;
         height: 194px;
 
-        background: url("../img/warranty.svg") no-repeat center/171px 194px;
+        background: url("../img/warranty.svg") no-repeat center;
     }
 
     .services div:nth-last-of-type(3)::after {
@@ -424,7 +431,7 @@ main {
         width: 136px;
         height: 164px;
 
-        background: url("../img/delivery.svg") no-repeat center/136px 164px;
+        background: url("../img/delivery.svg") no-repeat center;
     }
 
 .logotypes {
@@ -530,14 +537,17 @@ main {
     list-style: none outside;
 }
 
-    .breadcrumbs li:nth-child(1)::after,
-    .breadcrumbs li:nth-child(2)::after {
+    .breadcrumbs li::after {
         content: "";
         display: inline-block;
         width: 4px;
         height: 7px;
 
         background: url("../img/navarrow.svg") no-repeat center;
+    }
+
+    .breadcrumbs li:last-child::after {
+        display: none;
     }
 
     .breadcrumbs a {
@@ -675,11 +685,11 @@ main {
         margin: 5px 17px 0 0;
     }
 
-    .filter-list input[type="checkbox"]+label::before {
+    .filter-list input[type="checkbox"] + label::before {
         background: url("../img/checkboxoff.svg") no-repeat bottom left/23px 23px;
     }
 
-    .filter-list input[type="radio"]+label::before {
+    .filter-list input[type="radio"] + label::before {
         background: url("../img/radiooff.svg") no-repeat bottom left/25px 25px;
     }
 
@@ -688,31 +698,26 @@ main {
         background: url("../img/checkboxon.svg") no-repeat bottom left/27px 23px;
     }
 
-    .filter-list input[type="checkbox"]:disabled+label::before {
-        opacity: 0.25;
-        pointer-events: none;
-        cursor: default;
-    }
-
-    .filter-list input[type="checkbox"]:hover+label::before,
-    .filter-list input[type="checkbox"]:focus+label::before {
+    .filter-list input[type="checkbox"]:hover + label::before,
+    .filter-list input[type="checkbox"]:focus + label::before {
         opacity: 0.6;
         outline: none;
     } 
 
-    .filter-list input[type="radio"]:checked+label::before,
-    .filter-list input[type="radio"]:active+label::before {
+    .filter-list input[type="radio"]:checked + label::before,
+    .filter-list input[type="radio"]:active + label::before {
         background: url("../img/radioon.svg") no-repeat bottom left/25px 25px;
     }
 
-    .filter-list input[type="radio"]:disabled+label::before {
+    .filter-list input[type="radio"]:disabled + label::before,
+    .filter-list input[type="checkbox"]:disabled + label::before {
         opacity: 0.25;
         pointer-events: none;
         cursor: default;
     }
 
-    .filter-list input[type="radio"]:hover+label::before,
-    .filter-list input[type="radio"]:focus+label::before {
+    .filter-list input[type="radio"]:hover + label::before,
+    .filter-list input[type="checkbox"]:disabled + label::before {
         opacity: 0.6;
         outline: none;
     } 
@@ -794,10 +799,8 @@ main {
         position: relative;
     }
 
-    .catalog-item-new::before {
-        content: "";
+    .catalog-item-new {
         position: absolute;
-        z-index: 1;
         top: 28px;
         right: 27px;
 
@@ -805,7 +808,7 @@ main {
         width: 60px;
         height: 61px;
 
-        background: url("../img/new.png") no-repeat center/60px 61px;
+        background: url("../img/new.png") no-repeat center;
     }
 
     .catalog-list a {
@@ -934,7 +937,7 @@ main {
             width: 26px;
             height: 12px;
 
-            background: url("../img/userfooter.svg") no-repeat center left/13px 12px;
+            background: url("../img/userfooter.svg") no-repeat center left;
         }
 
         .comparison-footer a::before {
@@ -943,7 +946,7 @@ main {
             width: 26px;
             height: 12px;
 
-            background: url("../img/comparefooter.svg") no-repeat center left/13px 12px;
+            background: url("../img/comparefooter.svg") no-repeat center left;
         }
 
         .cart-footer a::before {
@@ -952,7 +955,7 @@ main {
             width: 26px;
             height: 12px;
 
-            background: url("../img/cartfooter.svg") no-repeat center left/13px 12px;
+            background: url("../img/cartfooter.svg") no-repeat center left;
         }
 
         .cart-footer a:hover::before,
