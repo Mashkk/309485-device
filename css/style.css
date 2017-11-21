@@ -375,6 +375,10 @@ body {
         padding: 0;
     }
 
+    .popular-list li {
+        flex-basis: 160px;
+    }
+
         .popular-list a {
             font: bold 18px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
             color: #000;
@@ -449,9 +453,9 @@ body {
     }
 
     .services-nav {
-        max-width: 300px;
+        width: 280px;
 
-        padding-right: 120px; 
+        margin-right: 120px; 
     }
 
         .services-nav ul {
@@ -466,6 +470,19 @@ body {
 
         .services-button {
             width: 160px;
+        }
+
+        .services-button.is-active,
+        .services-button:active {
+            color: #f7e184;
+        }
+
+        .services-button.is-active::before,
+        .services-button:active::before {
+            width: 280px;
+            height: 40px;
+
+            background-color: #000;
         }
 
     .services-item {
@@ -557,85 +574,33 @@ body {
         padding: 0;
     }
 
-    .logotypes-list a {
-        display: inline-block;
-        vertical-align: top;
-        overflow: hidden;
-        
-        width: 260px;
-        height: 100px;
-    }
-
-        .logo-dji a {
-            opacity: 0.2;
+        .logotypes-list li{
+            flex-basis: 260px;
         }
 
-        .logo-dji a:hover,
-        .logo-dji a:focus {
-            background-position: -5px -5px;
-            opacity: 1;
-            outline: none;
-        }
+            .logotypes-list a {
+                display: inline-block;
+                vertical-align: top;
+                overflow: hidden;
+                
+                width: 260px;
+                height: 100px;
+            }
 
-        .logo-dji a:active {
-            opacity: 0.7;
-        }
+                .logo img {
+                    opacity: 0.2;
+                }
 
-        .logo-spgadgets a {
-            background: url("../img/sprites-2.png") no-repeat center;
-            background-position: -270px -5px;
+                .logo:hover img,
+                .logo:focus img {
+                    transform: translateX(-50%);
+                    opacity: 1;
+                    outline: none;
+                }
 
-            opacity: 0.2;
-        }
-
-        .logo-spgadgets a:hover,
-        .logo-spgadgets a:focus {
-            background-position: -5px -5px;
-
-            opacity: 1;
-            outline: none;
-        }
-
-        .logo-spgadgets a:active {
-            opacity: 0.7;
-        }
-
-        .logo-gopro a {
-            background: url("../img/sprites-3.png") no-repeat center;
-            background-position: -270px -5px;
-
-            opacity: 0.2;
-        }
-
-        .logo-gopro a:hover,
-        .logo-gopro a:focus {
-            background-position: -5px -5px;
-
-            opacity: 1;
-            outline: none;
-        }
-
-        .logo-gopro a:active {
-            opacity: 0.7;
-        }
-
-        .logo-vive a {
-            background: url("../img/sprites-4.png") no-repeat center;
-            background-position: -270px -5px;
-
-            opacity: 0.2;
-        }
-
-        .logo-vive a:hover,
-        .logo-vive a:focus {
-            background-position: -5px -5px;
-            opacity: 1;
-            outline: none;
-        }
-
-        .logo-vive a:active {
-            opacity: 0.7;
-        }
+                .logo:active img {
+                    opacity: 0.7;
+                }
 
 .container-columns {
     display: flex;
@@ -678,7 +643,7 @@ body {
     }
 
         .button-columns {
-            align-self: flex-end;
+            width: 260px;
         }
 
 .company-list a {
@@ -1077,72 +1042,90 @@ body {
 .main-footer {
     margin-top: 80px;
     min-height: 325px;
+    padding: 64px 0;
 
     background-color: #464646;
 }
-    .main-footer > p {
+
+    .main-footer .container {
+        display: flex;
+    }
+
+        .main-footer > p {
+            margin: 0;
+            padding: 0;
+
             color: #fff;
             letter-spacing: 0;
-    }
+        }
 
-    .user-navigation-footer a {
-        color: rgba(225, 225, 225, 0.6);
-        line-height: 2.4; 
-        text-decoration: none;
-    }
+        .main-footer ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .user-navigation-footer {
+            flex-basis: 460px;
+            margin-left: auto;
+        }
+
+            .user-navigation-footer a {
+                color: rgba(225, 225, 225, 0.6);
+                line-height: 2.4; 
+                text-decoration: none;
+            }
     
-        .user-enter-footer a::before {
-            content: "";
-            display: inline-block;
-            width: 26px;
-            height: 12px;
+            .user-enter-footer a::before {
+                content: "";
+                display: inline-block;
+                width: 26px;
+                height: 12px;
 
-            background: url("../img/userfooter.svg") no-repeat center left;
-        }
+                background: url("../img/userfooter.svg") no-repeat center left;
+            }
 
-        .comparison-footer a::before {
-            content: "";
-            display: inline-block;
-            width: 26px;
-            height: 12px;
+            .comparison-footer a::before {
+                content: "";
+                display: inline-block;
+                width: 26px;
+                height: 12px;
 
-            background: url("../img/comparefooter.svg") no-repeat center left;
-        }
+                background: url("../img/comparefooter.svg") no-repeat center left;
+            }
 
-        .cart-footer a::before {
-            content: "";
-            display: inline-block;
-            width: 26px;
-            height: 12px;
+            .cart-footer a::before {
+                content: "";
+                display: inline-block;
+                width: 26px;
+                height: 12px;
 
-            background: url("../img/cartfooter.svg") no-repeat center left;
-        }
+                background: url("../img/cartfooter.svg") no-repeat center left;
+            }
 
-        .cart-footer a:hover::before,
-        .cart-footer a:focus::before,
-        .comparison-footer a:hover::before,
-        .comparison-footer a:focus::before,
-        .user-enter-footer a:hover::before,
-        .user-enter-footer a:focus::before {
-            opacity: 0.6;
-            outline: none;
-        }
+            .cart-footer a:hover::before,
+            .cart-footer a:focus::before,
+            .comparison-footer a:hover::before,
+            .comparison-footer a:focus::before,
+            .user-enter-footer a:hover::before,
+            .user-enter-footer a:focus::before {
+                opacity: 0.6;
+                outline: none;
+            }
 
-    .user-navigation-footer a:hover,
-    .user-navigation-footer a:focus {
-            color: #fff;
-            outline: none;
-    }
+            .user-navigation-footer a:hover,
+            .user-navigation-footer a:focus {
+                    color: #fff;
+                    outline: none;
+            }
 
     .sait-navigation-footer {
-        text-align: center;
+        flex-basis: 440px;
     }
 
         .sait-navigation-footer a {
             font: bold 18px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
             color: #fff;
             letter-spacing: 0.2em;
-            text-align: center;
             text-decoration: none;
         }
 
@@ -1165,6 +1148,7 @@ body {
         }
 
     .social-btn {
+        flex-basis: 160px;
         text-align: center;
     }
 
@@ -1186,6 +1170,26 @@ body {
         .htmlacademy-link:active {
             opacity: 0.1;
         }
+
+    .logo-footer {
+        flex-basis: 200px;
+        margin-right: 400px;
+    }
+
+    .htmlacademy-link {
+        flex-basis: 60px;
+        margin-left: auto;
+    }
+
+    .phonenumber {
+        flex-basis: 180px;
+        margin-left: auto;
+    }
+
+    .direction {
+        flex-basis: 260px;
+        margin-right: 148px;
+    }
 
     
 /*Модальные окна*/
