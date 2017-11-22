@@ -696,19 +696,115 @@ body {
 
 /*Оформление catalog.html*/
 
-.inner-page h1 {
-    font: bold 47px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
-    color: #000;
-    letter-spacing: 0.01em;
+.inner-page .main-navigation-header {
+    margin-bottom: 36px;
 }
 
-.breadcrumbs li {
-    list-style: none outside;
+.inner-page .button {
+    width: 200px;
 }
+
+.inner-container {
+    padding-left: 70px;
+}
+
+.catalog-wrapper {
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    height: 1290px;
+}
+
+    .filter-container {
+        width: 40%;
+        height: 100%;
+
+        margin-right: 72px;
+
+        background-color: #eee;
+    }
+
+        .filters {
+            width: 220px;
+            height: 750px;
+
+            float: right;
+        }
+
+    .catalog-container {
+        width: 60%;
+    }
+
+
+        .catalog-list {
+            display: flex;
+            flex-wrap: wrap;
+
+            width: 760px;
+            height: 1000px;
+
+            margin: 0;
+            padding: 0;
+        }
+
+            .catalog-item {
+                width: 360px;
+                height: 464px;
+
+                margin-left: 40px;
+                margin-top: 42px;
+            }
+
+            .catalog-item:nth-child(odd) {
+                margin-left: 0;
+            }
+
+    .sorting {
+        width: 760px;
+        height: 25px;
+    }
+
+    .sorting::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 100%;
+        height: 70px;
+
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+
+
+
+    .inner-page h1 {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+
+        font: bold 47px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
+        color: #000;
+        letter-spacing: 0.01em;
+    }
+
+    .breadcrumbs {
+        margin: 0;
+        margin-bottom: 50px;
+        padding: 0;
+
+        list-style: none outside;
+    }
 
     .breadcrumbs li::after {
         content: "";
         display: inline-block;
+        vertical-align: middle;
+
+        padding: 0 15px;
+
         width: 4px;
         height: 7px;
 
@@ -719,34 +815,30 @@ body {
         display: none;
     }
 
-    .breadcrumbs a {
-        font-size: 14px;
-        line-height: 2.6;
-        color: rgba(0, 0, 0, 0.3);
+        .breadcrumbs a {
+            font-size: 14px;
+            line-height: 2.6;
+            color: rgba(0, 0, 0, 0.3);
 
-        text-decoration: none;
-    }
+            text-decoration: none;
+        }
 
-    .breadcrumbs a:hover,
-    .breadcrumbs a:focus {
-        color: rgba(0, 0, 0, 0.6);
+        .breadcrumbs a:hover,
+        .breadcrumbs a:focus {
+            color: rgba(0, 0, 0, 0.6);
 
-        outline: none;
-    }
+            outline: none;
+        }
 
-    .breadcrumbs a:active {
-        color: rgba(0, 0, 0, 0.1);
-    }
+        .breadcrumbs a:active {
+            color: rgba(0, 0, 0, 0.1);
+        }
 
-    .breadcrumbs .breadcrumb-is-active {
-        pointer-events: none;
-        cursor: default;
-        color: rgba(0, 0, 0, 0.3);
-    }
-
-.filters {
-    background-color: #efefef;
-}
+        .breadcrumbs .is-active {
+            pointer-events: none;
+            cursor: default;
+            color: rgba(0, 0, 0, 0.3);
+        }
 
     .filters fieldset {
         border: none;
@@ -796,6 +888,9 @@ body {
 
     .filters h2,
     .sorting h2 {
+        margin: 0;
+        padding: 0;
+
         font: bold 16px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
         color: #000;
         letter-spacing: 0.2em;
