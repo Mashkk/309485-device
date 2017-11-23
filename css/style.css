@@ -270,7 +270,7 @@ body {
                 margin-left: 20px;
             }
 
-            .user-navigation-header li:nth-child(2) {
+            .user-navigation-header li:nth-last-of-type(2) {
                 margin-left: auto; 
             }
 
@@ -320,6 +320,8 @@ body {
             }
 
         .user-navigation-exit-button {
+            padding: 0;
+
             color: rgba(0, 0, 0, 0.3);
 
             background-color: transparent;
