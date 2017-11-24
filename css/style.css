@@ -995,6 +995,18 @@ input[type="radio"].visually-hidden {
         min-height: 530px;
     }
 
+    .contacts::before {
+        content: "";
+        position: absolute;
+        top: -48px;
+        left: 0;
+
+        width: 80px;
+        height: 7px;
+
+        background-color: #000;
+    }
+
         .pop-up.map {
             display: block;
             margin-bottom: 65px;
@@ -1740,6 +1752,7 @@ input[type="radio"].visually-hidden {
                 color: #fff;
                 letter-spacing: 0.2em;
                 text-decoration: none;
+                text-transform: uppercase;
             }
 
             .sait-navigation-footer a:hover,
