@@ -228,6 +228,7 @@ input[type="radio"].visually-hidden {
             }
 
             .main-search-button:active {
+                display: inline-block;
                 color: rgba(225, 225, 225, 0.3); 
             }
 
