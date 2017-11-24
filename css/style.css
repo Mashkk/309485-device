@@ -219,19 +219,15 @@ input[type="radio"].visually-hidden {
                 display: inline-block;
             }
 
-            .main-search-field:active + button:hover,
-            .main-search-field.is-active + button:hover,
-            .main-search-field:active + button:focus,
-            .main-search-field.is-active + button:focus {
+            .main-search-button:hover,
+            .main-search-button:focus {
                 color: #fff;
 
                 background-color: #000;
                 outline: none;
             }
 
-            .main-search-field:focus + button:active,
-            .main-search-field:active + button:active,
-            .main-search-field.is-active + button:active {
+            .main-search-button:active {
                 color: rgba(225, 225, 225, 0.3); 
             }
 
