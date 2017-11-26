@@ -968,11 +968,11 @@ input[type="radio"].visually-hidden {
             padding-left: 35px;
         }
 
-        .about-us li {
+        .about-us .company-list {
             position: relative;
         }
             
-            .about-us li:before {
+            .about-us .company-list::before {
                 content: "";
                 position: absolute;
                 top: 10px;
@@ -1900,9 +1900,8 @@ input[type="radio"].visually-hidden {
     }
 
     .main-footer .phonenumber {
-        flex-basis: 164px;
+        flex-basis: 300px;
 
-        margin-left: 136px;
         text-align: right;
     }
 
