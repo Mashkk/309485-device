@@ -1417,10 +1417,14 @@ input[type="radio"].visually-hidden {
     }
 
     .price-slider {
-        display: inline-block;
+        display: block;
         position: relative;
+
         width: 196px;
         height: 2px;
+
+        margin: 17px 0 5px 0; 
+
         line-height: 0;
         font-size: 0;
 
@@ -1428,7 +1432,6 @@ input[type="radio"].visually-hidden {
     }
 
         .price-slider-bar {
-            display: inline-block;
             position: absolute;
             width: 110px;
             height: 2px;
@@ -1459,9 +1462,22 @@ input[type="radio"].visually-hidden {
     }
 
     .price-slider-data {
+        display: inline-block;
+        vertical-align: baseline;
+
+        min-width: 40px;
+
+        margin: 0;
+        padding: 0;
+        padding-right: 60px;
+
         font: lighter 14px/0.63 "Gilroy", Arial, Helvetica, sans-serif;
         color: rgba(0, 0, 0, 0.2);
         letter-spacing: 0;
+    }
+
+    .price-slider-data-to {
+        padding: 0;
     }
 
     .filters h2,
@@ -1614,7 +1630,9 @@ input[type="radio"].visually-hidden {
 }
 
     .pagination-list > li {
-        width: 160px;
+        width: 126px;
+        height: 70px;
+        line-height: 70px;
 
         padding-left: 30px;
 
@@ -1629,7 +1647,7 @@ input[type="radio"].visually-hidden {
 
     .pagination-list > li:last-child {
         text-align: right;
-        padding-right: 30px;
+        padding: 0 26px 0 0;
     }
 
         .pagination-items {
@@ -1654,17 +1672,22 @@ input[type="radio"].visually-hidden {
             text-decoration: none;
             text-transform: uppercase;
         }
-       
+
         .pagination-list a:hover,
         .pagination-list a:focus {
             color: rgba(0, 0, 0, 0.6);
         }
 
-        .back a:hover,
-        .next a:hover,
-        .back a:active,
-        .next a:active {
+        .back:hover,
+        .next:hover,
+        .back:active,
+        .next:active {
             background-color: #d9d9d9;
+        }
+
+        .pagination-item-is-active {
+            pointer-events: none;
+            cursor: default;
         }
 
         .pagination-item-is-active a,
