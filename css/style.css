@@ -125,7 +125,7 @@ input[type="radio"].visually-hidden {
 
         .logo-header {
             position: absolute;
-            top: -18px;
+            top: -16px;
         }    
             
         .logo-header:focus {
@@ -261,13 +261,14 @@ input[type="radio"].visually-hidden {
                 min-width: 100px;
             }
 
-            .user-navigation-header .user-enter {
+            .user-navigation-header .user-enter,
+            .user-navigation-header .user-name {
                 padding-left: 48px;
             }
 
             .user-navigation-header .comparison {
                 margin-left: auto; 
-                padding-left: 21px;
+                padding-left: 20px;
                 
             }
 
@@ -277,14 +278,12 @@ input[type="radio"].visually-hidden {
             }
 
                 .user-navigation-header a {
+                    position: relative;
+
                     line-height: 2.4;
                     color: #000;
                     text-decoration: none;
                 }    
-                
-                .user-navigation-header a {
-                    position: relative;
-                }
 
                     .user-enter a::before,
                     .user-name a::before {
@@ -325,7 +324,9 @@ input[type="radio"].visually-hidden {
 
         .user-navigation-exit-button {
             padding: 0;
+            padding-left: 20px;
 
+            line-height: 2.4;
             color: rgba(0, 0, 0, 0.3);
 
             background-color: transparent;
@@ -349,12 +350,13 @@ input[type="radio"].visually-hidden {
     width: 100%;
 }
 
-    .sait-navigation > li{
+    .sait-navigation > li {
         width: 160px;
     }
 
     .sait-navigation > li:first-child {
-        width: 540px;
+        width: 250px;
+        margin-right: 290px;
     }
 
     .sait-navigation > li:last-child {
@@ -401,13 +403,12 @@ input[type="radio"].visually-hidden {
                 min-height: 150px;
 
                 position: absolute;
-                top: 15px;
+                top: 100%;
                 left: -60px;
                 z-index: 1;
 
                 margin: 0;
-                margin-top: 25px;
-                padding: 0;
+                padding: 25px 0 30px 0;
                                         
                 background-color: #f7e296;
             }
@@ -609,7 +610,7 @@ input[type="radio"].visually-hidden {
 
         .slider-list-navigation {
             position: absolute;
-            top: 317px;
+            bottom: 180px;
             right: 83px;
         }
 
@@ -916,11 +917,9 @@ input[type="radio"].visually-hidden {
 }
 
     .about-us {
-        display: flex;
-        flex-wrap: wrap;
         position: relative;
 
-        width: 560px;
+        width: 475px;
         min-height: 530px;
     }
 
@@ -939,22 +938,24 @@ input[type="radio"].visually-hidden {
         .about-us p,
         .contacts p {
             margin: 0;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             padding: 0;
+
+            letter-spacing: 0;
         }
 
         .about-us p:last-of-type {
-            margin-bottom: 62px;
+            margin-bottom: 65px;
         }
 
         .contacts p:last-of-type {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .about-us h2,
         .contacts h2 {
             margin: 0;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             padding: 0;
         }
 
@@ -962,6 +963,7 @@ input[type="radio"].visually-hidden {
             list-style: none outside;
 
             margin: 0;
+            margin-bottom: 55px;
             padding: 0;
             padding-left: 35px;
         }
@@ -984,8 +986,6 @@ input[type="radio"].visually-hidden {
         
 
     .contacts {
-        display: flex;
-        flex-wrap: wrap;
         position: relative;
 
         width: 560px;
@@ -1026,7 +1026,7 @@ input[type="radio"].visually-hidden {
 /*Оформление catalog.html*/
 
 .inner-page .main-navigation-header {
-    margin-bottom: 36px;
+    margin-bottom: 33px;
 }
 
 .inner-page .button {
@@ -1039,7 +1039,7 @@ input[type="radio"].visually-hidden {
 
 .inner-page h1 {
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 15px;
     padding: 0;
     padding-left: 60px;
 
@@ -1052,54 +1052,64 @@ input[type="radio"].visually-hidden {
     display: flex;
 
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     padding: 0;
     padding-left: 60px;
 
     list-style: none outside;
 }
 
-    .breadcrumbs li::after {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
+    .breadcrumbs li {
+        position: relative;
 
-        padding: 0 15px;
-
-        width: 4px;
-        height: 7px;
-
-        background: url("../img/navarrow.svg") no-repeat center;
+        padding-right: 38px;
     }
 
-    .breadcrumbs li:last-child::after {
-        display: none;
-    }
+        .breadcrumbs li::after {
+            content: "";
+            position: absolute;
+            top: 14px;
+            right: 19px;
 
-        .breadcrumbs a {
-            font-size: 14px;
-            line-height: 2.6;
-            color: rgba(0, 0, 0, 0.3);
+            width: 6px;
+            height: 6px;
 
-            text-decoration: none;
+            background-color: #fff;
+            border-radius: 50% 0 0 0;
+            border: 1px solid #000;
+            border-width: 0 1px 1px 0;
+
+            transform: rotate(-45deg);
         }
 
-        .breadcrumbs a:hover,
-        .breadcrumbs a:focus {
-            color: rgba(0, 0, 0, 0.6);
-
-            outline: none;
+        .breadcrumbs li:last-child::after {
+            display: none;
         }
 
-        .breadcrumbs a:active {
-            color: rgba(0, 0, 0, 0.1);
-        }
+            .breadcrumbs a {
+                font-size: 14px;
+                line-height: 2.6;
+                color: rgba(0, 0, 0, 0.3);
 
-        .breadcrumbs .is-active {
-            pointer-events: none;
-            cursor: default;
-            color: rgba(0, 0, 0, 0.3);
-        }
+                text-decoration: none;
+            }
+
+            .breadcrumbs a:hover,
+            .breadcrumbs a:focus {
+                color: rgba(0, 0, 0, 0.6);
+
+                outline: none;
+            }
+
+            .breadcrumbs a:active {
+                color: rgba(0, 0, 0, 0.1);
+            }
+
+            .breadcrumbs .is-active {
+                pointer-events: none;
+                cursor: default;
+                color: rgba(0, 0, 0, 0.3);
+            }
 
 .catalog-col-container {
     display: flex;
@@ -1119,7 +1129,7 @@ input[type="radio"].visually-hidden {
         top: 0;
         bottom: 0;
         right: 50%;
-        transform: translateX(-272px);
+        transform: translateX(-252px);
         z-index: 0;
 
         background-color: #eee;
@@ -1144,38 +1154,47 @@ input[type="radio"].visually-hidden {
         z-index: 2;
     }
 
-        .catalog {
-            width: 760px;
-            min-height: 1050px;
+        .catalog-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
 
-            padding-top: 94px;
+            width: 760px;
+            height: 1090px;
+
+            margin: 0;
+            padding: 0;
+            padding-top: 90px;
         }
 
-            .catalog-list {
-                display: flex;
-                flex-wrap: wrap;
+            .catalog-item {
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
 
-                width: 760px;
-                height: 1072px;
+                width: 360px;
+                height: 464px;
 
-                margin: 0;
-                padding: 0;
+                margin-left: 40px;
+                margin-bottom: 40px;
+
+                list-style: none outside;
             }
 
-                .catalog-item {
-                    width: 360px;
-                    height: 464px;
-
-                    margin-left: 40px;
-                }
-
-                .catalog-item:nth-child(odd) {
-                    margin-left: 0;
-                }   
+            .catalog-item:nth-child(odd) {
+                margin-left: 0;
+            }   
                 
                     .catalog-item-image {
                         margin: 0;
+                        margin-bottom: 25px; 
                         padding: 0;
+                    }
+
+                    .catalog-item a {
+                        color: #000;
+                        
+                        text-decoration: none;
                     }
 
                     .catalog-item a:hover,
@@ -1212,14 +1231,74 @@ input[type="radio"].visually-hidden {
                         .action-button button:nth-child(1) {
                             margin: 0 auto;
                         }
-               
+
+                    .filter-name,
+                    .catalog-item h3 {
+                        margin: 0;
+                        padding: 0;
+                
+                        font: bold 18px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
+                        color: #000;
+                        letter-spacing: 0.01em;
+                    }
+                
+                    .catalog-item h3 {
+                        display: inline-block;
+                        vertical-align: top;
+                        
+                        width: 258px;
+                    }
+
+                    .catalog-item-new {
+                        position: absolute;
+                        top: 28px;
+                        right: 27px;
+            
+                        display: inline-block;
+                        width: 60px;
+                        height: 61px;
+            
+                        background: url("../img/new.png") no-repeat center;
+                    }
+                    
+                    .catalog-item-price {
+                        display: inline-block;
+                        vertical-align: top;
+            
+                        width: 95px;
+            
+                        font: lighter 16px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
+                        color: #464646;
+                        letter-spacing: 0.01em;
+                        text-align: right;
+                    }
+            
+                    .compare-button {
+                        font: inherit;
+                        font-size: 13px;
+                        line-height: 2.77;
+                        color: rgba(0, 0, 0, 0.5);
+            
+                        border: none;
+                        background-color: transparent;
+                    } 
+            
+                    .compare-button:hover,
+                    .compare-button:focus {
+                        color: #000;
+            
+                        outline: none;
+                    }
+            
+                    .compare-button:active {
+                        color: rgba(0, 0, 0, 0.2);
+                    }
         .sorting {
             display: flex;
             align-items: baseline;
 
             width: 760px;
-            height: 35px;
-            padding-top: 5px;
+            padding-top: 18px;
         }
 
             .sorting h2 {
@@ -1241,7 +1320,7 @@ input[type="radio"].visually-hidden {
 
                 .sorting-list li {
                     list-style: none outside;
-                    margin-right: 32px;
+                    margin-right: 30px;
                 }
             
                     .sorting-list a {
@@ -1269,11 +1348,11 @@ input[type="radio"].visually-hidden {
             .sorting-pointers {
                 display: flex;
                 justify-content: space-between;
-                width: 45px;
+                width: 43px;
 
                 margin: 0;
-                padding: 0;
                 margin-left: auto;
+                padding: 0;
             }
                 .sorting-pointers li {
                     list-style: none; 
@@ -1281,6 +1360,11 @@ input[type="radio"].visually-hidden {
             
                 .sorting-pointer {
                     display: inline-block;
+                    vertical-align: middle;
+
+                    margin: 0;
+                    padding: 0;
+
                     border: none;
                     line-height: 0;
                     font-size: 0;
@@ -1323,17 +1407,13 @@ input[type="radio"].visually-hidden {
         display: block;
 
         width: 100%;
-        height: 40px;
+        height: 70px;
 
         position: absolute;
         top: 0;
         z-index: 1;
 
         background-color: rgba(0, 0, 0, 0.08);
-    }
-
-    .filters fieldset {
-        border: none;
     }
 
     .price-slider {
@@ -1394,221 +1474,222 @@ input[type="radio"].visually-hidden {
 
     .filters h2 {
         margin: 0;
-        padding: 0;
+        padding: 24px 0 0 4px;
         margin-bottom: 108px;
-        padding-left: 10px;
-        padding-top: 10px;
     }
 
-    .filter-name,
-    .catalog-item h3 {
-        margin: 0;
-        padding: 0;
+    .filters-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-        font: bold 18px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
-        color: #000;
-        letter-spacing: 0.01em;
+        flex-basis: 535px;
+
+        margin-bottom: 30px;
     }
 
-    .filter-list li{
-        list-style: none outside;
-    }
+        .filter-list {
+            border: none;
 
-    .filter-list input[type="checkbox"]+label,
-    .filter-list input[type="radio"]+label {
-        font-size: 14px;
-        line-height: 2.86;
-        font-weight: 300;
-        color: #000;
+            margin: 0;
+            padding: 0;
+        }
 
-        list-style: none outside;
-        cursor: pointer;
-    }
+        .filters-wrap > .filter-slider {
+            flex-basis: 142px;
+        }
 
-    .filter-list input[type="checkbox"]+label::before,
-    .filter-list input[type="radio"]+label::before {
-        content: "";
-        display: inline-block;
-        width: 27px;
-        height: 25px;
-        margin: 5px 17px 0 0;
-    }
+        .filters-wrap > .filter-color {
+            flex-basis: 285px;
+        }
 
-    .filter-list input[type="checkbox"] + label::before {
-        background: url("../img/checkboxoff.svg") no-repeat bottom left/23px 23px;
-    }
+        .filters-wrap .filter-bluetoos {
+            flex-basis: 108px;
+        }
 
-    .filter-list input[type="radio"] + label::before {
-        background: url("../img/radiooff.svg") no-repeat bottom left/25px 25px;
-    }
+        .filter-name {
+            position: relative;
+            margin-bottom: 20px;
+        }
 
-    .filter-list input[type="checkbox"]:checked+label::before,
-    .filter-list input[type="checkbox"]:active+label::before {
-        background: url("../img/checkboxon.svg") no-repeat bottom left/27px 23px;
-    }
+            .filter-name::before {
+                content: "";
+                position: absolute;
+                top: -15px;
+                left: 0;
 
-    .filter-list input[type="checkbox"]:hover + label::before,
-    .filter-list input[type="checkbox"]:focus + label::before {
-        opacity: 0.6;
-        outline: none;
-    } 
+                width: 201px;
+                height: 2px;
 
-    .filter-list input[type="radio"]:checked + label::before,
-    .filter-list input[type="radio"]:active + label::before {
-        background: url("../img/radioon.svg") no-repeat bottom left/25px 25px;
-    }
+                background-color: #000;
+            }
 
-    .filter-list input[type="radio"]:disabled + label::before,
-    .filter-list input[type="checkbox"]:disabled + label::before {
-        opacity: 0.25;
-        pointer-events: none;
-        cursor: default;
-    }
+        .filter-list ul {
+            margin: 0;
+            padding: 0;
+        }
 
-    .filter-list input[type="radio"]:hover + label::before,
-    .filter-list input[type="checkbox"]:disabled + label::before {
-        opacity: 0.6;
-        outline: none;
-    } 
+            .filter-list li{
+                list-style: none outside;
 
-.catalog-list li {
-    list-style: none outside;
-}
+                padding-left: 40px;
+            }
 
-    .catalog-item {
-        display: inline-block;
-        position: relative;
-    }
+                .filter-list input[type="checkbox"] + label,
+                .filter-list input[type="radio"] + label {
+                    position: relative;
 
-    .catalog-item-new {
-        position: absolute;
-        top: 28px;
-        right: 27px;
+                    font-size: 14px;
+                    line-height: 2.86;
+                    font-weight: 300;
+                    color: #000;
 
-        display: inline-block;
-        width: 60px;
-        height: 61px;
+                    list-style: none outside;
+                    cursor: pointer;
+                }
 
-        background: url("../img/new.png") no-repeat center;
-    }
+                .filter-list input[type="checkbox"] + label::before,
+                .filter-list input[type="radio"] + label::before {
+                    content: "";
+                    position: absolute;
+                    top: -8px;
+                    left: -40px;
 
-    .catalog-list a {
-        color: #000;
+                    width: 27px;
+                    height: 25px;
 
-        text-decoration: none;
-    }
+                    margin: 5px 17px 0 0;
+                }
 
-    .catalog-item-price {
-        font: lighter 16px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
-        color: #464646;
-        letter-spacing: 0.01em;
-    }
+                .filter-list input[type="checkbox"] + label::before {
+                    background: url("../img/checkboxoff.svg") no-repeat bottom left/23px 23px;
+                }
 
-    .compare-button {
-        font: inherit;
-        font-size: 13px;
-        line-height: 2.77;
-        color: rgba(0, 0, 0, 0.5);
+                .filter-list input[type="radio"] + label::before {
+                    background: url("../img/radiooff.svg") no-repeat bottom left/25px 25px;
+                }
 
-        border: none;
-        background-color: transparent;
-    } 
+                .filter-list input[type="checkbox"]:checked + label::before,
+                .filter-list input[type="checkbox"]:active + label::before {
+                    background: url("../img/checkboxon.svg") no-repeat bottom left/27px 23px;
+                }
 
-    .compare-button:hover,
-    .compare-button:focus {
-        color: #000;
+                .filter-list input[type="checkbox"]:hover + label::before,
+                .filter-list input[type="checkbox"]:focus + label::before {
+                    opacity: 0.6;
+                    outline: none;
+                } 
 
-        outline: none;
-    }
+                .filter-list input[type="radio"]:checked + label::before,
+                .filter-list input[type="radio"]:active + label::before {
+                    background: url("../img/radioon.svg") no-repeat bottom left/25px 25px;
+                }
 
-    .compare-button:active {
-        color: rgba(0, 0, 0, 0.2);
-    }
+                .filter-list input[type="radio"]:disabled + label::before,
+                .filter-list input[type="checkbox"]:disabled + label::before {
+                    opacity: 0.25;
+                    pointer-events: none;
+                    cursor: default;
+                }
+
+                .filter-list input[type="radio"]:hover + label::before,
+                .filter-list input[type="checkbox"]:disabled + label::before {
+                    opacity: 0.6;
+                    outline: none;
+                } 
 
 .pagination-list {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
 
     width: 760px;
     height: 70px;
 
     margin: 0;
+    margin-bottom: 80px;
     padding: 0;
-
-    line-height: 70px;
 
     background-color: #ebebeb;
 }
 
-    .pagination-list li {
+    .pagination-list > li {
+        width: 160px;
+
+        padding-left: 30px;
+
         list-style: none outside;
     }
 
-    .pagination-list a {
-        font: bold 16px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
-        color: rgba(0, 0, 0, 0.3);
-        letter-spacing: 0.2em; 
+    .pagination-list > li:nth-child(2) {
+        width: 400px;
 
-        text-decoration: none;
-        text-transform: uppercase;
+        padding: 0;
     }
 
-    .pagination-list a:hover,
-    .pagination-list a:focus {
-        color: rgba(0, 0, 0, 0.6);
+    .pagination-list > li:last-child {
+        text-align: right;
+        padding-right: 30px;
     }
 
-    .back a,
-    .next a {
-        display: inline-block;
-        position: absolute;
-        width: 126px;
-        height: 100%;
-        line-height: 70px;
-        text-align: center;
-        vertical-align: middle;
+        .pagination-items {
+            display: flex;
+            justify-content: center;
 
-        background-color: transparent;
-    }
+            margin: 0;
+            padding: 0;
 
-    .back a {
-        top:0;
-        left: 0;
-    }
+            list-style: none outside;
+        }
 
-    .next a {
-        top:0;
-        right: 0;
-    }
+            .pagination-items li {
+                padding: 0 15px;
+            }
 
-    .back a:hover,
-    .next a:hover,
-    .back a:active,
-    .next a:active {
-        background-color: #d9d9d9;
-    }
+        .pagination-list a {
+            font: bold 16px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
+            color: rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.2em; 
 
-    .pagination-item-is-active a,
-    .pagination-item-is-active a:hover,
-    .pagination-item-is-active a:focus,
-    .pagination-list a:active,
-    .back a,
-    .next a,
-    .back a:hover,
-    .next a:hover {
-        color: #000;
-    }
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+       
+        .pagination-list a:hover,
+        .pagination-list a:focus {
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .back a:hover,
+        .next a:hover,
+        .back a:active,
+        .next a:active {
+            background-color: #d9d9d9;
+        }
+
+        .pagination-item-is-active a,
+        .pagination-item-is-active a:hover,
+        .pagination-item-is-active a:focus,
+        .pagination-list a:active,
+        .back a,
+        .next a,
+        .back a:hover,
+        .next a:hover {
+            color: #000;
+        }
 
 
 /*Футер*/
 .main-footer {
     margin-top: 80px;
     min-height: 325px;
-    padding: 60px 0;
+    padding: 59px 0;
 
     background-color: #464646;
+}
+
+.inner-page .main-footer {
+    margin-top: 0;
 }
 
     .main-footer .container {
@@ -1621,7 +1702,7 @@ input[type="radio"].visually-hidden {
         .main-footer .container::after {
             content: "";
             position: absolute;
-            top: 171px;
+            top: 176px;
             left: 20px;
 
             width: 80px;
@@ -1668,11 +1749,15 @@ input[type="radio"].visually-hidden {
                 text-align: right;
             }
 
+            .comparison-footer {
+                padding-left: 10px;
+            }
+
             .user-enter-footer a::before {
                 content: "";
                 position: absolute;
                 top: 3px;
-                left: -28px;
+                left: -26px;
 
                 width: 15px;
                 height: 13px;
@@ -1696,7 +1781,7 @@ input[type="radio"].visually-hidden {
                 content: "";
                 position: absolute;
                 top: 3px;
-                left: -23px;
+                left: -21px;
 
                 width: 14px;
                 height: 14px;
@@ -1727,7 +1812,7 @@ input[type="radio"].visually-hidden {
         flex-basis: 560px;
 
         margin: 0;
-        margin-bottom: 50px;
+        margin-bottom: 62px;
         padding: 0;
         padding: 0 67px;
     }
@@ -1805,10 +1890,9 @@ input[type="radio"].visually-hidden {
         }
 
     .logo-footer {
-        flex-basis: 200px;
+        flex-basis: 165px;
 
-        margin-right: 400px;
-        margin-bottom: 33px;
+        margin: 4px 435px 22px 0;
     }
 
     .htmlacademy-link {
@@ -1817,7 +1901,9 @@ input[type="radio"].visually-hidden {
 
     .main-footer .phonenumber {
         flex-basis: 164px;
+
         margin-left: 136px;
+        text-align: right;
     }
 
     .main-footer .direction {
