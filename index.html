@@ -34,7 +34,7 @@
               <li class="sait-navigation-catalog">
                 <a href="catalog.html">Каталог товаров</a>
 
-                  <div class="navigation-catalog">
+                  <div class="navigation-catalog is-active">
 
                     <ul class="navigation-catalog-list">
                       <li><a href="catalog.html">Виртуальная реальность</a></li>
@@ -72,7 +72,7 @@
         <section class="sliders-list">
           <h2 class="visually-hidden">Хиты продаж!</h2>
 
-          <div class="slider-item">
+          <div class="slider-item visually-hidden">
 
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-1.png" alt="Моноподы для селфи" width="384" height="486">
@@ -101,7 +101,7 @@
             </div>
           </div>
 
-          <div class="slider-item visually-hidden">
+          <div class="slider-item  visually-hidden">
           
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-2.png" alt="Умные часы" width="345" height="485">
@@ -126,7 +126,7 @@
             </div>
           </div>
 
-          <div class="slider-item visually-hidden">
+          <div class="slider-item">
 
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-3.png" alt="Квадрокоптеры" width="526" height="334">
@@ -244,10 +244,10 @@
             <div class="services-nav">
               <ul>
                 <li>
-                    <button class="services-button is-active button" type="button" name="delivery-button">Доставка</button>
+                    <button class="services-button button" type="button" name="delivery-button">Доставка</button>
                 </li>
                 <li>
-                    <button class="services-button button" type="button" name="warranty-button">Гарантия</button>
+                    <button class="services-button is-active button" type="button" name="warranty-button">Гарантия</button>
                 </li>
                 <li>
                     <button class="services-button button" type="button" name="credit-button">Кредит</button>
@@ -255,17 +255,18 @@
               </ul>
             </div>
 
-            <div class="services-item delivery"> 
+            <div class="services-item delivery" hidden> 
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </div>
 
-            <div class="services-item warranty" hidden>
+            <div class="services-item warranty"  hidden>
               <h3>Гарантия</h3>
-              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.
+                <br> Товар, не дом, конечно же.</p>
             </div>
 
-            <div class="services-item credit" hidden>
+            <div class="services-item credit">
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </div>
@@ -330,13 +331,10 @@
             <h2>Контакты</h2>
 
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-
-            <div class="map">
-              <a class="map-image" href="#">
-                <img src="img/map.jpg" alt="Наш адрес" width="560" height="222">
-              </a>
-              <button class="button button-columns" type="button">Напишите нам</button>
-            </div>
+            <a class="map-image" href="#">
+              <img src="img/map.jpg" alt="Наш адрес" width="560" height="222">
+            </a>
+            <button class="button button-columns" type="button">Напишите нам</button>
           </section>
         </div>
       </div>
@@ -362,7 +360,7 @@
           </li>
         </ul>
 
-        <p class="direction">г. Москва,ул. Строителей, 15</p>
+        <p class="direction">г. Москва, ул. Строителей, 15</p>
         
         <ul class="sait-navigation-footer">
           <li>
@@ -376,7 +374,7 @@
           </li>
         </ul>
 
-        <p class="phonenumber">Тел.:+7 (495) 495-95-95</p>
+        <p class="phonenumber">Тел.: +7 (495) 495-95-95</p>
 
         <ul class="social-btn">
           <li>
