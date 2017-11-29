@@ -34,7 +34,7 @@
               <li class="sait-navigation-catalog">
                 <a href="catalog.html">Каталог товаров</a>
 
-                  <div class="navigation-catalog is-active">
+                  <div class="navigation-catalog">
 
                     <ul class="navigation-catalog-list">
                       <li><a href="catalog.html">Виртуальная реальность</a></li>
@@ -55,7 +55,7 @@
                   </div>
               </li>
               <li><a href="#delivery">Доставка</a></li>
-              <li><a href="#waranty">Гарантия</a></li>
+              <li><a href="#warranty">Гарантия</a></li>
               <li><a href="#contact">Контакты</a></li>
             </ul>
           </div>
@@ -72,7 +72,7 @@
         <section class="sliders-list">
           <h2 class="visually-hidden">Хиты продаж!</h2>
 
-          <div class="slider-item visually-hidden">
+          <div class="slider-item">
 
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-1.png" alt="Моноподы для селфи" width="384" height="486">
@@ -126,7 +126,7 @@
             </div>
           </div>
 
-          <div class="slider-item">
+          <div class="slider-item  visually-hidden">
 
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-3.png" alt="Квадрокоптеры" width="526" height="334">
@@ -243,11 +243,11 @@
             
             <div class="services-nav">
               <ul>
-                <li>
-                    <button class="services-button button" type="button" name="delivery-button">Доставка</button>
+                <li  id="delivery">
+                    <button class="services-button  is-active button" type="button" name="delivery-button">Доставка</button>
                 </li>
-                <li>
-                    <button class="services-button is-active button" type="button" name="warranty-button">Гарантия</button>
+                <li  id="warranty">
+                    <button class="services-button button" type="button" name="warranty-button">Гарантия</button>
                 </li>
                 <li>
                     <button class="services-button button" type="button" name="credit-button">Кредит</button>
@@ -255,18 +255,18 @@
               </ul>
             </div>
 
-            <div class="services-item delivery" hidden> 
+            <div class="services-item delivery"> 
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </div>
 
-            <div class="services-item warranty"  hidden>
+            <div class="services-item warranty" hidden>
               <h3>Гарантия</h3>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.
                 <br> Товар, не дом, конечно же.</p>
             </div>
 
-            <div class="services-item credit">
+            <div class="services-item credit"  hidden>
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </div>
@@ -327,7 +327,7 @@
           </section>
         
 
-          <section class="contacts">
+          <section class="contacts" id="contact">
             <h2>Контакты</h2>
 
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
@@ -367,7 +367,7 @@
             <a href="#delivery">Доставка</a>
           </li>
           <li>
-            <a href="#waranty">Гарантия</a>
+            <a href="#warranty">Гарантия</a>
           </li>
           <li>
             <a href="#contact">Контакты</a>
@@ -395,7 +395,8 @@
     </footer>
 
     <section class="modal-windows">
-        
+      <h2 class="visually-hidden">Дополнительная информация</h2> 
+
       <div class="modal modal-map" hidden>
         <button class="modal-close-button" type="button">Закрыть карту</button>
         <img src="img/map.jpg" alt="Мы находимся по адресу: г.Москва, ул.Строителей, 15" width="560" height="222">
