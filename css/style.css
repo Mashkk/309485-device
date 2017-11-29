@@ -1698,8 +1698,6 @@ img {
                 .filter-list li {
                     position: relative;
                     list-style: none outside;
-    
-                    padding-left: 39px;
 
                     font-size: 14px;
                     line-height: 2.86;
@@ -1710,6 +1708,7 @@ img {
                 }
 
                 .filter-item label {
+                    padding-left: 39px;
                     cursor: pointer;
                 }
 
@@ -1809,9 +1808,8 @@ img {
     .pagination-list > li {
         width: 126px;
         height: 70px;
-        line-height: 70px;
 
-        padding-left: 30px;
+        
 
         list-style: none outside;
     }
@@ -1823,8 +1821,8 @@ img {
     }
 
     .pagination-list > li:last-child {
+        width: 138px;
         text-align: right;
-        padding: 0 26px 0 0;
     }
 
         .pagination-items {
@@ -1849,6 +1847,7 @@ img {
             font: bold 16px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
             color: rgba(0, 0, 0, 0.3);
             letter-spacing: 0.2em; 
+            line-height: 70px;
 
             text-decoration: none;
             text-transform: uppercase;
@@ -1866,6 +1865,13 @@ img {
 
             width: 100%;
             height: 100%;
+            
+            padding: 0 26px 0 30px;
+        }
+
+        .next a {
+            padding: 0 30px 0 0;
+
         }
 
         .back:hover,
@@ -2154,10 +2160,10 @@ img {
 
     width: 960px;
 
-    top: 100px;
+    top: 50%;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     background-color: #fff;  
@@ -2185,6 +2191,15 @@ img {
         line-height: 0;
 
         cursor: pointer;
+    }
+
+    .modal-close-button:hover,
+    .modal-close-button:focus {
+        background-color: rgb(240, 197, 46);
+    }
+
+    .modal-close-button:active {
+        background-color: rgba(240, 197, 46, 0.3);
     }
 
         .modal-close-button::before,
@@ -2259,6 +2274,7 @@ img {
 
                 .modal-comment textarea {
                     height: 156px;
+                    resize: none;
                 }
 
             .modal-form .button {
