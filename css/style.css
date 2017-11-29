@@ -1707,6 +1707,9 @@ img {
                     color: #000;
 
                     list-style: none outside;
+                }
+
+                .filter-item label {
                     cursor: pointer;
                 }
 
@@ -1721,6 +1724,7 @@ img {
 
                     cursor: pointer;
                 }
+
 
                 .filter-list input[type="checkbox"] + .checkbox-indicator {
                     background: url("../img/checkboxoff.svg") no-repeat bottom left/23px 23px;
@@ -1752,6 +1756,10 @@ img {
                 .filter-list input[type="checkbox"]:active + .checkbox-indicator {
                     background: url("../img/checkboxon.svg") no-repeat bottom left/27px 23px;
                     opacity: 1;
+                }
+
+                .filter-list input[type="checkbox"]:checked:active + .checkbox-indicator {
+                    background: url("../img/checkboxoff.svg") no-repeat bottom left/23px 23px;
                 }
 
                 .filter-list input[type="radio"]:hover + .checkbox-indicator,
