@@ -1993,22 +1993,17 @@ input[type="radio"]:disabled {
     z-index: 5;
 
     width: 960px;
-    
-    background-color: #fff;
 
-    font: bold 18px/1 "Gilroy", Arial, Helvetica, sans-serif;
-    color: #000;
-    letter-spacing: 0;    
-}
-
-.modal-form {
-    min-height: 553px;
-    
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
     
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #fff;  
+}
+
+.modal-form {
+    min-height: 553px;
 
     padding: 95px 100px;
 }
@@ -2023,7 +2018,7 @@ input[type="radio"]:disabled {
 
         border-radius: 50%;
         border: 0;
-        background-color: #f7e296;
+        background-color: rgba(240, 197, 46, 0.5);
 
         font-size: 0;
         line-height: 0;
@@ -2070,6 +2065,10 @@ input[type="radio"]:disabled {
 
                 .modal label {
                     padding-bottom: 13px;
+
+                    font: bold 18px/1 "Gilroy", Arial, Helvetica, sans-serif;
+                    color: #000;
+                    letter-spacing: 0;  
                 }
 
                 .modal-item input,
@@ -2094,40 +2093,50 @@ input[type="radio"]:disabled {
                 
 
     
-        .modal-form input[type="text"]::-webkit-input-placeholder,
-        .modal-form input[type="email"]::-webkit-input-placeholder,
-        .modal-form textarea::-webkit-input-placeholder {  
-            font: 400 14px/1.29 "Open Sans", Arial, Helvetica, sans-serif;
-            color: rgba(70, 70, 70, 0.4);
-            letter-spacing: 0;
-        }
+            .modal-form input[type="text"]::-webkit-input-placeholder,
+            .modal-form input[type="email"]::-webkit-input-placeholder,
+            .modal-form textarea::-webkit-input-placeholder {  
+                font: 400 14px/1.29 "Open Sans", Arial, Helvetica, sans-serif;
+                color: rgba(70, 70, 70, 0.4);
+                letter-spacing: 0;
+            }
 
-        .modal-form input[type="text"],
-        .modal-form input[type="email"],
-        .modal-form textarea {
-            background-color: rgba(242, 242, 242, 0.5);
-            border: none;
-        }
+            .modal-form input[type="text"],
+            .modal-form input[type="email"],
+            .modal-form textarea {
+                font: 400 14px/1.29 "Open Sans", Arial, Helvetica, sans-serif;
+                color: #464646;
 
-        .modal-form input[type="text"]:hover,
-        .modal-form input[type="email"]:hover,
-        .modal-form textarea:hover {
-            background-color: rgba(234, 234, 234, 0.8);
-        }
+                background-color: rgba(242, 242, 242, 0.5);
+                border: none;
+            }
 
-        .modal-form input[type="text"]:focus,
-        .modal-form input[type="text"]:active,
-        .modal-form input[type="email"]:focus,
-        .modal-form input[type="email"]:active,
-        .modal-form textarea:focus,
-        .modal-form textarea:active {
-            color: rgb(70, 70, 70);
+            .modal-form input[type="text"]:hover,
+            .modal-form input[type="email"]:hover,
+            .modal-form textarea:hover {
+                background-color: rgba(234, 234, 234, 0.8);
+            }
 
-            background-color: transparent;
-            outline: 3px solid #f0c52e; 
-        }
+            .modal-form input[type="text"]:focus,
+            .modal-form input[type="text"]:active,
+            .modal-form input[type="email"]:focus,
+            .modal-form input[type="email"]:active,
+            .modal-form textarea:focus,
+            .modal-form textarea:active {
+                background-color: transparent;
+                outline: 3px solid #f0c52e; 
+            }
 
-        .modal-form input[type="text"]:invalid,
-        .modal-form input[type="email"]:invalid {
-        background-color: #f6dada;
-        }
+            .modal-form input[type="text"]:invalid,
+            .modal-form input[type="email"]:invalid {
+            background-color: #f6dada;
+            }
+
+.modal-map {
+    height: 560px;
+}
+
+    .modal-map img {
+        width: 100%;
+        height: 100%;
+    }
