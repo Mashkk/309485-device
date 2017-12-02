@@ -1733,53 +1733,52 @@ img {
                     background: url("../img/radiooff.svg") no-repeat bottom left/25px 25px;
                 }
 
-                
-
-                .filter-list input[type="checkbox"]:hover + .checkbox-indicator,
-                .filter-list input[type="checkbox"]:focus + .checkbox-indicator {
-                    opacity: 0.6;
-                } 
-
-                .filter-list input[type="checkbox"]:focus + .checkbox-indicator {
+                .filter-list input[type="checkbox"]:focus + .checkbox-indicator, 
+                .filter-list input[type="radio"]:focus + .checkbox-indicator {
                     outline: 2px auto;
                 }
 
+                .filter-list input[type="checkbox"]:hover + .checkbox-indicator,
+                .filter-list input[type="checkbox"]:focus + .checkbox-indicator,          
                 .filter-list input[type="checkbox"]:checked:hover + .checkbox-indicator,
                 .filter-list input[type="checkbox"]:checked:focus + .checkbox-indicator,
+                .filter-list input[type="radio"]:hover + .checkbox-indicator,
+                .filter-list input[type="radio"]:focus + .checkbox-indicator, 
                 .filter-list input[type="radio"]:checked:hover + .checkbox-indicator,
                 .filter-list input[type="radio"]:checked:focus + .checkbox-indicator {
                     opacity: 0.6;
                 }
 
-                .filter-list input[type="checkbox"]:checked + .checkbox-indicator,
-                .filter-list input[type="checkbox"]:active + .checkbox-indicator {
+                .filter-list input[type="checkbox"]:checked:not(disabled) + .checkbox-indicator,
+                .filter-list input[type="checkbox"]:active:not(disabled) + .checkbox-indicator {
                     background: url("../img/checkboxon.svg") no-repeat bottom left/27px 23px;
                     opacity: 1;
                 }
 
-                .filter-list input[type="checkbox"]:checked:active + .checkbox-indicator {
+                .filter-list input[type="checkbox"]:checked:active:not(:disabled) + .checkbox-indicator {
+                    opacity: 1;
                     background: url("../img/checkboxoff.svg") no-repeat bottom left/23px 23px;
                 }
 
-                .filter-list input[type="radio"]:hover + .checkbox-indicator,
-                .filter-list input[type="radio"]:focus + .checkbox-indicator {
-                    opacity: 0.6;
-                }
-
-                .filter-list input[type="radio"]:focus + .checkbox-indicator {
-                    outline: 2px auto;
-                }
-
-                .filter-list input[type="radio"]:checked + .checkbox-indicator,
-                .filter-list input[type="radio"]:active + .checkbox-indicator {
+                .filter-list input[type="radio"]:checked:not(:disabled) + .checkbox-indicator,
+                .filter-list input[type="radio"]:active:not(:disabled) + .checkbox-indicator {
                     background: url("../img/radioon.svg") no-repeat bottom left/25px 25px;
                     opacity: 1;
                 }
 
+                .filter-list input[type="radio"]:checked:active:not(:disabled) + .checkbox-indicator {
+                    opacity: 1;
+                    background: url("../img/radiooff.svg") no-repeat bottom left/25px 25px;
+                }
+
                 .filter-list input[type="radio"]:disabled + .checkbox-indicator,
-                .filter-list input[type="checkbox"]:disabled + .checkbox-indicator,
                 .filter-list input[type="radio"]:disabled:hover + .checkbox-indicator,
-                .filter-list input[type="checkbox"]:disabled:hover + .checkbox-indicator {
+                .filter-list input[type="radio"]:disabled:checked + .checkbox-indicator,
+                .filter-list input[type="radio"]:disabled:active + .checkbox-indicator,
+                .filter-list input[type="checkbox"]:disabled + .checkbox-indicator,
+                .filter-list input[type="checkbox"]:disabled:hover + .checkbox-indicator,
+                .filter-list input[type="checkbox"]:disabled:checked + .checkbox-indicator,
+                .filter-list input[type="checkbox"]:disabled:active + .checkbox-indicator {
                     opacity: 0.25;
                     pointer-events: none;
                     cursor: default;
@@ -2153,180 +2152,194 @@ img {
     
 /*Модальные окна*/
 
+    .modal {
+        position: fixed;
+        z-index: 5;
 
-.modal {
-    position: fixed;
-    z-index: 5;
+        width: 960px;
 
-    width: 960px;
-
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background-color: #fff;  
-}
-
-.modal-form {
-    min-height: 553px;
-
-    padding: 95px 100px;
-}
-
-    .modal-close-button {
-        position: absolute;
-        top: 22px;
-        right: 22px;
-
-        width: 55px;
-        height: 55px;
-
-        border-radius: 50%;
-        border: 0;
-        background-color: rgba(240, 197, 46, 0.5);
-
-        font-size: 0;
-        line-height: 0;
-
-        cursor: pointer;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        background-color: #fff;  
     }
 
-    .modal-close-button:hover,
-    .modal-close-button:focus {
-        background-color: rgb(240, 197, 46);
+    .modal-form {
+        min-height: 553px;
+
+        padding: 95px 100px;
     }
 
-    .modal-close-button:active {
-        background-color: rgba(240, 197, 46, 0.3);
-    }
-
-        .modal-close-button::before,
-        .modal-close-button::after {
+        .shadow-wrapper::after {
             content: "";
 
-            position: absolute;
+            position: fixed;
             top: 50%;
             left: 50%;
+            transform: translate(-50%, -50%);
 
-            width: 30px;
-            height: 2px;
-
-            background-color: #fff;
-
-            -webkit-transform: translate(-50%, -50%) rotate(45deg);
-
-                    transform: translate(-50%, -50%) rotate(45deg);
+            width: 960px;
+            height: 430px;
+          
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+            background-color: transparent;
         }
 
-        .modal-close-button::after {
-            -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-                    transform: translate(-50%, -50%) rotate(-45deg);
+        .modal-close-button {
+            position: absolute;
+            top: 22px;
+            right: 22px;
+
+            width: 55px;
+            height: 55px;
+
+            border-radius: 50%;
+            border: 0;
+            background-color: rgba(240, 197, 46, 0.5);
+
+            font-size: 0;
+            line-height: 0;
+
+            cursor: pointer;
         }
 
-        .modal-form form {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            width: 100%;
-            -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                    justify-content: space-between;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
+        .modal-close-button:hover,
+        .modal-close-button:focus {
+            background-color: rgb(240, 197, 46);
         }
 
-            .modal-form .modal-item,
-            .modal-form .modal-comment {
+        .modal-close-button:active {
+            background-color: rgba(240, 197, 46, 0.3);
+        }
+
+            .modal-close-button::before,
+            .modal-close-button::after {
+                content: "";
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                width: 30px;
+                height: 2px;
+
+                background-color: #fff;
+
+                -webkit-transform: translate(-50%, -50%) rotate(45deg);
+
+                        transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            .modal-close-button::after {
+                -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+                        transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            .modal-form form {
                 display: -webkit-box;
                 display: -ms-flexbox;
                 display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                    -ms-flex-direction: column;
-                        flex-direction: column;
-
-                width: 360px;
-
-                margin-bottom: 36px;
-            }
-
-                .modal label {
-                    padding-bottom: 13px;
-
-                    font: bold 18px/1 "Gilroy", Arial, Helvetica, sans-serif;
-                    color: #000;
-                    letter-spacing: 0;  
-                }
-
-                .modal-item input,
-                .modal-comment textarea {
-                    width: 100%;
-                    height: 50px;
-
-                    padding: 17px 22px;
-                }
-
-            .modal-form .modal-comment {
                 width: 100%;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
             }
 
-                .modal-comment textarea {
-                    height: 156px;
-                    resize: none;
+                .modal-form .modal-item,
+                .modal-form .modal-comment {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                            flex-direction: column;
+
+                    width: 360px;
+
+                    margin-bottom: 36px;
                 }
 
-            .modal-form .button {
-                width: 200px;
-            }
-                
+                    .modal label {
+                        padding-bottom: 13px;
 
-    
-            .modal-form input[type="text"]::-webkit-input-placeholder,
-            .modal-form input[type="email"]::-webkit-input-placeholder,
-            .modal-form textarea::-webkit-input-placeholder {  
-                font: 400 14px/1.29 "Open Sans", Arial, Helvetica, sans-serif;
-                color: rgba(70, 70, 70, 0.4);
-                letter-spacing: 0;
-            }
+                        font: bold 18px/1 "Gilroy", Arial, Helvetica, sans-serif;
+                        color: #000;
+                        letter-spacing: 0;  
+                    }
 
-            .modal-form input[type="text"],
-            .modal-form input[type="email"],
-            .modal-form textarea {
-                font: 400 14px/1.29 "Open Sans", Arial, Helvetica, sans-serif;
-                color: #464646;
+                    .modal-item input,
+                    .modal-comment textarea {
+                        width: 100%;
+                        height: 50px;
 
-                background-color: rgba(242, 242, 242, 0.5);
-                border: none;
-            }
+                        padding: 17px 22px;
+                    }
 
-            .modal-form input[type="text"]:hover,
-            .modal-form input[type="email"]:hover,
-            .modal-form textarea:hover {
-                background-color: rgba(234, 234, 234, 0.8);
-            }
+                .modal-form .modal-comment {
+                    width: 100%;
+                }
 
-            .modal-form input[type="text"]:focus,
-            .modal-form input[type="text"]:active,
-            .modal-form input[type="email"]:focus,
-            .modal-form input[type="email"]:active,
-            .modal-form textarea:focus,
-            .modal-form textarea:active {
-                background-color: transparent;
-                outline: 3px solid #f0c52e; 
-            }
+                    .modal-comment textarea {
+                        height: 156px;
+                        resize: none;
+                    }
 
-            .modal-form input[type="text"]:invalid,
-            .modal-form input[type="email"]:invalid {
-            background-color: #f6dada;
-            }
+                .modal-form .button {
+                    width: 200px;
+                }
+                    
 
-.modal-map {
-    height: 560px;
-}
+        
+                .modal-form input[type="text"]::-webkit-input-placeholder,
+                .modal-form input[type="email"]::-webkit-input-placeholder,
+                .modal-form textarea::-webkit-input-placeholder {  
+                    font: 400 14px/1.29 "Open Sans", Arial, Helvetica, sans-serif;
+                    color: rgba(70, 70, 70, 0.4);
+                    letter-spacing: 0;
+                }
 
-    .modal-map img {
-        width: 100%;
-        height: 100%;
+                .modal-form input[type="text"],
+                .modal-form input[type="email"],
+                .modal-form textarea {
+                    font: 400 14px/1.29 "Open Sans", Arial, Helvetica, sans-serif;
+                    color: #464646;
+
+                    background-color: rgba(242, 242, 242, 0.5);
+                    border: none;
+                }
+
+                .modal-form input[type="text"]:hover,
+                .modal-form input[type="email"]:hover,
+                .modal-form textarea:hover {
+                    background-color: rgba(234, 234, 234, 0.8);
+                }
+
+                .modal-form input[type="text"]:focus,
+                .modal-form input[type="text"]:active,
+                .modal-form input[type="email"]:focus,
+                .modal-form input[type="email"]:active,
+                .modal-form textarea:focus,
+                .modal-form textarea:active {
+                    background-color: transparent;
+                    outline: 3px solid #f0c52e; 
+                }
+
+                .modal-form input[type="text"]:invalid,
+                .modal-form input[type="email"]:invalid {
+                background-color: #f6dada;
+                }
+
+    .modal-map {
+        height: 560px;
     }
+
+        .modal-map img {
+            width: 100%;
+            height: 100%;
+        }
