@@ -1696,7 +1696,6 @@ img {
         }
 
                 .filter-list li {
-                    position: relative;
                     list-style: none outside;
 
                     font-size: 14px;
@@ -1708,10 +1707,91 @@ img {
                 }
 
                 .filter-item label {
+                    position: relative;
+
                     padding-left: 39px;
                     cursor: pointer;
                 }
 
+                .filter-item input {
+                    position: absolute;
+                    opacity: 0;
+                }
+
+                .filter-item input + label::before {
+                    content: "";
+                    display: block;
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+
+                    width: 27px;
+                    height: 25px;
+                }
+                
+                    .filter-list input[type="checkbox"] + label::before {
+                        background: url("../img/checkboxoff.svg") no-repeat bottom left/23px 23px;
+                    }
+                
+                    .filter-list input[type="radio"] + label::before {
+                        background: url("../img/radiooff.svg") no-repeat bottom left/25px 25px;
+                    }
+                
+                    .filter-list input:hover + label::before,
+                    .filter-list input:focus + label::before,
+                    .filter-list input:checked:hover + label:hover::before,
+                    .filter-list input:checked:focus + label::before {
+                       opacity: 0.6;
+                    } 
+
+                    .filter-list input[type="checkbox"]:checked:not(:disabled) + label::before,
+                    .filter-list input[type="checkbox"]:active:not(:disabled) + label::before {
+                        background: url("../img/checkboxon.svg") no-repeat bottom left/27px 23px;
+                        opacity: 1;
+                    }
+                
+                    .filter-list input[type="checkbox"]:checked:active:not(:disabled) + label::before {
+                        background: url("../img/checkboxoff.svg") no-repeat bottom left/23px 23px;
+                        opacity: 1;
+                    }
+
+                    .filter-list input[type="checkbox"]:disabled+label::before {
+                        opacity: 0.25;
+                        pointer-events: none;
+                        cursor: default;
+                    }
+                
+                    .filter-list input[type="radio"]:checked:not(:disabled) + label::before,
+                    .filter-list input[type="radio"]:active:not(:disabled) + label::before {
+                        background: url("../img/radioon.svg") no-repeat bottom left/25px 25px;
+                        opacity: 1;
+                    }
+
+                    .filter-list input[type="radio"]:checked:active:not(:disabled) + label::before {
+                        background: url("../img/radiooff.svg") no-repeat bottom left/25px 25px;
+                        opacity: 1;
+                    }
+
+                
+                    .filter-list input[type="radio"]:disabled+label::before {
+                        opacity: 0.25;
+                        pointer-events: none;
+                        cursor: default;
+                    }
+
+                    .filter-list input:disabled + label::before,
+                    .filter-list input:disabled:hover + label::before,
+                    .filter-list input:disabled:focus + label::before,
+                    .filter-list input:checked:disabled + label::before,
+                    .filter-list input:disabled:active + label::before {
+                        opacity: 0.25;
+                        pointer-events: none;
+                        cursor: default;
+                    }
+
+/*
                 .filter-list input[type="checkbox"] + .checkbox-indicator,
                 .filter-list input[type="radio"] + .checkbox-indicator {
                     position: absolute;
@@ -1782,7 +1862,7 @@ img {
                     opacity: 0.25;
                     pointer-events: none;
                     cursor: default;
-                }
+                }*/
 
 .pagination-list {
     display: -webkit-box;
