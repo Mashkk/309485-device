@@ -1088,9 +1088,9 @@ img {
             display: inline-block;
             vertical-align: middle;
 
-            margin: 3px 0 35px 0;
+            margin: 3px 0 45px 0;
 
-            font: 0;
+            font-size: 0;
             line-height: 0;
         }
 
@@ -1158,11 +1158,11 @@ img {
         .breadcrumbs li::after {
             content: "";
             position: absolute;
-            top: 14px;
+            top: 16px;
             right: 19px;
 
-            width: 6px;
-            height: 6px;
+            width: 5px;
+            height: 5px;
 
             background-color: #fff;
             border-radius: 50% 0 0 0;
@@ -1201,7 +1201,7 @@ img {
                 color: rgba(0, 0, 0, 0.1);
             }
 
-            .breadcrumbs .is-active {
+            .breadcrumbs a.is-active {
                 pointer-events: none;
                 cursor: default;
                 color: rgba(0, 0, 0, 0.3);
@@ -1738,11 +1738,11 @@ img {
                     outline: 2px auto;
                 }
 
-                .filter-list input[type="checkbox"]:hover + .checkbox-indicator,
+                .filter-list input:hover + .checkbox-indicator,
                 .filter-list input[type="checkbox"]:focus + .checkbox-indicator,          
                 .filter-list input[type="checkbox"]:checked:hover + .checkbox-indicator,
                 .filter-list input[type="checkbox"]:checked:focus + .checkbox-indicator,
-                .filter-list input[type="radio"]:hover + .checkbox-indicator,
+                
                 .filter-list input[type="radio"]:focus + .checkbox-indicator, 
                 .filter-list input[type="radio"]:checked:hover + .checkbox-indicator,
                 .filter-list input[type="radio"]:checked:focus + .checkbox-indicator {
@@ -1778,7 +1778,7 @@ img {
                 .filter-list input[type="checkbox"]:disabled + .checkbox-indicator,
                 .filter-list input[type="checkbox"]:disabled:hover + .checkbox-indicator,
                 .filter-list input[type="checkbox"]:disabled:checked + .checkbox-indicator,
-                .filter-list input[type="checkbox"]:disabled:active + .checkbox-indicator {
+                .filter-list input[type="checkbox"]:disabled:active + .checkbox-indicator,
                     opacity: 0.25;
                     pointer-events: none;
                     cursor: default;
