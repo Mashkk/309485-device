@@ -282,21 +282,25 @@
             <ul class="logotypes-list">
               <li class="logo">
                 <a href="https://www.dji.com" target="_blank">
+                  <span class="visually-hidden">Официальный сайт фирмы DJI</span>
                   <img src="img/dji.png" alt="dji" width="520" height="100">
                 </a>
               </li>
               <li class="logo">
                 <a href="http://www.sp-gadgets.com" target="_blank">
+                  <span class="visually-hidden">Официальный сайт фирмы SP-Gadgets</span>
                   <img src="img/spgadgets.png" alt="SPGadgets" width="520" height="100">
                 </a>
               </li>
               <li class="logo">
                 <a href="https://gopro.com" target="_blank">
+                  <span class="visually-hidden">Официальный сайт фирмы GoPro</span>
                   <img src="img/gopro.png" alt="GoPro" width="520" height="100">
                 </a>
               </li>
               <li class="logo">
                 <a href="https://www.vive.com" target="_blank">
+                  <span class="visually-hidden">Официальный сайт фирмы VIVE</span>
                   <img src="img/vive.png" alt="VIVE" width="520" height="100">
                 </a>
               </li>
@@ -332,6 +336,7 @@
 
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
             <a class="map-image" href="#">
+              <span class="visually-hidden">Открыть карту</span>
               <img src="img/map.jpg" alt="Наш адрес" width="560" height="222">
             </a>
             <button class="button button-columns  modal-form-button" type="button">Напишите нам</button>
@@ -379,19 +384,19 @@
         <ul class="social-btn">
           <li>
             <a href="https://www.facebook.com">
-              <span class="visually-hidden">Ссылка на нашу страничку в </span>
+              <span class="visually-hidden">Ссылка на нашу страничку в Facebook</span>
               <img src="img/fb.svg" title="Фейсбук" alt="Фейсбук" width="32" height="32">
             </a>
           </li>
           <li>
             <a href="https://www.instagram.com">
-              <span class="visually-hidden">Ссылка на нашу страничку в </span>
+              <span class="visually-hidden">Ссылка на нашу страничку в Instafram</span>
               <img src="img/instagram.svg" title="Инстаграм" alt="Инстаграм" width="32" height="32">
             </a>
           </li>
           <li>
             <a href="https://twitter.com">
-              <span class="visually-hidden">Ссылка на нашу страничку в </span>
+              <span class="visually-hidden">Ссылка на нашу страничку в Twitter</span>
               <img src="img/twitter.svg" title="Твиттер" alt="Твиттер" width="32" height="32">
             </a>
           </li>
@@ -429,7 +434,7 @@
 
           <div class="modal-comment">
             <label for="modal-user-comment">Текст письма:</label>
-            <textarea id="modal-user-comment" name="modal-user-comment" placeholder="В свободной форме" rows="5" required></textarea>
+            <textarea id="modal-user-comment" name="modal-user-comment" placeholder="В свободной форме" rows="5"></textarea>
           </div>
           <button class="button" type="submit">Отправить</button>
         </form>
@@ -437,7 +442,51 @@
       
     </section>
 
+    <script>
+        var modalLink = document.querySelector(".modal-form-button");
+  
+        var modalPopup = document.querySelector(".modal-form");
+        var modalClose = modalPopup.querySelector(".modal-close-button");
+  
+        var form = modalPopup.querySelector("form");
+        var modalLogin = modalPopup.querySelector("[name=modal-user-name]");
 
+        var mapLink = document.querySelector("map-image")
+  
+        modalLink.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          modalPopup.classList.add("is-active");
+          modalLogin.focus();
+        
+        });
+  
+        modalClose.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          modalPopup.classList.remove("is-active");
+        });
+ 
+        function markFormSubmitted() {
+            form.classList.add("submitted");
+        }
+        
+        function onSubmit(e) {
+            if (!this.reportValidity()) {
+                e.preventDefault();
+                markFormSubmitted();
+            }
+        }
+        
+        form.addEventListener("submit", onSubmit);
+  
+        window.addEventListener("keydown", function (evt) {
+          if (evt.keyCode === 27) {
+            if (modalPopup.classList.contains("is-active")) {
+              modalPopup.classList.remove("is-active");
+            }
+          }
+        });
+  
+      </script>
 
   </body>
 </html>
