@@ -335,7 +335,7 @@
             <h2>Контакты</h2>
 
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-            <a class="map-image" href="#">
+            <a class="map-image" href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.687031,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618">
               <span class="visually-hidden">Открыть карту</span>
               <img src="img/map.jpg" alt="Наш адрес" width="560" height="222">
             </a>
@@ -414,7 +414,11 @@
 
       <div class="modal modal-map">
         <button class="modal-close-button" type="button">Закрыть карту</button>
-        <img src="img/map.jpg" alt="Мы находимся по адресу: г.Москва, ул.Строителей, 15" width="560" height="222">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1512320673858" width="960" height="559" frameborder="0" style="border:0" allowfullscreen>
+        </iframe>
+        <p>
+          <img src="img/map-big.jpg" alt="Мы находимся по адресу: г.Москва, ул.Строителей, 15" width="960" height="559">
+        </p>
       </div>
       
       <div class="modal modal-form">
@@ -450,39 +454,56 @@
   
         var form = modalPopup.querySelector("form");
         var modalLogin = modalPopup.querySelector("[name=modal-user-name]");
-
-        var mapLink = document.querySelector("map-image")
+        var modalEmail = modalPopup.querySelector("[name=modal-user-email]");
   
         modalLink.addEventListener("click", function (evt) {
           evt.preventDefault();
           modalPopup.classList.add("is-active");
           modalLogin.focus();
-        
         });
   
         modalClose.addEventListener("click", function (evt) {
           evt.preventDefault();
           modalPopup.classList.remove("is-active");
+          modalPopup.classList.remove("invalid-value");
         });
  
-        function markFormSubmitted() {
-            form.classList.add("submitted");
-        }
-        
-        function onSubmit(e) {
-            if (!this.reportValidity()) {
-                e.preventDefault();
-                markFormSubmitted();
-            }
-        }
-        
-        
-        form.addEventListener("submit", onSubmit);
+        form.addEventListener("submit", function (evt) {
+          if (!modalLogin.value || !modalEmail.value) {
+            evt.preventDefault();
+            modalPopup.classList.remove("invalid-value");
+            modalPopup.offsetWidth = modalPopup.offsetWidth;
+            modalPopup.classList.add("invalid-value");
+          }           
+        });
   
         window.addEventListener("keydown", function (evt) {
           if (evt.keyCode === 27) {
             if (modalPopup.classList.contains("is-active")) {
               modalPopup.classList.remove("is-active");
+              modalPopup.classList.remove("invalid-value");
+            }
+          }
+        });
+
+        var mapLink = document.querySelector(".map-image");
+        var mapPopup = document.querySelector(".modal-map");
+        var mapClose = mapPopup.querySelector(".modal-close-button");
+
+        mapLink.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          mapPopup.classList.add("is-active");      
+        });
+
+        mapClose.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          mapPopup.classList.remove("is-active");
+        });
+
+        window.addEventListener("keydown", function (evt) {
+          if (evt.keyCode === 27) {
+            if (mapPopup.classList.contains("is-active")) {
+              mapPopup.classList.remove("is-active");
             }
           }
         });
