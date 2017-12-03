@@ -19,7 +19,8 @@
         
           <div class="main-navigation-wrapper">
             
-            <form class="main-search" name="main-search" action="https://echo.htmlacademy.ru" method="get">
+            <!-- Тут action укажи как везде https://echo.htmlacademy.ru -->
+            <form class="main-search" name="main-search" action="#" method="get">
               <input class="main-search-field" type="search" placeholder="Поиск по сайту" required> 
               <button class="main-search-button" name="search-button" type="submit">Найти</button>
             </form>
@@ -78,6 +79,9 @@
               <img class="slider-img" src="img/slider-1.png" alt="Моноподы для селфи" width="384" height="486">
             </div>
 
+            <!-- Не проходит по критерию Д19 переполнение контентом. Попробуй увеличить текст описания.
+            Тут не нужен флекс, аналогично блоку о нас и контакты тут просто поток текста.
+            Так же надо убирать min-height (растояние до следующего блока регулировать марджином), а то slider-list-navigation сползает криво при переполнении. -->
             <div class="slider-item-content">
               <h3>Делай селфи,<br>
                 как Бен Стиллер!</h3>
@@ -243,6 +247,8 @@
             
             <div class="services-nav">
               <ul>
+                <!-- id тут не особо нужны, если хочешь их оставить. то добавь и для кредита тоже.
+                В js для переключения будут использоваться атрибуты кнопки -->
                 <li  id="delivery">
                     <button class="services-button  is-active button" type="button" name="delivery-button">Доставка</button>
                 </li>
@@ -255,6 +261,8 @@
               </ul>
             </div>
 
+            <!-- Не проходит по критерию Д19 переполнение контентом. Попробуй увеличить текст описания.
+            Надо для .services задать min-height, а не height -->
             <div class="services-item delivery"> 
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
@@ -323,7 +331,7 @@
               </li>
             </ul>
 
-            <a class="button button-columns" href="about-us.html">подробнее о нас</a>
+            <a class="button button-columns" href="#">подробнее о нас</a>
           </section>
         
 
@@ -334,7 +342,7 @@
             <a class="map-image" href="#">
               <img src="img/map.jpg" alt="Наш адрес" width="560" height="222">
             </a>
-            <button class="button button-columns  modal-form-button" type="button">Напишите нам</button>
+            <button class="button button-columns" type="button">Напишите нам</button>
           </section>
         </div>
       </div>
@@ -378,27 +386,19 @@
 
         <ul class="social-btn">
           <li>
-            <a href="https://www.facebook.com">
-              <span class="visually-hidden">Ссылка на нашу страничку в </span>
-              <img src="img/fb.svg" title="Фейсбук" alt="Фейсбук" width="32" height="32">
-            </a>
+            <!-- По критерию Д27 тут у иконок (внутри ссылки) нужно сделать текстовое описание в элементе visually-hidden -->
+            <a href="https://www.facebook.com"><img src="img/fb.svg" title="Фейсбук" alt="Фейсбук" width="32" height="32"></a>
           </li>
           <li>
-            <a href="https://www.instagram.com">
-              <span class="visually-hidden">Ссылка на нашу страничку в </span>
-              <img src="img/instagram.svg" title="Инстаграм" alt="Инстаграм" width="32" height="32">
-            </a>
+            <a href="https://www.instagram.com"><img src="img/instagram.svg" title="Инстаграм" alt="Инстаграм" width="32" height="32"></a>
           </li>
           <li>
-            <a href="https://twitter.com">
-              <span class="visually-hidden">Ссылка на нашу страничку в </span>
-              <img src="img/twitter.svg" title="Твиттер" alt="Твиттер" width="32" height="32">
-            </a>
+            <a href="https://twitter.com"><img src="img/twitter.svg" title="Твиттер" alt="Твиттер" width="32" height="32"></a>
           </li>
         </ul>
         
+        <!-- По критерию Д27 тут у иконоки (внутри ссылки) нужно сделать текстовое описание в элементе visually-hidden -->
         <a class="htmlacademy-link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <span class="visually-hidden">CopyRight</span>
           <img class="htmlacademy-link-img" src="img/logohtml.svg" title="HTMLacademy" alt="HTMLacademy" width="27" height="35">
         </a>
       </div>
@@ -407,37 +407,38 @@
     <section class="modal-windows">
       <h2 class="visually-hidden">Дополнительная информация</h2> 
 
-      <div class="modal modal-map">
+      <div class="modal modal-map" hidden>
         <button class="modal-close-button" type="button">Закрыть карту</button>
         <img src="img/map.jpg" alt="Мы находимся по адресу: г.Москва, ул.Строителей, 15" width="560" height="222">
       </div>
       
-      <div class="modal modal-form">
-        <button class="modal-close-button" type="button">Закрыть форму обратной связи</button>
+      <!-- shadow-wrapper лишняя обертка, не пройдет по критерию Д2.
+      В данном случае можно спокойно сделать эту тень псевдоэлементом для modal-form -->
+      <div class="shadow-wrapper" hidden>
+        <div class="modal modal-form">
+          <button class="modal-close-button" type="button">Закрыть форму обратной связи</button>
 
-        <form action="https://echo.htmlacademy.ru" method="post">
+          <form action="https://echo.htmlacademy.ru" method="post">
 
-          <div class="modal-item">
-            <label for="modal-user-name">Ваше имя:</label> 
-            <input id="modal-user-name" type="text" name="modal-user-name" placeholder="Представьтесь, пожалуйста" required>
-          </div>
+            <div class="modal-item">
+              <label for="modal-user-name">Ваше имя:</label> 
+              <input id="modal-user-name" type="text" name="modal-user-name" placeholder="Представьтесь, пожалуйста" required>
+            </div>
 
-          <div class="modal-item">
-            <label for="modal-user-email">Ваш e-mail:</label>
-            <input id="modal-user-email" type="email" name="modal-user-email" placeholder="Для отправки ответа" required>
-          </div>
+            <div class="modal-item">
+              <label for="modal-user-email">Ваш e-mail:</label>
+              <input id="modal-user-email" type="email" name="modal-user-email" placeholder="Для отправки ответа" required>
+            </div>
 
-          <div class="modal-comment">
-            <label for="modal-user-comment">Текст письма:</label>
-            <textarea id="modal-user-comment" name="modal-user-comment" placeholder="В свободной форме" rows="5" required></textarea>
-          </div>
-          <button class="button" type="submit">Отправить</button>
-        </form>
+            <div class="modal-comment">
+              <label for="modal-user-comment">Текст письма:</label>
+              <textarea id="modal-user-comment" name="modal-user-comment" placeholder="В свободной форме" rows="5" required></textarea>
+            </div>
+            <button class="button" type="submit">Отправить</button>
+          </form>
+        </div>
       </div>
-      
     </section>
-
-
 
   </body>
 </html>

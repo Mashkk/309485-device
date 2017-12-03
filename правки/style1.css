@@ -522,7 +522,7 @@ img {
 
 .sliders-list {
     position: relative;
-    margin-bottom: 104px;
+    margin-bottom: 64px;
 }
     
     .sliders-list::before {
@@ -565,7 +565,7 @@ img {
         position: relative;
 
         width: 100%;
-        
+        min-height: 530px;
 
         padding-right: 50px;
         padding-left: 18px;
@@ -603,8 +603,17 @@ img {
             }
 
         .slider-item-content {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+
             width: 510px;
-            
+            min-height: 500px;
+
             margin-left: auto;
             padding-top: 81px;
         }
@@ -657,7 +666,7 @@ img {
 
         .slider-list-navigation {
             position: absolute;
-            bottom: 142px;
+            bottom: 183px;
             right: 82px;
         }
 
@@ -783,7 +792,7 @@ img {
             }
 
 .services {
-    min-height: 288px;
+    height: 288px;
     width: 100%;
 
     margin-bottom: 95px;
@@ -1079,9 +1088,9 @@ img {
             display: inline-block;
             vertical-align: middle;
 
-            margin: 3px 0 45px 0;
+            margin: 3px 0 35px 0;
 
-            font-size: 0;
+            font: 0;
             line-height: 0;
         }
 
@@ -1149,11 +1158,11 @@ img {
         .breadcrumbs li::after {
             content: "";
             position: absolute;
-            top: 16px;
+            top: 14px;
             right: 19px;
 
-            width: 5px;
-            height: 5px;
+            width: 6px;
+            height: 6px;
 
             background-color: #fff;
             border-radius: 50% 0 0 0;
@@ -1192,7 +1201,7 @@ img {
                 color: rgba(0, 0, 0, 0.1);
             }
 
-            .breadcrumbs a.is-active {
+            .breadcrumbs .is-active {
                 pointer-events: none;
                 cursor: default;
                 color: rgba(0, 0, 0, 0.3);
@@ -1227,13 +1236,13 @@ img {
 
 
         .filters {
-            width: 200px;
+            width: 270px;
             min-height: 800px;
 
             position: relative;
             z-index: 2;
 
-            margin: 0 70px 0 58px;
+            margin-left: 58px;
         }
 
     .catalog-container {
@@ -1255,7 +1264,7 @@ img {
                 flex-wrap: wrap;
 
             width: 760px;
-            min-height: 1090px;
+            height: 1090px;
 
             margin: 0;
             padding: 0;
@@ -1523,7 +1532,7 @@ img {
                 }
             
                 .sorting-pointer:active::before,
-                .sorting-pointer.is-active::before {
+                .pointer-is-active::before {
                     opacity: 1;
                 }
 
@@ -1567,7 +1576,6 @@ img {
     .price-slider-button {
         display: inline-block;
         vertical-align: middle;
-
         position: absolute;
         top: -12px;
         left: -10px;
@@ -1584,6 +1592,9 @@ img {
         left: 100px;
     }
 
+    // По стайлгайду на наведение эти кнопки не меняются, только по нажатию
+    .price-slider-button:hover,
+    .price-slider-button:focus,
     .price-slider-button:active {
         outline: none;
         background-size: 22px 24px;
@@ -1622,22 +1633,45 @@ img {
         margin-bottom: 108px;
     }
 
+    .filters-wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+
+        -ms-flex-preferred-size: 535px;
+
+            flex-basis: 535px;
+
+        margin-bottom: 30px;
+    }
+
         .filter-list {
             border: none;
 
-            min-height: 100px;
-
             margin: 0;
-            margin-bottom: 40px;
             padding: 0;
         }
 
-        .filter-list.filter-color {
-            margin-bottom: 46px;
+        .filters-wrap > .filter-slider {
+            -ms-flex-preferred-size: 140px;
+                flex-basis: 140px;
         }
 
-        .filter-list.filter-bluetoos {
-            margin-bottom: 33px;
+        .filters-wrap > .filter-color {
+            -ms-flex-preferred-size: 285px;
+                flex-basis: 285px;
+        }
+
+        .filters-wrap .filter-bluetoos {
+            -ms-flex-preferred-size: 108px;
+                flex-basis: 108px;
         }
 
         .filter-name {
@@ -1663,6 +1697,7 @@ img {
         }
 
                 .filter-list li {
+                    position: relative;
                     list-style: none outside;
 
                     font-size: 14px;
@@ -1673,90 +1708,83 @@ img {
                     list-style: none outside;
                 }
 
-                .filter-list label {
-                    position: relative;
-
+                .filter-item label {
                     padding-left: 39px;
                     cursor: pointer;
                 }
 
-                .filter-list input {
+                .filter-list input[type="checkbox"] + .checkbox-indicator,
+                .filter-list input[type="radio"] + .checkbox-indicator {
                     position: absolute;
-                    opacity: 0;
+                    top: 7px;
+                    left: 0px;
+
+                    width: 27px;
+                    height: 25px;
+
+                    cursor: pointer;
                 }
 
-                    .filter-list input + label::before {
-                        content: "";
-                        display: block;
 
-                        position: absolute;
-                        top: -2px;
-                        left: 0;
+                .filter-list input[type="checkbox"] + .checkbox-indicator {
+                    background: url("../img/checkboxoff.svg") no-repeat bottom left/23px 23px;
+                }
 
+                .filter-list input[type="radio"] + .checkbox-indicator {
+                    background: url("../img/radiooff.svg") no-repeat bottom left/25px 25px;
+                }
 
-                        width: 27px;
-                        height: 25px;
-                    }
+                .filter-list input[type="checkbox"]:focus + .checkbox-indicator, 
+                .filter-list input[type="radio"]:focus + .checkbox-indicator {
+                    outline: 2px auto;
+                }
 
-                    .filter-list input + label::after {
-                        content: "";
-                        display: none;
+                // В таких местах (где не меняется картинка) type указывать не нужно и кол-во строк уменьшается в 2 раза
+                .filter-list input[type="checkbox"]:hover + .checkbox-indicator,
+                .filter-list input[type="checkbox"]:focus + .checkbox-indicator,          
+                .filter-list input[type="checkbox"]:checked:hover + .checkbox-indicator,
+                .filter-list input[type="checkbox"]:checked:focus + .checkbox-indicator,
+                .filter-list input[type="radio"]:hover + .checkbox-indicator,
+                .filter-list input[type="radio"]:focus + .checkbox-indicator, 
+                .filter-list input[type="radio"]:checked:hover + .checkbox-indicator,
+                .filter-list input[type="radio"]:checked:focus + .checkbox-indicator {
+                    opacity: 0.6;
+                }
 
-                        position: absolute;
-                        top: -4px;
-                        left: -2px;
+                .filter-list input[type="checkbox"]:checked:not(disabled) + .checkbox-indicator,
+                .filter-list input[type="checkbox"]:active:not(disabled) + .checkbox-indicator {
+                    background: url("../img/checkboxon.svg") no-repeat bottom left/27px 23px;
+                    opacity: 1;
+                }
 
-                        width: 31px;
-                        height: 29px;
+                .filter-list input[type="checkbox"]:checked:active:not(:disabled) + .checkbox-indicator {
+                    opacity: 1;
+                    background: url("../img/checkboxoff.svg") no-repeat bottom left/23px 23px;
+                }
 
-                        border: 2px solid #ccc;
-                    }
-                
-                    .filter-list input[type="checkbox"] + label::before {
-                        background: url("../img/checkboxoff.svg") no-repeat bottom left/23px 23px;
-                    }
-                
-                    .filter-list input[type="radio"] + label::before {
-                        background: url("../img/radiooff.svg") no-repeat bottom left/25px 25px;
-                    }
-                
-                    .filter-list input:hover + label::before,
-                    .filter-list input:checked:hover:not(:disabled) + label:hover::before {
-                       opacity: 0.6;
-                    } 
+                .filter-list input[type="radio"]:checked:not(:disabled) + .checkbox-indicator,
+                .filter-list input[type="radio"]:active:not(:disabled) + .checkbox-indicator {
+                    background: url("../img/radioon.svg") no-repeat bottom left/25px 25px;
+                    opacity: 1;
+                }
 
-                    .filter-list input:focus + label::after {
-                        display: block;
-                    }
+                .filter-list input[type="radio"]:checked:active:not(:disabled) + .checkbox-indicator {
+                    opacity: 1;
+                    background: url("../img/radiooff.svg") no-repeat bottom left/25px 25px;
+                }
 
-                    .filter-list input[type="checkbox"]:checked + label::before,
-                    .filter-list input[type="checkbox"]:active:not(:disabled) + label::before {
-                        background: url("../img/checkboxon.svg") no-repeat bottom left/27px 23px;
-                        opacity: 1;
-                    }
-                
-                    .filter-list input[type="checkbox"]:checked:active:not(:disabled) + label::before {
-                        background: url("../img/checkboxoff.svg") no-repeat bottom left/23px 23px;
-                        opacity: 1;
-                    }
-                
-                    .filter-list input[type="radio"]:checked + label::before,
-                    .filter-list input[type="radio"]:active:not(:disabled) + label::before {
-                        background: url("../img/radioon.svg") no-repeat bottom left/25px 25px;
-                        opacity: 1;
-                    }
-
-                    .filter-list input[type="radio"]:checked:active:not(:disabled) + label::before {
-                        background: url("../img/radiooff.svg") no-repeat bottom left/25px 25px;
-                        opacity: 1;
-                    }
-
-                    .filter-list input:disabled + label,
-                    .filter-list input:checked:disabled + label {
-                        opacity: 0.25;
-                        pointer-events: none;
-                        cursor: default;
-                    }
+                .filter-list input[type="radio"]:disabled + .checkbox-indicator,
+                .filter-list input[type="radio"]:disabled:hover + .checkbox-indicator,
+                .filter-list input[type="radio"]:disabled:checked + .checkbox-indicator,
+                .filter-list input[type="radio"]:disabled:active + .checkbox-indicator,
+                .filter-list input[type="checkbox"]:disabled + .checkbox-indicator,
+                .filter-list input[type="checkbox"]:disabled:hover + .checkbox-indicator,
+                .filter-list input[type="checkbox"]:disabled:checked + .checkbox-indicator,
+                .filter-list input[type="checkbox"]:disabled:active + .checkbox-indicator {
+                    opacity: 0.25;
+                    pointer-events: none;
+                    cursor: default;
+                }
 
 .pagination-list {
     display: -webkit-box;
@@ -1808,7 +1836,6 @@ img {
 
             margin: 0;
             padding: 0;
-            padding-left: 15px;
 
             list-style: none outside;
         }
@@ -1855,14 +1882,14 @@ img {
             background-color: #d9d9d9;
         }
 
-        .pagination-item.is-active {
+        .pagination-item-is-active {
             pointer-events: none;
             cursor: default;
         }
 
-        .pagination-item.is-active a,
-        .pagination-item.is-active a:hover,
-        .pagination-item.is-active a:focus,
+        .pagination-item-is-active a,
+        .pagination-item-is-active a:hover,
+        .pagination-item-is-active a:focus,
         .pagination-list a:active,
         .back a,
         .next a,
@@ -2143,38 +2170,25 @@ img {
     }
 
     .modal-form {
-        display: none;
         min-height: 553px;
-        z-index: 1;
 
         padding: 95px 100px;
     }
 
-    .modal-form.is-active {
-        display: block;
-    }
-
-        .modal-form::after,
-        .modal-form::before {
+        .shadow-wrapper::after {
             content: "";
 
-            display: block;
-            position: absolute;
-            top: 43px;
-            bottom: 60px;
-            left: 0;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
             width: 960px;
-            z-index: -1;
-
-            box-shadow: -40px 0 40px -40px rgba(0, 0, 0, 0.75);
+            height: 430px;
+          
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+            background-color: transparent;
         }
-
-        .modal-form::after {
-            box-shadow: 40px 0 40px -40px rgba(0, 0, 0, 0.75);
-            right: 0;
-            left: auto;
-}
 
         .modal-close-button {
             position: absolute;
@@ -2324,12 +2338,7 @@ img {
                 }
 
     .modal-map {
-        display: none;
         height: 560px;
-    }
-
-    .modal-map.is-active {
-        display: block;
     }
 
         .modal-map img {

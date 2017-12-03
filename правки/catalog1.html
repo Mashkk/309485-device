@@ -19,14 +19,14 @@
 
           <div class="main-navigation-wrapper">
 
-            <form class="main-search" name="main-search" action="https://echo.htmlacademy.ru" method="get">
+            <form class="main-search" name="main-search" action="#" method="get">
               <input class="main-search-field" type="search" placeholder="Поиск по сайту" required>
               <button class="main-search-button" name="search-button" type="submit">Найти</button>
             </form>
 
             <ul class="user-navigation-header">
               <li class="user-name">
-                <a href="user-profile-page.html">Валентин Петухов</a>
+                <a href="#">Валентин Петухов</a>
               </li>
               <li class="exit">
                 <button class="user-navigation-exit-button" type="button" name="exit">Выйти</button>
@@ -47,7 +47,8 @@
 
                     <ul class="navigation-catalog-list">
                       <li><a href="catalog.html">Виртуальная реальность</a></li>
-                      <li class="navigation-catalog-item is-active"><a href="catalog.html">Моноподы для селфи</a></li>
+                      <!-- По критерию Б15 названия классов должны быть сделаны единообразно, у тебя для активных элементов в основном используется класс is-active, нужно его использовать и тут -->
+                      <li class="navigation-catalog-item-is-active"><a href="catalog.html">Моноподы для селфи</a></li>
                       <li><a href="catalog.html">Экшн-камеры</a></li>
                     </ul>
 
@@ -94,64 +95,86 @@
 
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
 
-              <fieldset class="filter-list filter-slider">
-                <legend class="filter-name">Стоимость</legend>
+              <!-- Этот блок тут совсем лишний и тем более с флексбоксом.
+              Тут просто друг за другом идут fieldset с падингами и марджинами и все.
+              Черные полосы лучше всего сделать рамкой у fieldset без псевдоэлементов. -->
+              <div class="filters-wrap">
 
-                <div class="price-slider">
-                  <div class="price-slider-bar"></div>
+                <fieldset class="filter-list filter-slider">
+                  <legend class="filter-name">Стоимость</legend>
 
-                  <div class="price-slider-button price-slider-button-from" tabindex="0">Цена от</div>
-                  <div class="price-slider-button price-slider-button-to" tabindex="0">Цена до</div>
-                </div>
+                  <div class="price-slider">
+                    <div class="price-slider-bar"></div>
 
-                <p class="price-slider-data price-slider-data-from">от 0</p>
-                <p class="price-slider-data price-slider-data-to">до 5000</p>
-                
-                <input type="hidden" name="price-from" value="0">
-                <input type="hidden" name="price-to" value="5000">
-              </fieldset>
+                    <div class="price-slider-button price-slider-button-from" tabindex="0">Цена от</div>
+                    <div class="price-slider-button price-slider-button-to" tabindex="0">Цена до</div>
+                  </div>
 
-              <fieldset class="filter-list filter-color">
-                <legend class="filter-name">Цвет</legend>
+                  <p class="price-slider-data price-slider-data-from">от 0</p>
+                  <p class="price-slider-data price-slider-data-to">до 5000</p>
+                  
+                  <input type="hidden" name="price-from" value="0">
+                  <input type="hidden" name="price-to" value="5000">
+                </fieldset>
 
-                <ul>
-                  <li class="filter-item">
-                    <input class="filter-input filter-input-checkbox" id="black" type="checkbox" name="color" value="black" checked disabled>
-                    <label for="black">Черный</label>
-                  </li>
-                  <li class="filter-item"> 
-                    <input class="filter-input filter-input-checkbox" id="white" type="checkbox" name="color" value="white">
-                    <label for="white">Белый</label>
-                  </li>
-                  <li class="filter-item">
-                    <input class="filter-input filter-input-checkbox" id="blue" type="checkbox" name="color" value="blue" checked>
-                    <label for="blue">Синий</label>                    
-                  </li>
-                  <li class="filter-item">
-                    <input class="filter-input filter-input-checkbox" id="red" type="checkbox" name="color" value="red" checked>
-                    <label for="red">Красный</label>
-                  </li>
-                  <li class="filter-item">
-                    <input class="filter-input filter-input-checkbox" id="pink" type="checkbox" name="color" value="pink">
-                    <label for="pink">Розовый</label>
-                  </li>
-                </ul>
-              </fieldset>
+                <fieldset class="filter-list filter-color">
+                  <legend class="filter-name">Цвет</legend>
 
-              <fieldset class="filter-list filter-bluetoos">
-                <legend class="filter-name">Bluetooth</legend>
+                  <ul>
+                    <li class="filter-item">
+                      <!-- У заблокированного по стайлгайду текст тоже прозрачный -->
+                      <label for="black">Черный
+                        <input class="filter-input filter-input-checkbox" id="black" type="checkbox" name="color" value="black" checked disabled>
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                    <li class="filter-item">
+                      <label for="white">Белый
+                        <input class="visually-hidden filter-input filter-input-checkbox" id="white" type="checkbox" name="color" value="white">
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                    <li class="filter-item">
+                      <label for="blue">Синий
+                        <input class="visually-hidden filter-input filter-input-checkbox" id="blue" type="checkbox" name="color" value="blue" checked>
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                    <li class="filter-item">
+                      <label for="red">Красный
+                        <input class="visually-hidden filter-input filter-input-checkbox" id="red" type="checkbox" name="color" value="red" checked>
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                    <li class="filter-item">
+                      <label for="pink">Розовый
+                        <input class="visually-hidden filter-input filter-input-checkbox" id="pink" type="checkbox" name="color" value="pink">
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
 
-                <ul>
-                  <li class="filter-item">
-                    <input class="filter-input filter-input-radio" id="yes" type="radio" name="bluetooth" value="yes" checked>
-                    <label for="yes">Есть</label>
-                  </li>
-                  <li class="filter-item">
-                    <input class="filter-input filter-input-radio" id="no" type="radio" name="bluetooth" value="no">
-                    <label for="no">Нет</label>
-                  </li>
-                </ul>
-              </fieldset>
+                <fieldset class="filter-list filter-bluetoos">
+                  <legend class="filter-name">Bluetooth</legend>
+
+                  <ul>
+                    <li class="filter-item">
+                      <label for="yes">Есть
+                        <input class="visually-hidden filter-input filter-input-radio" id="yes" type="radio" name="bluetooth" value="yes" checked>
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                    <li class="filter-item">
+                      <label for="no">Нет
+                        <input class="visually-hidden filter-input filter-input-radio" id="no" type="radio" name="bluetooth" value="no">
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+            
               <button class="button" type="submit" name="filter-button">Показать</button>
             </form>
         
@@ -180,7 +203,8 @@
                   <button class="sorting-pointer sorting-pointer-up" type="button">По возрастанию</button>
                 </li>
                 <li>
-                  <button class="sorting-pointer sorting-pointer-down is-active" type="button">По убыванию</button>
+                  <!-- По критерию Б15 названия классов должны быть сделаны единообразно, у тебя для активных элементов в основном используется класс is-active, нужно его использовать и тут -->
+                  <button class="sorting-pointer sorting-pointer-down pointer-is-active" type="button">По убыванию</button>
                 </li>
               </ul>
             </section>
@@ -188,6 +212,7 @@
             <section class="catalog">
               <h2 class="visually-hidden">Список товаров</h2>
 
+              <!-- Из-за высоты, указанной у .catalog-list, ломается страница при добавлении еще нескольких товаров, высоту надо убрать. -->
               <ul class="catalog-list">
                 <li class="catalog-item">
                   <p class="catalog-item-image">
@@ -253,7 +278,8 @@
                 <li>
 
                   <ul class="pagination-items">
-                    <li class="pagination-item is-active">
+                    <!-- По критерию Б15 названия классов должны быть сделаны единообразно, у тебя для активных элементов в основном используется класс is-active, нужно его использовать и тут -->
+                    <li class="pagination-item pagination-item-is-active">
                       <a>1</a>
                     </li>
                     <li class="pagination-item">
@@ -312,27 +338,19 @@
 
         <ul class="social-btn">
           <li>
-            <a href="https://www.facebook.com">
-              <span class="visually-hidden">Ссылка на нашу страничку в </span>
-              <img src="img/fb.svg" title="Фейсбук" alt="Фейсбук" width="32" height="32">
-            </a>
+            <!-- По критерию Д27 тут у иконок (внутри ссылки) нужно сделать текстовое описание в элементе visually-hidden -->
+            <a href="https://www.facebook.com"><img src="img/fb.svg" title="Фейсбук" alt="Фейсбук" width="32" height="32"></a>
           </li>
           <li>
-            <a href="https://www.instagram.com">
-              <span class="visually-hidden">Ссылка на нашу страничку в </span>
-              <img src="img/instagram.svg" title="Инстаграм" alt="Инстаграм" width="32" height="32">
-            </a>
+            <a href="https://www.instagram.com"><img src="img/instagram.svg" title="Инстаграм" alt="Инстаграм" width="32" height="32"></a>
           </li>
           <li>
-            <a href="https://twitter.com">
-              <span class="visually-hidden">Ссылка на нашу страничку в </span>
-              <img src="img/twitter.svg" title="Твиттер" alt="Твиттер" width="32" height="32">
-            </a>
+            <a href="https://twitter.com"><img src="img/twitter.svg" title="Твиттер" alt="Твиттер" width="32" height="32"></a>
           </li>
         </ul>
           
+        <!-- По критерию Д27 тут у иконоки (внутри ссылки) нужно сделать текстовое описание в элементе visually-hidden -->
         <a class="htmlacademy-link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <span class="visually-hidden">CopyRight</span>
           <img class="htmlacademy-link-img" src="img/logohtml.svg" title="HTMLacademy" alt="HTMLacademy" width="27" height="35">
         </a>
       </div>
