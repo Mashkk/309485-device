@@ -2158,25 +2158,19 @@ img {
     
 /*Модальные окна*/
 
-    .modal {
+    .modal-wrapper {
+        display: none;
+
         position: fixed;
-        z-index: 5;
-
-        width: 960px;
-
         top: 50%;
         left: 50%;
+        z-index: 3;
+
+        width: 1000px;
         -webkit-transform: translate(-50%, -50%);
                 -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        
-        -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        background-color: #fff;  
+            transform: translate(-50%, -50%);        
     }
-
-    
 
     @keyframes fadeIn {
         from {
@@ -2187,10 +2181,6 @@ img {
           opacity: 1;
         }
       }
-
-    .modal-wrapper {
-        display: none;
-    }
             
     .modal-wrapper.is-active {
         display: block;
@@ -2201,22 +2191,39 @@ img {
     .modal-wrapper:after {
         content: "";
         position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
 
         width: 960px;
         height: 430px;
 
-        top: 50%;
-        left: 50%;
         transform: translate(-50%, -50%);
 
         box-shadow: 0 0 40px rgba(0, 0, 0, 0.75);
     }
 
-        .modal-form {
-                min-height: 553px;
-                z-index: 1;
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
 
-                padding: 95px 100px;
+            width: 960px;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);  
+
+            -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-form {
+            min-height: 553px;
+
+            padding: 95px 100px;
+            background-color: #fff;
             }
 
             .modal-close-button {
