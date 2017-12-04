@@ -2146,8 +2146,10 @@ img {
     .main-footer .phonenumber {
         -ms-flex-preferred-size: 290px;
             flex-basis: 290px;
+            width: 290px;
 
         text-align: right;
+        white-space: nowrap
     }
 
     .main-footer .direction {
