@@ -858,7 +858,12 @@ img {
         }
 
     .services-item {
+        display: none;
         width: 700px;
+    }
+
+    .services-item.is-active {
+        display: block;
     }
 
         .services-item p {

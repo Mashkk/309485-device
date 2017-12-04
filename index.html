@@ -72,7 +72,7 @@
         <section class="sliders-list">
           <h2 class="visually-hidden">Хиты продаж!</h2>
 
-          <div class="slider-item first-slide is-active">
+          <div class="slider-item" id="slide-1">
 
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-1.png" alt="Моноподы для селфи" width="384" height="486">
@@ -101,7 +101,7 @@
             </div>
           </div>
 
-          <div class="slider-item  second-slide">
+          <div class="slider-item is-active" id="slide-2">
           
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-2.png" alt="Умные часы" width="345" height="485">
@@ -126,7 +126,7 @@
             </div>
           </div>
 
-          <div class="slider-item  third-slide">
+          <div class="slider-item" id="slide-3">
 
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-3.png" alt="Квадрокоптеры" width="526" height="334">
@@ -154,9 +154,9 @@
           </div>
 
           <div class="slider-list-navigation">
-            <button class="slider-button is-active" type="button">Моноподы для селфи</button>
-            <button class="slider-button" type="button">Фитнес-браслеты</button>
-            <button class="slider-button" type="button">Квадрокоптеры</button>
+            <button class="slider-button" type="button" id="slider-button-1">Моноподы для селфи</button>
+            <button class="slider-button is-active" type="button" id="slider-button-2">Фитнес-браслеты</button>
+            <button class="slider-button" type="button" id="slider-button-3">Квадрокоптеры</button>
           </div>
         </section>
       </div>
@@ -244,29 +244,29 @@
             <div class="services-nav">
               <ul>
                 <li  id="delivery">
-                    <button class="services-button  is-active button" type="button" name="delivery-button">Доставка</button>
+                    <button class="services-button  is-active button" type="button" name="delivery-button" id="services-button-1">Доставка</button>
                 </li>
                 <li  id="warranty">
-                    <button class="services-button button" type="button" name="warranty-button">Гарантия</button>
+                    <button class="services-button button" type="button" name="warranty-button" id="services-button-2">Гарантия</button>
                 </li>
                 <li>
-                    <button class="services-button button" type="button" name="credit-button">Кредит</button>
+                    <button class="services-button button" type="button" name="credit-button" id="services-button-3">Кредит</button>
                 </li>
               </ul>
             </div>
 
-            <div class="services-item delivery"> 
+            <div class="services-item delivery is-active" id="services-slide-1"> 
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </div>
 
-            <div class="services-item warranty" hidden>
+            <div class="services-item warranty" id="services-slide-2">
               <h3>Гарантия</h3>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.
                 <br> Товар, не дом, конечно же.</p>
             </div>
 
-            <div class="services-item credit"  hidden>
+            <div class="services-item credit"  id="services-slide-3">
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </div>

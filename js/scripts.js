@@ -70,3 +70,92 @@ window.addEventListener("keydown", function (evt) {
     });
 
 //Оживление главного слайдера 
+var slide1 = document.getElementById("slide-1");
+var slide2 = document.getElementById("slide-2");
+var slide3 = document.getElementById("slide-3");
+
+var button1 = document.getElementById("slider-button-1");
+var button2 = document.getElementById("slider-button-2");
+var button3 = document.getElementById("slider-button-3");
+
+//Включение 1го слайда
+button1.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    button1.classList.add("is-active");
+    button2.classList.remove("is-active");
+    button3.classList.remove("is-active");
+
+    slide1.classList.add("is-active");
+    slide2.classList.remove("is-active");
+    slide3.classList.remove("is-active");
+});
+
+//Включение 2го слайда
+button2.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    button2.classList.add("is-active");
+    button1.classList.remove("is-active");
+    button3.classList.remove("is-active");
+
+    slide2.classList.add("is-active");
+    slide1.classList.remove("is-active");
+    slide3.classList.remove("is-active");
+});
+
+//Включение 3го слайда
+button3.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    button3.classList.add("is-active");
+    button2.classList.remove("is-active");
+    button1.classList.remove("is-active");
+
+    slide3.classList.add("is-active");
+    slide2.classList.remove("is-active");
+    slide1.classList.remove("is-active");
+});
+
+
+//Оживление слайдера предоставляемых услуг
+var servicesSlide1 = document.getElementById("services-slide-1");
+var servicesSlide2 = document.getElementById("services-slide-2");
+var servicesSlide3 = document.getElementById("services-slide-3");
+
+var servicesButton1 = document.getElementById("services-button-1");
+var servicesButton2 = document.getElementById("services-button-2");
+var servicesButton3 = document.getElementById("services-button-3");
+
+//Включение 1го слайда
+servicesButton1.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    servicesButton1.classList.add("is-active");
+    servicesButton2.classList.remove("is-active");
+    servicesButton3.classList.remove("is-active");
+
+    servicesSlide1.classList.add("is-active");
+    servicesSlide2.classList.remove("is-active");
+    servicesSlide3.classList.remove("is-active");
+});
+
+//Включение 2го слайда
+servicesButton2.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    servicesButton2.classList.add("is-active");
+    servicesButton1.classList.remove("is-active");
+    servicesButton3.classList.remove("is-active");
+
+    servicesSlide2.classList.add("is-active");
+    servicesSlide1.classList.remove("is-active");
+    servicesSlide3.classList.remove("is-active");
+});
+
+//Включение 3го слайда
+servicesButton3.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    servicesButton3.classList.add("is-active");
+    servicesButton2.classList.remove("is-active");
+    servicesButton1.classList.remove("is-active");
+
+    servicesSlide3.classList.add("is-active");
+    servicesSlide2.classList.remove("is-active");
+    servicesSlide1.classList.remove("is-active");
+});
