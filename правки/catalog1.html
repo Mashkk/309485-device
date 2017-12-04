@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Девайс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body class="inner-page">
+    <header class="main-header">
+
+      <div class="container">
+
+        <nav class="main-navigation-header ">
+          <a class="main-logo logo-header" href="index.html">
+            <img class="logo-header-img" src="img/logo.svg" alt="Device" width="163" height="35">
+          </a>
+
+          <div class="main-navigation-wrapper">
+
+            <form class="main-search" name="main-search" action="#" method="get">
+              <input class="main-search-field" type="search" placeholder="Поиск по сайту" required>
+              <button class="main-search-button" name="search-button" type="submit">Найти</button>
+            </form>
+
+            <ul class="user-navigation-header">
+              <li class="user-name">
+                <a href="#">Валентин Петухов</a>
+              </li>
+              <li class="exit">
+                <button class="user-navigation-exit-button" type="button" name="exit">Выйти</button>
+              </li>
+              <li class="comparison">
+                <a href="#">Сравнить</a>
+              </li>
+              <li class="cart">
+                <a href="#">Корзина</a>
+              </li>
+            </ul>
+
+            <ul class="sait-navigation">
+              <li class="sait-navigation-catalog">
+                <a href="catalog.html">Каталог товаров</a>
+
+                  <div class="navigation-catalog">
+
+                    <ul class="navigation-catalog-list">
+                      <li><a href="catalog.html">Виртуальная реальность</a></li>
+                      <!-- По критерию Б15 названия классов должны быть сделаны единообразно, у тебя для активных элементов в основном используется класс is-active, нужно его использовать и тут -->
+                      <li class="navigation-catalog-item-is-active"><a href="catalog.html">Моноподы для селфи</a></li>
+                      <li><a href="catalog.html">Экшн-камеры</a></li>
+                    </ul>
+
+                    <ul class="navigation-catalog-list">
+                      <li><a href="catalog.html">Фитнес-браслеты</a></li>
+                      <li><a href="catalog.html">Умные часы</a></li>
+                    </ul>
+
+                    <ul class="navigation-catalog-list">
+                      <li><a href="catalog.html">Квадрокоптеры</a></li>
+                    </ul>
+                  </div>
+              </li>
+              <li><a href="index.html#delivery">Доставка</a></li>
+              <li><a href="index.html#waranty">Гарантия</a></li>
+              <li><a href="index.html#contact">Контакты</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+     <!--Конец шапки сайта-->
+
+    <main>
+
+      <div class="container"> <!--Заголовок-->
+
+        <h1>Моноподы для селфи</h1>
+
+          <ul class="breadcrumbs">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">Каталог товаров</a></li>
+            <li><a class="is-active">Моноподы для селфи</a></li>
+          </ul>
+      </div>
+
+
+      <div class="catalog-col-container">
+
+        <div class="container inner-container">
+
+          <section class="filters">
+            <h2 class="catalog-h2 filters-h">Фильтр:</h2>
+
+            <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+
+              <!-- Этот блок тут совсем лишний и тем более с флексбоксом.
+              Тут просто друг за другом идут fieldset с падингами и марджинами и все.
+              Черные полосы лучше всего сделать рамкой у fieldset без псевдоэлементов. -->
+              <div class="filters-wrap">
+
+                <fieldset class="filter-list filter-slider">
+                  <legend class="filter-name">Стоимость</legend>
+
+                  <div class="price-slider">
+                    <div class="price-slider-bar"></div>
+
+                    <div class="price-slider-button price-slider-button-from" tabindex="0">Цена от</div>
+                    <div class="price-slider-button price-slider-button-to" tabindex="0">Цена до</div>
+                  </div>
+
+                  <p class="price-slider-data price-slider-data-from">от 0</p>
+                  <p class="price-slider-data price-slider-data-to">до 5000</p>
+                  
+                  <input type="hidden" name="price-from" value="0">
+                  <input type="hidden" name="price-to" value="5000">
+                </fieldset>
+
+                <fieldset class="filter-list filter-color">
+                  <legend class="filter-name">Цвет</legend>
+
+                  <ul>
+                    <li class="filter-item">
+                      <!-- У заблокированного по стайлгайду текст тоже прозрачный -->
+                      <label for="black">Черный
+                        <input class="filter-input filter-input-checkbox" id="black" type="checkbox" name="color" value="black" checked disabled>
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                    <li class="filter-item">
+                      <label for="white">Белый
+                        <input class="visually-hidden filter-input filter-input-checkbox" id="white" type="checkbox" name="color" value="white">
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                    <li class="filter-item">
+                      <label for="blue">Синий
+                        <input class="visually-hidden filter-input filter-input-checkbox" id="blue" type="checkbox" name="color" value="blue" checked>
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                    <li class="filter-item">
+                      <label for="red">Красный
+                        <input class="visually-hidden filter-input filter-input-checkbox" id="red" type="checkbox" name="color" value="red" checked>
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                    <li class="filter-item">
+                      <label for="pink">Розовый
+                        <input class="visually-hidden filter-input filter-input-checkbox" id="pink" type="checkbox" name="color" value="pink">
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <fieldset class="filter-list filter-bluetoos">
+                  <legend class="filter-name">Bluetooth</legend>
+
+                  <ul>
+                    <li class="filter-item">
+                      <label for="yes">Есть
+                        <input class="visually-hidden filter-input filter-input-radio" id="yes" type="radio" name="bluetooth" value="yes" checked>
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                    <li class="filter-item">
+                      <label for="no">Нет
+                        <input class="visually-hidden filter-input filter-input-radio" id="no" type="radio" name="bluetooth" value="no">
+                        <span class="checkbox-indicator"></span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+            
+              <button class="button" type="submit" name="filter-button">Показать</button>
+            </form>
+        
+          </section>
+      
+
+          <div class="catalog-container">
+
+            <section class="sorting">
+              <h2 class="catalog-h2 sorting-h">Сортировка:</h2>
+
+              <ul class="sorting-list">
+                <li>
+                  <a class="sorting-link is-active" href="#">По цене</a>
+                </li>
+                <li>
+                  <a class="sorting-link" href="#">По типу</a>
+                </li>
+                <li>
+                  <a class="sorting-link" href="#">По популярности</a>
+                </li>
+              </ul>
+
+              <ul class="sorting-pointers">
+                <li>
+                  <button class="sorting-pointer sorting-pointer-up" type="button">По возрастанию</button>
+                </li>
+                <li>
+                  <!-- По критерию Б15 названия классов должны быть сделаны единообразно, у тебя для активных элементов в основном используется класс is-active, нужно его использовать и тут -->
+                  <button class="sorting-pointer sorting-pointer-down pointer-is-active" type="button">По убыванию</button>
+                </li>
+              </ul>
+            </section>
+
+            <section class="catalog">
+              <h2 class="visually-hidden">Список товаров</h2>
+
+              <!-- Из-за высоты, указанной у .catalog-list, ломается страница при добавлении еще нескольких товаров, высоту надо убрать. -->
+              <ul class="catalog-list">
+                <li class="catalog-item">
+                  <p class="catalog-item-image">
+                    <img class="catalog-img" src="img/item-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
+                  </p>
+                  <h3><a href="catalog-item.html">Любительская селфи-палка</a></h3>
+                  <span class="catalog-item-price">500 руб.</span>
+                    
+                  <div class="action-button">
+                    <button class="button" type="button">В корзину</button>
+                    <button class="compare-button" type="button">Добавить к сравнению</button>
+                  </div>
+                </li>  
+              
+                <li class="catalog-item">
+                  <p class="catalog-item-image">
+                    <img class="catalog-img" src="img/item-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
+                  </p>  
+                  <h3><a href="catalog-item.html">Профессиональная
+                    <br> селфи-палка</a></h3>
+                  <span class="catalog-item-price"> 1500 руб.</span>
+
+                  <div class="action-button">
+                    <button class="button" type="button">В корзину</button>
+                    <button class="compare-button" type="button">Добавить к сравнению</button>
+                  </div>
+                </li>
+                  
+                <li class="catalog-item">
+                  <p class="catalog-item-image">
+                    <img class="catalog-img" src="img/item-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
+                  </p>    
+                  <h3><a href="catalog-item.html">Непотопляемая селфи-палка</a></h3>
+                  <span class="catalog-item-price">2500 руб.</span>
+
+                  <div class="action-button">
+                    <button class="button" type="button">В корзину</button>
+                    <button class="compare-button" type="button">Добавить к сравнению</button>
+                  </div>
+                </li>
+                    
+                <li class="catalog-item">
+                  <p class="catalog-item-image">
+                    <img class="catalog-img" src="img/item-4.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+                  </p> 
+                  <strong class="catalog-item-new">
+                    <span class="visually-hidden">Новинка</span>
+                  </strong>
+                  <h3><a href="catalog-item.html">Селфи-палка «Следуй за мной»</a></h3>
+                  <span class="catalog-item-price">4900 руб.</span>
+                    
+                  <div class="action-button">
+                    <button class="button" type="button">В корзину</button>
+                    <button class="compare-button" type="button">Добавить к сравнению</button>
+                  </div>
+                </li>
+              </ul>
+
+              <ul class="pagination-list">
+                <li class="pagination-item back">
+                  <a >Назад</a>
+                </li>
+                <li>
+
+                  <ul class="pagination-items">
+                    <!-- По критерию Б15 названия классов должны быть сделаны единообразно, у тебя для активных элементов в основном используется класс is-active, нужно его использовать и тут -->
+                    <li class="pagination-item pagination-item-is-active">
+                      <a>1</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a href="#">2</a>
+                    </li>
+                    <li  class="pagination-item">
+                      <a href="#">3</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="pagination-item next">
+                  <a href="#">Вперед</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--Начало подвала-->
+    <footer class="main-footer">
+        
+      <div class="container">
+        <a class="main-logo logo-footer" href="index.html">
+          <img class="logo-footer-img" src="img/logo-footer.svg" alt="Device" width="162" height="35">
+        </a>
+  
+        <ul class="user-navigation-footer">
+          <li class="user-enter-footer">
+            <a href="#">Войти</a>
+          </li>
+          <li class="comparison-footer">
+            <a href="#">Сравнить</a>
+          </li>
+          <li class="cart-footer">
+            <a href="#">Корзина</a>
+          </li>
+        </ul>
+  
+        <p class="direction">г. Москва, ул. Строителей, 15</p>
+        
+        <ul class="sait-navigation-footer">
+          <li>
+            <a href="#delivery">Доставка</a>
+          </li>
+          <li>
+            <a href="#waranty">Гарантия</a>
+          </li>
+          <li>
+            <a href="#contact">Контакты</a>
+          </li>
+        </ul>
+  
+        <p class="phonenumber">Тел.: +7 (495) 495-95-95</p>
+
+        <ul class="social-btn">
+          <li>
+            <!-- По критерию Д27 тут у иконок (внутри ссылки) нужно сделать текстовое описание в элементе visually-hidden -->
+            <a href="https://www.facebook.com"><img src="img/fb.svg" title="Фейсбук" alt="Фейсбук" width="32" height="32"></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com"><img src="img/instagram.svg" title="Инстаграм" alt="Инстаграм" width="32" height="32"></a>
+          </li>
+          <li>
+            <a href="https://twitter.com"><img src="img/twitter.svg" title="Твиттер" alt="Твиттер" width="32" height="32"></a>
+          </li>
+        </ul>
+          
+        <!-- По критерию Д27 тут у иконоки (внутри ссылки) нужно сделать текстовое описание в элементе visually-hidden -->
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img class="htmlacademy-link-img" src="img/logohtml.svg" title="HTMLacademy" alt="HTMLacademy" width="27" height="35">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
+      

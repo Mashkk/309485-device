@@ -14,19 +14,19 @@
 
         <nav class="main-navigation-header">
           <a class="logo-header">
-            <span class="visually-hidden">Логотип компании Device</span>
             <img class="logo-header-img" src="img/logo.svg" alt="Device" width="163" height="35">
           </a>
         
           <div class="main-navigation-wrapper">
             
-            <form class="main-search" name="main-search" action="https://echo.htmlacademy.ru" method="get">
+            <!-- Тут action укажи как везде https://echo.htmlacademy.ru -->
+            <form class="main-search" name="main-search" action="#" method="get">
               <input class="main-search-field" type="search" placeholder="Поиск по сайту" required> 
               <button class="main-search-button" name="search-button" type="submit">Найти</button>
             </form>
 
             <ul class="user-navigation-header">
-              <li class="user-enter"><a href="login-page.html">Войти</a></li>
+              <li class="user-enter"><a href="#">Войти</a></li>
               <li class="comparison"><a href="#">Сравнить</a></li>
               <li class="cart"><a href="#">Корзина</a></li>
             </ul>
@@ -73,19 +73,22 @@
         <section class="sliders-list">
           <h2 class="visually-hidden">Хиты продаж!</h2>
 
-          <div class="slider-item is-active" id="slide-1">
+          <div class="slider-item">
 
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-1.png" alt="Моноподы для селфи" width="384" height="486">
             </div>
 
+            <!-- Не проходит по критерию Д19 переполнение контентом. Попробуй увеличить текст описания.
+            Тут не нужен флекс, аналогично блоку о нас и контакты тут просто поток текста.
+            Так же надо убирать min-height (растояние до следующего блока регулировать марджином), а то slider-list-navigation сползает криво при переполнении. -->
             <div class="slider-item-content">
               <h3>Делай селфи,<br>
                 как Бен Стиллер!</h3>
               <p>Самая длинная палка для селфи доступна в нашем магазине. <br>
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 
-              <a class="button" href="catalog.html">Подробнее</a>
+              <a class="button" href="catalog.html">подробнее</a>
 
               <table class="item-stats">
                 <tr>
@@ -102,7 +105,7 @@
             </div>
           </div>
 
-          <div class="slider-item" id="slide-2">
+          <div class="slider-item  visually-hidden">
           
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-2.png" alt="Умные часы" width="345" height="485">
@@ -114,7 +117,7 @@
               <p>Мотивирующие фитнес-браслеты помогут найти в себе силы <br>
                 не пропускать занятия и соблюдать диету.</p>
 
-              <a class="button" href="catalog.html">Подробнее</a>
+              <a class="button" href="catalog.html">подробнее</a>
 
               <table class="item-stats">
                 <tr>
@@ -127,7 +130,7 @@
             </div>
           </div>
 
-          <div class="slider-item" id="slide-3">
+          <div class="slider-item  visually-hidden">
 
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-3.png" alt="Квадрокоптеры" width="526" height="334">
@@ -139,7 +142,7 @@
               <p>Это обычный, на первый взгляд, квадрокоптер оснащен <br>
                 мощным лазером, замаскированным под стандартную камеру</p>
                 
-              <a class="button" href="catalog.html">Подробнее</a>
+              <a class="button" href="catalog.html">подробнее</a>
 
               <table class="item-stats">
                 <tr>
@@ -155,9 +158,9 @@
           </div>
 
           <div class="slider-list-navigation">
-            <button class="slider-button is-active" type="button" id="slider-button-1">Моноподы для селфи</button>
-            <button class="slider-button" type="button" id="slider-button-2">Фитнес-браслеты</button>
-            <button class="slider-button" type="button" id="slider-button-3">Квадрокоптеры</button>
+            <button class="slider-button is-active" type="button">Моноподы для селфи</button>
+            <button class="slider-button" type="button">Фитнес-браслеты</button>
+            <button class="slider-button" type="button">Квадрокоптеры</button>
           </div>
         </section>
       </div>
@@ -173,7 +176,9 @@
                   <img class="popular-img" src="img/popular-1.svg" alt="Виртуальная реальность" width="97" height="55">                
                 </span>
                 <p>
-                  Виртуальная реальность
+                  Виртуальная
+                  <br> 
+                  реальность
                 </p>
               </a>
             </li>
@@ -242,30 +247,34 @@
             
             <div class="services-nav">
               <ul>
+                <!-- id тут не особо нужны, если хочешь их оставить. то добавь и для кредита тоже.
+                В js для переключения будут использоваться атрибуты кнопки -->
                 <li  id="delivery">
-                    <button class="services-button  is-active button" type="button" name="delivery-button" id="services-button-1">Доставка</button>
+                    <button class="services-button  is-active button" type="button" name="delivery-button">Доставка</button>
                 </li>
                 <li  id="warranty">
-                    <button class="services-button button" type="button" name="warranty-button" id="services-button-2">Гарантия</button>
+                    <button class="services-button button" type="button" name="warranty-button">Гарантия</button>
                 </li>
                 <li>
-                    <button class="services-button button" type="button" name="credit-button" id="services-button-3">Кредит</button>
+                    <button class="services-button button" type="button" name="credit-button">Кредит</button>
                 </li>
               </ul>
             </div>
 
-            <div class="services-item delivery is-active" id="services-slide-1"> 
+            <!-- Не проходит по критерию Д19 переполнение контентом. Попробуй увеличить текст описания.
+            Надо для .services задать min-height, а не height -->
+            <div class="services-item delivery"> 
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </div>
 
-            <div class="services-item warranty" id="services-slide-2">
+            <div class="services-item warranty" hidden>
               <h3>Гарантия</h3>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.
                 <br> Товар, не дом, конечно же.</p>
             </div>
 
-            <div class="services-item credit"  id="services-slide-3">
+            <div class="services-item credit"  hidden>
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </div>
@@ -281,25 +290,21 @@
             <ul class="logotypes-list">
               <li class="logo">
                 <a href="https://www.dji.com" target="_blank">
-                  <span class="visually-hidden">Официальный сайт фирмы DJI</span>
                   <img src="img/dji.png" alt="dji" width="520" height="100">
                 </a>
               </li>
               <li class="logo">
                 <a href="http://www.sp-gadgets.com" target="_blank">
-                  <span class="visually-hidden">Официальный сайт фирмы SP-Gadgets</span>
                   <img src="img/spgadgets.png" alt="SPGadgets" width="520" height="100">
                 </a>
               </li>
               <li class="logo">
                 <a href="https://gopro.com" target="_blank">
-                  <span class="visually-hidden">Официальный сайт фирмы GoPro</span>
                   <img src="img/gopro.png" alt="GoPro" width="520" height="100">
                 </a>
               </li>
               <li class="logo">
                 <a href="https://www.vive.com" target="_blank">
-                  <span class="visually-hidden">Официальный сайт фирмы VIVE</span>
                   <img src="img/vive.png" alt="VIVE" width="520" height="100">
                 </a>
               </li>
@@ -326,7 +331,7 @@
               </li>
             </ul>
 
-            <a class="button button-columns" href="about-us.html">подробнее о нас</a>
+            <a class="button button-columns" href="#">подробнее о нас</a>
           </section>
         
 
@@ -334,11 +339,10 @@
             <h2>Контакты</h2>
 
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-            <a class="map-image" href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.687031,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618">
-              <span class="visually-hidden">Открыть карту</span>
+            <a class="map-image" href="#">
               <img src="img/map.jpg" alt="Наш адрес" width="560" height="222">
             </a>
-            <button class="button button-columns  modal-form-button" type="button">Напишите нам</button>
+            <button class="button button-columns" type="button">Напишите нам</button>
           </section>
         </div>
       </div>
@@ -382,27 +386,19 @@
 
         <ul class="social-btn">
           <li>
-            <a href="https://www.facebook.com">
-              <span class="visually-hidden">Ссылка на нашу страничку в Facebook</span>
-              <img src="img/fb.svg" title="Фейсбук" alt="Фейсбук" width="32" height="32">
-            </a>
+            <!-- По критерию Д27 тут у иконок (внутри ссылки) нужно сделать текстовое описание в элементе visually-hidden -->
+            <a href="https://www.facebook.com"><img src="img/fb.svg" title="Фейсбук" alt="Фейсбук" width="32" height="32"></a>
           </li>
           <li>
-            <a href="https://www.instagram.com">
-              <span class="visually-hidden">Ссылка на нашу страничку в Instafram</span>
-              <img src="img/instagram.svg" title="Инстаграм" alt="Инстаграм" width="32" height="32">
-            </a>
+            <a href="https://www.instagram.com"><img src="img/instagram.svg" title="Инстаграм" alt="Инстаграм" width="32" height="32"></a>
           </li>
           <li>
-            <a href="https://twitter.com">
-              <span class="visually-hidden">Ссылка на нашу страничку в Twitter</span>
-              <img src="img/twitter.svg" title="Твиттер" alt="Твиттер" width="32" height="32">
-            </a>
+            <a href="https://twitter.com"><img src="img/twitter.svg" title="Твиттер" alt="Твиттер" width="32" height="32"></a>
           </li>
         </ul>
         
+        <!-- По критерию Д27 тут у иконоки (внутри ссылки) нужно сделать текстовое описание в элементе visually-hidden -->
         <a class="htmlacademy-link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <span class="visually-hidden">CopyRight</span>
           <img class="htmlacademy-link-img" src="img/logohtml.svg" title="HTMLacademy" alt="HTMLacademy" width="27" height="35">
         </a>
       </div>
@@ -411,21 +407,18 @@
     <section class="modal-windows">
       <h2 class="visually-hidden">Дополнительная информация</h2> 
 
-      <div class="modal modal-map">
+      <div class="modal modal-map" hidden>
         <button class="modal-close-button" type="button">Закрыть карту</button>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1512320673858" width="960" height="559" frameborder="0" style="border:0" allowfullscreen>
-        </iframe>
-        <p>
-          <img src="img/map-big.jpg" alt="Мы находимся по адресу: г.Москва, ул.Строителей, 15" width="960" height="559">
-        </p>
+        <img src="img/map.jpg" alt="Мы находимся по адресу: г.Москва, ул.Строителей, 15" width="560" height="222">
       </div>
       
-      <div class="modal-wrapper">
-        
+      <!-- shadow-wrapper лишняя обертка, не пройдет по критерию Д2.
+      В данном случае можно спокойно сделать эту тень псевдоэлементом для modal-form -->
+      <div class="shadow-wrapper" hidden>
         <div class="modal modal-form">
           <button class="modal-close-button" type="button">Закрыть форму обратной связи</button>
 
-          <form action="https://echo.htmlacademy.ru" method="post" novalidate>
+          <form action="https://echo.htmlacademy.ru" method="post">
 
             <div class="modal-item">
               <label for="modal-user-name">Ваше имя:</label> 
@@ -439,13 +432,13 @@
 
             <div class="modal-comment">
               <label for="modal-user-comment">Текст письма:</label>
-              <textarea id="modal-user-comment" name="modal-user-comment" placeholder="В свободной форме" rows="5"></textarea>
+              <textarea id="modal-user-comment" name="modal-user-comment" placeholder="В свободной форме" rows="5" required></textarea>
             </div>
             <button class="button" type="submit">Отправить</button>
           </form>
         </div>
       </div>
     </section>
-    <script src="js/scripts.js"></script>
+
   </body>
 </html>

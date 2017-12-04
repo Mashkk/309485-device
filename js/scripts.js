@@ -1,6 +1,6 @@
 //Открытие-закрытие модального окна формы
 var modalLink = document.querySelector(".modal-form-button");
-var modalPopup = document.querySelector(".modal-form");
+var modalPopup = document.querySelector(".modal-wrapper");
 var modalClose = modalPopup.querySelector(".modal-close-button");
 
 modalLink.addEventListener("click", function (evt) {
@@ -26,14 +26,12 @@ form.addEventListener("submit", function (evt) {
     if (!modalLogin.value) {
         evt.preventDefault();
         modalLogin.classList.remove("invalid-value");
-        modalLogin.offsetWidth = modalPopup.offsetWidth;
         modalLogin.classList.add("invalid-value");
     }  
 
     if (!modalEmail.value) {
         evt.preventDefault();
         modalEmail.classList.remove("invalid-value");
-        modalEmail.offsetWidth = modalPopup.offsetWidth;
         modalEmail.classList.add("invalid-value");
     }      
 });
@@ -42,14 +40,12 @@ form.addEventListener("submit", function (evt) {
 modalLogin.addEventListener("blur", function(evt){
     if (modalLogin.value) {
         modalLogin.classList.remove("invalid-value");
-        modalLogin.offsetWidth = modalPopup.offsetWidth;
     }  
 });
 
 modalEmail.addEventListener("blur", function(evt){
     if (modalEmail.value) {
         modalEmail.classList.remove("invalid-value");
-        modalEmail.offsetWidth = modalPopup.offsetWidth;
     }  
 });
 
@@ -74,12 +70,12 @@ mapClose.addEventListener("click", function (evt) {
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
         if (modalPopup.classList.contains("is-active")) {
-        modalPopup.classList.remove("is-active");
-        modalLogin.classList.remove("invalid-value");
-        modalEmail.classList.remove("invalid-value");
+            modalPopup.classList.remove("is-active");
+            modalLogin.classList.remove("invalid-value");
+            modalEmail.classList.remove("invalid-value");
         }
         if (mapPopup.classList.contains("is-active")) {
-        mapPopup.classList.remove("is-active");
+            mapPopup.classList.remove("is-active");
         }
     }
     });
