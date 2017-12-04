@@ -38,6 +38,21 @@ form.addEventListener("submit", function (evt) {
     }      
 });
 
+// Снять алерт если пользователь ввел значение
+modalLogin.addEventListener("blur", function(evt){
+    if (modalLogin.value) {
+        modalLogin.classList.remove("invalid-value");
+        modalLogin.offsetWidth = modalPopup.offsetWidth;
+    }  
+});
+
+modalEmail.addEventListener("blur", function(evt){
+    if (modalEmail.value) {
+        modalEmail.classList.remove("invalid-value");
+        modalEmail.offsetWidth = modalPopup.offsetWidth;
+    }  
+});
+
 
 //Открытие-закрытие модального окна карты
 var mapLink = document.querySelector(".map-image");
