@@ -2147,9 +2147,9 @@ img {
         -ms-flex-preferred-size: 290px;
             flex-basis: 290px;
             width: 290px;
+            flex: 1;
 
         text-align: right;
-        white-space: nowrap
     }
 
     .main-footer .direction {
