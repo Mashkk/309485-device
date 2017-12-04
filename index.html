@@ -72,7 +72,7 @@
         <section class="sliders-list">
           <h2 class="visually-hidden">Хиты продаж!</h2>
 
-          <div class="slider-item">
+          <div class="slider-item first-slide is-active">
 
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-1.png" alt="Моноподы для селфи" width="384" height="486">
@@ -101,7 +101,7 @@
             </div>
           </div>
 
-          <div class="slider-item  visually-hidden">
+          <div class="slider-item  second-slide">
           
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-2.png" alt="Умные часы" width="345" height="485">
@@ -126,7 +126,7 @@
             </div>
           </div>
 
-          <div class="slider-item  visually-hidden">
+          <div class="slider-item  third-slide">
 
             <div class="img-wrap">
               <img class="slider-img" src="img/slider-3.png" alt="Квадрокоптеры" width="526" height="334">
@@ -424,7 +424,7 @@
       <div class="modal modal-form">
         <button class="modal-close-button" type="button">Закрыть форму обратной связи</button>
 
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form action="https://echo.htmlacademy.ru" method="post" novalidate>
 
           <div class="modal-item">
             <label for="modal-user-name">Ваше имя:</label> 
@@ -445,70 +445,6 @@
       </div>
       
     </section>
-
-    <script>
-        var modalLink = document.querySelector(".modal-form-button");
-  
-        var modalPopup = document.querySelector(".modal-form");
-        var modalClose = modalPopup.querySelector(".modal-close-button");
-  
-        var form = modalPopup.querySelector("form");
-        var modalLogin = modalPopup.querySelector("[name=modal-user-name]");
-        var modalEmail = modalPopup.querySelector("[name=modal-user-email]");
-  
-        modalLink.addEventListener("click", function (evt) {
-          evt.preventDefault();
-          modalPopup.classList.add("is-active");
-          modalLogin.focus();
-        });
-  
-        modalClose.addEventListener("click", function (evt) {
-          evt.preventDefault();
-          modalPopup.classList.remove("is-active");
-          modalPopup.classList.remove("invalid-value");
-        });
- 
-        form.addEventListener("submit", function (evt) {
-          if (!modalLogin.value || !modalEmail.value) {
-            evt.preventDefault();
-            modalPopup.classList.remove("invalid-value");
-            modalPopup.offsetWidth = modalPopup.offsetWidth;
-            modalPopup.classList.add("invalid-value");
-          }           
-        });
-  
-        window.addEventListener("keydown", function (evt) {
-          if (evt.keyCode === 27) {
-            if (modalPopup.classList.contains("is-active")) {
-              modalPopup.classList.remove("is-active");
-              modalPopup.classList.remove("invalid-value");
-            }
-          }
-        });
-
-        var mapLink = document.querySelector(".map-image");
-        var mapPopup = document.querySelector(".modal-map");
-        var mapClose = mapPopup.querySelector(".modal-close-button");
-
-        mapLink.addEventListener("click", function (evt) {
-          evt.preventDefault();
-          mapPopup.classList.add("is-active");      
-        });
-
-        mapClose.addEventListener("click", function (evt) {
-          evt.preventDefault();
-          mapPopup.classList.remove("is-active");
-        });
-
-        window.addEventListener("keydown", function (evt) {
-          if (evt.keyCode === 27) {
-            if (mapPopup.classList.contains("is-active")) {
-              mapPopup.classList.remove("is-active");
-            }
-          }
-        });
-  
-      </script>
-
+    <script src="js/scripts.js"></script>
   </body>
 </html>

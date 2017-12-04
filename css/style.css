@@ -555,12 +555,7 @@ img {
 
 
     .slider-item {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        display: none;
 
         position: relative;
 
@@ -569,6 +564,15 @@ img {
 
         padding-right: 50px;
         padding-left: 18px;
+    }
+
+    .slider-item.is-active {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .slider-item::before {
@@ -2318,7 +2322,7 @@ img {
                     outline: 3px solid #f0c52e; 
                 }
 
-                .invalid-value input {
+                input.invalid-value  {
                 background-color: #f6dada;
                 }
 
