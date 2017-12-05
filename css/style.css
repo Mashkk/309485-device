@@ -4,7 +4,7 @@
          url("fonts/web/gilroylight.woff2") format("woff2"), 
          url("fonts/web/gilroylight.woff") format("woff"); 
     font-style: normal;
-    font-weight: lighter; 
+    font-weight: 400; 
 }
 
 @font-face {
@@ -563,6 +563,7 @@ img {
         visibility: hidden;
         width: 0;
         height: 0;
+
         overflow: hidden;
 
         display: -webkit-box;
@@ -583,9 +584,7 @@ img {
         visibility: visible;
 
         width: 100%;
-        height: auto;
-        
-        overflow: auto;
+        height: auto;   
     }
 
     .slider-item::before {
@@ -664,7 +663,7 @@ img {
                     padding: 0;
                     padding-right: 78px;
 
-                    font: lighter 36px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
+                    font: 400 36px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
                     color: #000;
                     text-align: left;
                 }
@@ -1417,7 +1416,7 @@ img {
             
                         width: 95px;
             
-                        font: lighter 16px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
+                        font: 400 16px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
                         color: #464646;
                         letter-spacing: 0.01em;
                         text-align: right;
@@ -1639,7 +1638,7 @@ img {
         padding: 0;
         padding-right: 60px;
 
-        font: lighter 14px/0.63 "Gilroy", Arial, Helvetica, sans-serif;
+        font: 400 14px/0.63 "Gilroy", Arial, Helvetica, sans-serif;
         color: rgba(0, 0, 0, 0.2);
         letter-spacing: 0;
     }
