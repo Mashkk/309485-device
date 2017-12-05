@@ -48,10 +48,12 @@ input[type="radio"]:disabled {
 
   width: 1px;
   height: 1px;
+
   margin: -1px;
-  border: 0;
   padding: 0;
 
+  border: 0;
+  
   white-space: nowrap;
 
   -webkit-clip-path: inset(100%);
@@ -71,11 +73,13 @@ img {
     vertical-align: middle;
     
     position: relative;
+    z-index: 1;
+
     width: 220px;
     height: 40px;
+
     margin: 0;
     padding: 0;
-    z-index: 1;
 
     background-color: transparent;
     border: none;
@@ -85,7 +89,6 @@ img {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     text-align: center;
-    vertical-align: middle;
     text-decoration: none;
 
     cursor: pointer;
@@ -95,8 +98,10 @@ img {
         content: "";
         position: absolute;
         z-index: -1;
+
         width: 100%;
         height: 8px;
+
         left: 0;
         top:50%;
         -webkit-transform: translateY(-50%);
@@ -131,8 +136,7 @@ img {
         width: 100%;
         min-height: 186px;
 
-        padding: 35px 60px;
-        padding-bottom: 0px;
+        padding: 35px 60px 0 60px;
 
         background-color: #f7e296;
     }
@@ -250,6 +254,7 @@ img {
             .main-search-button:active {
                 display: inline-block;
                 vertical-align: middle;
+                
                 color: rgba(225, 225, 225, 0.3); 
             }
 
@@ -280,8 +285,7 @@ img {
             
             width: 520px;
 
-            margin-left: auto;
-            margin-bottom: 33px;
+            margin: 0 0 33px auto;
         }
 
             .user-navigation-header li {
@@ -474,8 +478,7 @@ img {
                 }
 
                 .navigation-catalog-list:first-child {
-                    margin-left: 60px;
-                    margin-right: 40px;
+                    margin: 0 40px 0 60px;
                 }
 
                 .navigation-catalog-list:nth-child(2) {
@@ -557,28 +560,38 @@ img {
 
 
     .slider-item {
-        display: none;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        overflow: hidden;
 
-        position: relative;
-
-        width: 100%;
-        
-
-        padding-right: 50px;
-        padding-left: 18px;
-    }
-
-    .slider-item.is-active {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
+
+        position: relative;
+
+        width: 100%;
+    
+        padding: 0 50px 0 18px;
+    }
+
+    .slider-item.is-active {
+        visibility: visible;
+
+        width: 100%;
+        height: auto;
+        
+        overflow: auto;
     }
 
     .slider-item::before {
-        content: "";
+        content: "0" counter(flag);
+
+
         position: absolute;
         top: -13px;
         right: 47px;
@@ -587,8 +600,7 @@ img {
         font: bold 179.2px/1 "Gilroy", Arial, Helvetica, sans-serif;
         color: #fff;
 
-        counter-increment: flag;
-        content: "0" counter(flag);
+        counter-increment: flag;   
     }
 
         .slider-item .img-wrap {
@@ -632,7 +644,6 @@ img {
             }
 
             .item-stats {
-                
                 margin-top: 53px;
                 
                 border-collapse: collapse;
@@ -649,8 +660,8 @@ img {
                 }
 
                 .item-stats td {
-                    padding: 0;
                     margin: 0;
+                    padding: 0;
                     padding-right: 78px;
 
                     font: lighter 36px/1.2 "Gilroy", Arial, Helvetica, sans-serif;
@@ -901,8 +912,7 @@ img {
         }
 
         .services-item h3 {
-            margin-top: -31px;
-            margin-bottom: 28px;
+            margin: -31px 0 28px 0;
         }
 
     .services-item.credit::after {
@@ -1293,8 +1303,7 @@ img {
 
                 width: 360px;
                 
-                margin-left: 40px;
-                margin-bottom: 49px;
+                margin-left: 0 0 49px 40px;
 
                 list-style: none outside;
             }
@@ -1649,8 +1658,8 @@ img {
 
     .filters h2 {
         margin: 0;
-        padding: 26px 0 0 4px;
         margin-bottom: 108px;
+        padding: 26px 0 0 4px;
     }
 
         .filter-list {
@@ -1813,8 +1822,6 @@ img {
         width: 126px;
         height: 70px;
 
-        
-
         list-style: none outside;
     }
 
@@ -1961,9 +1968,8 @@ img {
                 flex-basis: 460px;
 
             margin: 0;
-            padding: 0;
-
             margin-left: auto;
+            padding: 0;
         }
 
             .user-navigation-footer li {
@@ -2053,7 +2059,6 @@ img {
 
         margin: 0;
         margin-bottom: 63px;
-        padding: 0;
         padding: 0 67px;
     }
 
@@ -2102,9 +2107,7 @@ img {
         -ms-flex-preferred-size: 141px;
             flex-basis: 141px;
 
-        margin: 0;
-        margin-left: auto;
-        margin-right: 483px;
+        margin: 0 483px 0 auto;
         padding: 0;
     }
 
