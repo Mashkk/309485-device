@@ -745,7 +745,7 @@ img {
         }
 
         .popular-list a:active {
-            color: rgba(225, 225, 225, 0.3);
+            color: rgba(0, 0, 0, 0.3);
         }
 
             .popular-item-img {
@@ -1878,6 +1878,7 @@ img {
             height: 100%;
             
             padding: 0 26px 0 30px;
+            cursor: pointer;
         }
 
         .next a {
@@ -1892,7 +1893,7 @@ img {
             background-color: #d9d9d9;
         }
 
-        .pagination-item.is-active {
+        .pagination-items .is-active {
             pointer-events: none;
             cursor: default;
         }
@@ -1900,12 +1901,17 @@ img {
         .pagination-item.is-active a,
         .pagination-item.is-active a:hover,
         .pagination-item.is-active a:focus,
-        .pagination-list a:active,
+        .pagination-list a:active ,
         .back a,
         .next a,
         .back a:hover,
         .next a:hover {
             color: #000;
+        }
+
+        .back a:active,
+        .next a:active {
+            opacity: 0.3;
         }
 
 
