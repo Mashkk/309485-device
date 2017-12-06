@@ -969,9 +969,9 @@ img {
         display: flex;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
-                justify-content: space-between;
         -ms-flex-line-pack: center;
             align-content: center;
+        flex-wrap: wrap;
 
         margin: 0;
         padding: 0;
@@ -980,6 +980,11 @@ img {
         .logotypes-list li{
             -ms-flex-preferred-size: 260px;
                 flex-basis: 260px;
+                margin-right: 40px;
+        }
+
+        .logotypes-list li:nth-child(4n) {
+            margin: 0;
         }
 
             .logotypes-list a {
@@ -1302,7 +1307,7 @@ img {
 
                 width: 360px;
                 
-                margin-left: 0 0 49px 40px;
+                margin: 0 0 49px 40px;
 
                 list-style: none outside;
             }
@@ -1941,7 +1946,7 @@ img {
         .main-footer .container::after {
             content: "";
             position: absolute;
-            top: 178px;
+            bottom: 22px;
             left: 20px;
 
             width: 80px;
