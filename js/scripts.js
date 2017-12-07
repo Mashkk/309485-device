@@ -13,11 +13,10 @@ modalClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     modalPopup.classList.remove("is-active");
     modalLogin.classList.remove("invalid-value");
-    modalEmail.classList.remove("invalid-value");
     modalLogin.classList.remove("modal-error");
+    modalEmail.classList.remove("invalid-value");
     modalEmail.classList.remove("modal-error");
 });
-
 
 //Валидация формы
 var modalLogin = document.getElementById("modal-user-name");
@@ -28,18 +27,18 @@ form.addEventListener("submit", function (evt) {
     if (!modalLogin.value) {
         evt.preventDefault();
         modalLogin.classList.remove("invalid-value");
-        modalLogin.classList.add("invalid-value");
         modalLogin.classList.remove("modal-error");
         modalLogin.offsetWidth = modalLogin.offsetWidth;
+        modalLogin.classList.add("invalid-value");
         modalLogin.classList.add("modal-error");
     }  
 
     if (!modalEmail.value) {
         evt.preventDefault();
         modalEmail.classList.remove("invalid-value");
-        modalEmail.classList.add("invalid-value");
         modalEmail.classList.remove("modal-error");
         modalEmail.offsetWidth = modalEmail.offsetWidth;
+        modalEmail.classList.add("invalid-value");
         modalEmail.classList.add("modal-error");
     }     
 });
@@ -47,8 +46,8 @@ form.addEventListener("submit", function (evt) {
 // Снять алерт если пользователь ввел значение
 modalLogin.addEventListener("blur", function(evt){
     if (modalLogin.value) {
-        modalLogin.classList.remove("invalid-value");
-        modalLogin.classList.remove("modal-error");   
+        modalLogin.classList.remove("invalid-value");  
+        modalLogin.classList.remove("modal-error");
     }  
 });
 
@@ -58,7 +57,6 @@ modalEmail.addEventListener("blur", function(evt){
         modalEmail.classList.remove("modal-error");
     }  
 });
-
 
 //Открытие-закрытие модального окна карты
 var mapLink = document.querySelector(".map-image");
@@ -75,16 +73,15 @@ mapClose.addEventListener("click", function (evt) {
     mapPopup.classList.remove("is-active");
 });
 
-
 //Закрытие модальных окон на клавишу Esc
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
         if (modalPopup.classList.contains("is-active")) {
             modalPopup.classList.remove("is-active");
             modalLogin.classList.remove("invalid-value");
-            modalEmail.classList.remove("invalid-value");
             modalLogin.classList.remove("modal-error");
             modalEmail.classList.remove("modal-error");
+            modalEmail.classList.remove("invalid-value");
         }
         if (mapPopup.classList.contains("is-active")) {
             mapPopup.classList.remove("is-active");
