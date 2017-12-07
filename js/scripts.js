@@ -14,7 +14,8 @@ modalClose.addEventListener("click", function (evt) {
     modalPopup.classList.remove("is-active");
     modalLogin.classList.remove("invalid-value");
     modalEmail.classList.remove("invalid-value");
-    modalPopup.classList.remove("modal-error");
+    modalLogin.classList.remove("modal-error");
+    modalEmail.classList.remove("modal-error");
 });
 
 
@@ -28,14 +29,18 @@ form.addEventListener("submit", function (evt) {
         evt.preventDefault();
         modalLogin.classList.remove("invalid-value");
         modalLogin.classList.add("invalid-value");
-        modalPopup.classList.add("modal-error");
+        modalLogin.classList.remove("modal-error");
+        modalLogin.offsetWidth = modalLogin.offsetWidth;
+        modalLogin.classList.add("modal-error");
     }  
 
     if (!modalEmail.value) {
         evt.preventDefault();
         modalEmail.classList.remove("invalid-value");
         modalEmail.classList.add("invalid-value");
-        modalPopup.classList.add("modal-error");
+        modalEmail.classList.remove("modal-error");
+        modalEmail.offsetWidth = modalEmail.offsetWidth;
+        modalEmail.classList.add("modal-error");
     }     
 });
 
@@ -43,12 +48,14 @@ form.addEventListener("submit", function (evt) {
 modalLogin.addEventListener("blur", function(evt){
     if (modalLogin.value) {
         modalLogin.classList.remove("invalid-value");
+        modalLogin.classList.remove("modal-error");   
     }  
 });
 
 modalEmail.addEventListener("blur", function(evt){
     if (modalEmail.value) {
         modalEmail.classList.remove("invalid-value");
+        modalEmail.classList.remove("modal-error");
     }  
 });
 
@@ -76,10 +83,11 @@ window.addEventListener("keydown", function (evt) {
             modalPopup.classList.remove("is-active");
             modalLogin.classList.remove("invalid-value");
             modalEmail.classList.remove("invalid-value");
+            modalLogin.classList.remove("modal-error");
+            modalEmail.classList.remove("modal-error");
         }
         if (mapPopup.classList.contains("is-active")) {
             mapPopup.classList.remove("is-active");
-            modalPopup.classList.remove("modal-error");
         }
     }
     });
