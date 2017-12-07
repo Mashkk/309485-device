@@ -2063,13 +2063,13 @@ img {
         -ms-flex-line-pack: baseline;
             align-content: baseline;
 
-        -ms-flex-preferred-size: 570px;
+        -ms-flex-preferred-size: 500px;
 
-            flex-basis: 570px;
+            flex-basis: 500px;
 
         margin: 0;
         margin-bottom: 63px;
-        padding: 0 67px;
+        padding-left: 67px;
     }
 
         .sait-navigation-footer li {
