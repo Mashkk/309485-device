@@ -156,6 +156,10 @@ img {
 
             margin: 22px 0 10px 0;
         }    
+
+        .inner-page .logo-header {
+            margin-bottom: 9px;
+        }
             
         .logo-header:focus {
             outline: none;
@@ -976,7 +980,7 @@ img {
     }
 
     .logotypes {
-        margin-bottom: 99px;
+        margin-bottom: 79px;
     }
 
     .logotypes-list {
@@ -996,11 +1000,11 @@ img {
         .logotypes-list li{
             -ms-flex-preferred-size: 260px;
                 flex-basis: 260px;
-                margin-right: 40px;
+                margin:0 40px 20px 0;
         }
 
         .logotypes-list li:nth-child(4n) {
-            margin: 0;
+            margin-right: 0;
         }
 
             .logotypes-list a {
@@ -1608,7 +1612,7 @@ img {
         width: 196px;
         height: 2px;
 
-        margin: 17px 0 5px 0; 
+        margin-bottom: 5px; 
 
         line-height: 0;
         font-size: 0;
@@ -1703,6 +1707,10 @@ img {
         .filter-name {
             position: relative;
             margin-bottom: 18px;
+        }
+
+        .filter-slider .filter-name {
+            margin-bottom: 35px;
         }
 
             .filter-name::before {
