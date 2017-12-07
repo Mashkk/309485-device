@@ -14,6 +14,7 @@ modalClose.addEventListener("click", function (evt) {
     modalPopup.classList.remove("is-active");
     modalLogin.classList.remove("invalid-value");
     modalEmail.classList.remove("invalid-value");
+    modalPopup.classList.remove("modal-error");
 });
 
 
@@ -27,13 +28,15 @@ form.addEventListener("submit", function (evt) {
         evt.preventDefault();
         modalLogin.classList.remove("invalid-value");
         modalLogin.classList.add("invalid-value");
+        modalPopup.classList.add("modal-error");
     }  
 
     if (!modalEmail.value) {
         evt.preventDefault();
         modalEmail.classList.remove("invalid-value");
         modalEmail.classList.add("invalid-value");
-    }      
+        modalPopup.classList.add("modal-error");
+    }     
 });
 
 // Снять алерт если пользователь ввел значение
@@ -76,6 +79,7 @@ window.addEventListener("keydown", function (evt) {
         }
         if (mapPopup.classList.contains("is-active")) {
             mapPopup.classList.remove("is-active");
+            modalPopup.classList.remove("modal-error");
         }
     }
     });

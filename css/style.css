@@ -2232,11 +2232,32 @@ img {
           opacity: 1;
         }
       }
+
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+      
+        30%,
+        90% {
+          transform: translateX(-10px);
+        }
+      
+
+        60% {
+          transform: translateX(10px);
+        }
+      }
             
     .modal-wrapper.is-active {
         display: block;
         -webkit-animation: fadeIn 0.5s;
                 animation: fadeIn 0.5s;
+    }
+
+    .modal-error {
+        animation: shake 0.4s;
     }
     
     .modal-wrapper:after {
